@@ -2,25 +2,16 @@
 # way to pull out the PyMOL data and modify it in our script.
 # See below.
 import sys
-from Bio import SeqIO
 from Bio.PDB import *
 from pymol import stored
-import numpy
 
-#Notes for bfactor editing from biopython
+#Notes for bfactor editing
 #get_bfactor(self)
 # set_bfactor(self, bfactor)
 
 #Convert pdb to fasta
-## This is the command using the pymol API
-# fasta = cmd.get_fastastr('all')
 
-## This is the pdb to fasta command using biopython
-filenames = []
-input_format = "swiss" #This SHOULD work with uniprot filetype
-feature_type = "TRANSMEM" #For future modification, this can be used to look for any annotation in the .dat file.
-output_filename = "TMH.fasta" #Simply the output name, can be anything as it is written in binary (not file-type specific language).
-#This list will hold the IDs and the average KD
+fasta = cmd.get_fastastr('all')
 
 # Writing input files for TMSOC
 with open("inputseq.fasta", 'w') as temp_tmh_fasta:
@@ -29,8 +20,8 @@ with open("inputseq.fasta", 'w') as temp_tmh_fasta:
 with open("TMsegments.txt", 'w') as temp_tmh_seq:
     pass
 
-#An iteration needs to be ran through the TMH regions knowing where they lie in the sequence.
-#The TMH sections need to be identified before this point.
+#Needs to be rewritten to include pdb, not swissprot format.
+#The
 for i, f in enumerate(record.features):
     if f.type == feature_type:
         try:
@@ -42,7 +33,7 @@ for i, f in enumerate(record.features):
         except TypeError:
             pass
 
-#Running TMSOC
+# Running TMSOC
 complexity = "NONE"
 commandString = 'bash perl.sh'
 os.system(commandString)
@@ -59,7 +50,6 @@ for line in tmsoc_result:
         complexity = "Twilight"
         complexity_list.append(complexity)
 
-#For the pymol API
 #Each residue needs a colour that describes it
 #white = NONE 1
 #red = complex 2
