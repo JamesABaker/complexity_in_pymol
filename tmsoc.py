@@ -1,6 +1,3 @@
-# Import PyMOL's stored module.  This will allow us with a
-# way to pull out the PyMOL data and modify it in our script.
-# See below.
 import sys
 from Bio import SeqIO
 from Bio.PDB import *
@@ -15,23 +12,31 @@ import numpy
 ## This is the command using the pymol API
 # fasta = cmd.get_fastastr('all')
 
+
+input_filename = 'test.pdb'
 ## This is the pdb to fasta command using biopython
-filenames = []
-input_format = "swiss" #This SHOULD work with uniprot filetype
-feature_type = "TRANSMEM" #For future modification, this can be used to look for any annotation in the .dat file.
-output_filename = "TMH.fasta" #Simply the output name, can be anything as it is written in binary (not file-type specific language).
-#This list will hold the IDs and the average KD
+parser = PDBParser()
+structure = parser.get_structure('test', input_filename)
+
+ppb = PPBuilder()
+for pp in ppb.build_peptides(structure):
+    residues = pp.get_sequence()
+
+
+
 
 # Writing input files for TMSOC
 with open("inputseq.fasta", 'w') as temp_tmh_fasta:
-    temp_tmh_fasta.write(fasta)
+    temp_tmh_fasta.write(residues)
 
 with open("TMsegments.txt", 'w') as temp_tmh_seq:
     pass
 
 #An iteration needs to be ran through the TMH regions knowing where they lie in the sequence.
 #The TMH sections need to be identified before this point.
-for i, f in enumerate(record.features):
+
+'''
+for i, f in enumerate(record.features): #This needs to replaced with going through the TMHMM output
     if f.type == feature_type:
         try:
             # Coordinates from the original TMSOC project look like
@@ -58,6 +63,10 @@ for line in tmsoc_result:
     elif ";twilight" in line:
         complexity = "Twilight"
         complexity_list.append(complexity)
+'''
+
+
+
 
 #For the pymol API
 #Each residue needs a colour that describes it
