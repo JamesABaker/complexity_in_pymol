@@ -3,17 +3,24 @@ from Bio import SeqIO
 from Bio.PDB import *
 from pymol import cmd, stored
 
-write_input_fasta_file = open("inputseq.fasta", "w")
-write_segment_positions_file = open("TMsegments.txt", "w")
-cmd.color('white', "all")
+
 
 def complexity(selection='all'):
+    # DESCRIPTION
+    # In pymol type `run Path/To/complexity_in_pymol/complexity.py` and hit
+    # enter. Then type `complexity` in the pymol terminal. This function will
+    # extract and recolour transmembrane helices according to the complexity
+    # score of the helix.
+
+    write_input_fasta_file = open("inputseq.fasta", "w")
+    write_segment_positions_file = open("TMsegments.txt", "w")
+
+    cmd.show('cartoon', "all")
+    cmd.color('gray', "all")
 
     # writing the fasta sequence to the input
     sequence = cmd.get_fastastr('all')
-    #I need to get this to read actual ID
-    pdb_id = "1MT5_B"
-    write_input_fasta_file.writelines([str(">" + pdb_id), sequence])
+    write_input_fasta_file.writelines([sequence])
 
     # Do sequence predition. For now, let's use the predefined ones for 1MT5,
     # which is probably a SP and a TMH.
@@ -23,12 +30,12 @@ def complexity(selection='all'):
     for a_tmh in tmh_list:
         start=int(a_tmh[0])
         stop=int(a_tmh[1])
+        print("Checking tmh at positions %s-%s"%(start,stop))
         output_locations = str(str(start) + " , " + str(stop))
-        print(output_locations)
         write_segment_positions_file.writelines([output_locations])
 
         # run tmsoc
-        complexity = "NONE"
+        tmh_complexity = "NONE"
         commandString = 'bash perl.sh'
         os.system(commandString)
 
@@ -46,31 +53,22 @@ def complexity(selection='all'):
             elif ";twilight" in line:
                 complexity = "Twilight"
             else:
-                #print(line)
+                print(line)
                 pass
 
 
-        cmd.select("1MT5_B", "resi a_tmh[0]-a_tmh[1]")
-        cmd.show('sphere', "1MT5_B")
-        if complexity=="Complex":
-            cmd.color('red', "resi a_tmh[0]-a_tmh[1]")
-        elif complexity=="Simple":
-            cmd.color('blue', "resi a_tmh[0]-a_tmh[1]")
-        elif complexity=="Twilight":
-            cmd.color('purple', "resi a_tmh[0]-a_tmh[1]")
-        elif complexity=="NONE":
+        cmd.select("1MT5_B", "resi %s-%s"%(start,stop))
+        cmd.show('cartoon', "1MT5_B")
+        if tmh_complexity=="Complex":
+            cmd.color('red', "resi %s-%s"%(start,stop))
+        elif tmh_complexity=="Simple":
+            cmd.color('blue', "resi %s-%s"%(start,stop))
+        elif tmh_complexity=="Twilight":
+            cmd.color('purple', "resi %s-%s"%(start,stop))
+        elif tmh_complexity=="NONE":
             print("Complexity calculation failed.")
+        print("%s-%s complexity="%(start,stop), tmh_complexity)
 
 
-    # DESCRIPTION
-    # In pymol type `run Path/To/complexity_in_pymol/complexity.py` and hit
-    # enter. Then type `complexity` in the pymol terminal. This function will
-    # extract and recolour transmembrane helices according to the complexity
-    # score of the helix.
-
-    #
-    # Your code goes here
-    #
-    return (sequence)
 
 cmd.extend("complexity", complexity)
