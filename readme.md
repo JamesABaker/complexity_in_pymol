@@ -6,6 +6,8 @@ In pymol type `run Path/To/complexity_in_pymol/complexity.py` and hit enter. The
 #To do
 [ ] TM prediction integration.
 
-[x] TMSOC integration.
+[ ] Manual TMH location definitions.
+
+[ ] TMSOC integration.
 
 [![Code Issues](https://www.quantifiedcode.com/api/v1/project/8a4ca942e31146de8448bb69a75c384f/badge.svg)](https://www.quantifiedcode.com/app/project/8a4ca942e31146de8448bb69a75c384f)

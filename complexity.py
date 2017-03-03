@@ -33,7 +33,7 @@ def complexity(selection='all'):
     for a_tmh in tmh_list:
         start = int(a_tmh[0])
         stop = int(a_tmh[1])
-        print(("Checking tmh at positions %s-%s" % (start, stop)))
+        print("Checking tmh at positions %s-%s" % (start, stop))
         output_locations = str(str(start) + "," + str(stop))
         print("Writing TMsegments.txt\n")
         write_segment_positions_file.writelines([output_locations])
@@ -65,7 +65,7 @@ def complexity(selection='all'):
 
             print("Running TMSOC.pl\n")
             results = check_output(
-                ["perl TMSOC.pl %s/sequence.fasta %s/TMsegments.txt" % (pwd, pwd)], shell=True)
+                ["perl ./TMSOC.pl ./sequence.fasta ./TMsegments.txt"], shell=True)
 
             print("Result:")
             for line in results.split('\n'):
@@ -79,10 +79,7 @@ def complexity(selection='all'):
                 else:
                     pass
 
-            # Remove the output to stop it intefering with other iterations.
-            #subprocess.call("rm sequence.fasta", shell=True)
-            #subprocess.call("rm TMsegments.txt", shell=True)
-            #subprocess.call("rm TMSOCoutput.txt", shell=True)
+
 
             if tmh_complexity == "Complex":
                 cmd.color('red', "resi %s-%s" % (start, stop))
@@ -97,6 +94,13 @@ def complexity(selection='all'):
                 print("Catastrophic failure. A variable behaved in a completely unexpected way.")
 
             print("%s-%s complexity=" % (start, stop), tmh_complexity,"\n")
+
+            # Remove the output to stop it intefering with other iterations.
+            #print("Cleaning input and output files.")
+            #subprocess.call("rm sequence.fasta", shell=True)
+            #subprocess.call("rm TMsegments.txt", shell=True)
+            #subprocess.call("rm TMSOCoutput.txt", shell=True)
+
         print("Red is complex, blue is simple, and purple is twighlight. Orange indicates an error reported by TMSOC.")
 
 cmd.extend("complexity", complexity)
