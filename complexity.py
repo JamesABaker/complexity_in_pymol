@@ -1,20 +1,25 @@
+from __future__ import absolute_import
 import sys
 import subprocess
 from subprocess import call
 from subprocess import check_output
 from pymol import cmd, stored
+from io import open
 
 
-def complexity(selection='all'):
+def complexity(selection=u'all'):
     '''
-    In pymol type `run Path/To/complexity_in_pymol/complexity.py` and hit enter. Then type `complexity` in the pymol terminal. This function will extract and recolour transmembrane helices according to the complexity score of the helix.
+    In pymol type `run Path/To/complexity_in_pymol/complexity.py` and hit enter. Then type `complexity` in the pymol terminal.
+    This function will extract and recolour transmembrane helices according to the complexity score of the helix.
     '''
+    print sys.version
     # might be useful for dynamic file locaitons
-    pwd = check_output("PWD", shell=True)
-    pwd = str(pwd.rstrip())
+    #pwd = check_output("pwd", shell=True)
+    #pwd = str(pwd.rstrip()).encode('utf-8')
+    #print("File locations:", pwd)
 
-    write_input_fasta_file = open("sequence.fasta", "w")
-    write_segment_positions_file = open("TMsegments.txt", "w")
+    write_input_fasta_file = open("sequence.fasta", "w", encoding="utf-8")
+    write_segment_positions_file = open("TMsegments.txt", "w", encoding="utf-8")
 
     cmd.hide("all")
     cmd.show('cartoon', "all")
@@ -22,9 +27,9 @@ def complexity(selection='all'):
 
     # writing the fasta sequence to the input
     sequence = cmd.get_fastastr('all')
-    print(sequence)
-    print("Writing sequence.fasta\n")
-    write_input_fasta_file.writelines([sequence])
+
+    print "Writing sequence.fasta\n"
+    write_input_fasta_file.write(sequence)
 
     # Do sequence predition. For now, let's use the predefined ones for 1MT5,
     tmh_list = [[5, 25]]
@@ -33,10 +38,10 @@ def complexity(selection='all'):
     for a_tmh in tmh_list:
         start = int(a_tmh[0])
         stop = int(a_tmh[1])
-        print("Checking tmh at positions %s-%s" % (start, stop))
-        output_locations = str(str(start) + "," + str(stop))
-        print("Writing TMsegments.txt\n")
-        write_segment_positions_file.writelines([output_locations])
+        print ("Checking tmh at positions %s-%s" % (start, stop))
+        output_locations = str(start) + "," + str(stop)
+        print "Writing TMsegments.txt\n"
+        write_segment_positions_file.write(unicode([output_locations]))
 
         # Checks input files are in place.
         file_list = check_output("ls", shell=True)
@@ -49,12 +54,12 @@ def complexity(selection='all'):
                 segment_file = True
 
         if fasta_file == False or segment_file == False:
-            print('Input files for TMSOC are not present, but, they should be.')
+            print 'Input files for TMSOC are not present, but, they should be.'
 
         elif fasta_file == True and segment_file == True:
-            print('Input files for TMSOC found.')
+            print 'Input files for TMSOC found.'
 
-            print("Selecting TM region.\n")
+            print u"Selecting TM region.\n"
             cmd.select("new_selection", "resi %s-%s" % (start, stop))
 
             # Let's set the TMH complexity to a null value incase of an error.
@@ -63,23 +68,22 @@ def complexity(selection='all'):
             # run tmsoc
             #'perl TMSOC.pl sequence.fasta TMsegments.txt '
 
-            print("Running TMSOC.pl\n")
+            command="perl TMSOC.pl sequence.fasta TMsegments.txt"
+            print "Running", command
             results = check_output(
-                ["perl ./TMSOC.pl ./sequence.fasta ./TMsegments.txt"], shell=True)
+                [command] , shell=True)
 
-            print("Result:")
+            print "Result:"
             for line in results.split('\n'):
-                print(line)
+                print line
                 if ";simple" in line:
-                    tmh_complexity = "Simple"
+                    tmh_complexity = u"Simple"
                 elif ";complex" in line:
-                    tmh_complexity = "Complex"
+                    tmh_complexity = u"Complex"
                 elif ";twilight" in line:
-                    tmh_complexity = "Twilight"
+                    tmh_complexity = u"Twilight"
                 else:
                     pass
-
-
 
             if tmh_complexity == "Complex":
                 cmd.color('red', "resi %s-%s" % (start, stop))
@@ -89,11 +93,11 @@ def complexity(selection='all'):
                 cmd.color('purple', "resi %s-%s" % (start, stop))
             elif tmh_complexity == "NONE":
                 cmd.color('orange', "resi %s-%s" % (start, stop))
-                print("Complexity calculation failed.\n")
+                print "Complexity calculation failed.\n"
             else:
-                print("Catastrophic failure. A variable behaved in a completely unexpected way.")
+                print "Catastrophic failure. The complexity variable behaved in a completely unexpected way."
 
-            print("%s-%s complexity=" % (start, stop), tmh_complexity,"\n")
+            print "%s-%s complexity=" % (start, stop), tmh_complexity, "\n"
 
             # Remove the output to stop it intefering with other iterations.
             #print("Cleaning input and output files.")
@@ -101,6 +105,6 @@ def complexity(selection='all'):
             #subprocess.call("rm TMsegments.txt", shell=True)
             #subprocess.call("rm TMSOCoutput.txt", shell=True)
 
-        print("Red is complex, blue is simple, and purple is twighlight. Orange indicates an error reported by TMSOC.")
+        print "Red is complex, blue is simple, and purple is twighlight. Orange indicates an error reported by TMSOC."
 
 cmd.extend("complexity", complexity)
