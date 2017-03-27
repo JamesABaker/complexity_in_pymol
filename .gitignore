@@ -1,5 +1,12 @@
-*.pdb
 
+#Generic files
+*.pdb
+*.fasta
+
+#Copyright issues
+tmhmm-2.0c/
+
+#TMSOC useful files
 TMsegments.txt
 TMSOCoutput.txt
 sequence.fasta
