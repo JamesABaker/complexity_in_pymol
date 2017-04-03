@@ -4,7 +4,11 @@
 *.fasta
 
 #Copyright issues
-tmhmm-2.0c/
+decodeanhmm
+phobius.model
+phobius.options
+phobius.pl
+tmh_list.txt
 
 #TMSOC useful files
 TMsegments.txt

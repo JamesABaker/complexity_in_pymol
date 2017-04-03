@@ -11,15 +11,13 @@ from subprocess import check_output
 
 p = PDBParser(PERMISSIVE=1)
 
+with open("tmh_list.txt") as f:
+    content = f.readlines()
+# you may also want to remove whitespace characters like `\n` at the end of each line
+content = [x.strip() for x in content]
 
-if len(sys.argv) != 2:
-    print("------------------------------------------")
-    print("Usage : python3 ./complexity.py <YOUR PDB>")
-    print("------------------------------------------")
-    sys.exit()
-else:
-    pdb_id_filename = sys.argv[1]
-    pdb_id = os.path.splitext(pdb_id_filename)[0]
+for pdb_id in content:
+    pdb_id_filename = pdb_id.split('_')[0]+".pdb"
 
     # Check if a local file already exists.
     print("Checking local files for %s" % pdb_id_filename)
@@ -49,14 +47,14 @@ else:
 
             ### Writing TMsegments.txt ###
 
-            # Tries running the TMHMM program. If it is found the coordinates
+            # Tries running the phobius program. If it is found the coordinates
             # will automatically be entered. If the program fails, the user
             # manually enters the TMH boundaries and these are passed to TMSOC.
-            tmh_results = subprocess.getoutput(["tmhmm", pdb_fasta_filename])
+            tmh_results = subprocess.getoutput(["perl phobius.pl %s" % pdb_fasta_filename])
 
-            if "tmhmm: not found" in tmh_results:
+            if "TRANSMEM" not in tmh_results:
                 print(
-                    "\nTMHMM not installed properly. You must enter the TMH boundaries manually.\n")
+                    "\nPhobius could not identify any transmembrane regions.\n")
                 user_tmh_boundaries = input(
                     "Please enter the start and stop locations of the TMH.\nSeparate start and stop by a comma, and a new TMH by a space.\nExample: 2,22 48,68 1023,1046\n")
                 # tmh_boundaries_for_file_export=user_tmh_boundaries.rsplit(sep="
@@ -66,11 +64,15 @@ else:
             else:
                 print(tmh_results)
 
+                for line in tmh_results.splitlines():
+                        if "TRANSMEM" in line:
+                            print("TRANSMEM")
+
+
             ### Writing FASTA for the 1 chain only ###
 
             with open('sequence.fasta', 'w') as f:
-                write_fasta = f.write(
-                    "> " + record.id + ":\n" + str(record.seq))
+                write_fasta = f.write(">" + record.id + ":\n" + str(record.seq))
 
             # Let's set the TMH complexity to a null value incase of an
             # error.
@@ -81,7 +83,7 @@ else:
 
             command = "perl TMSOC.pl sequence.fasta TMsegments.txt"
             # print "Running", command
-            print("Running TMSOC..."
+            print("Running TMSOC...")
             results=str(check_output([command], shell=True))
 
             print("\nTMSOC results:\n" + results)
