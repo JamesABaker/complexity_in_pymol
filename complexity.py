@@ -23,8 +23,9 @@ for pdb_id in content:
     # Check if a local file already exists.
     print("Checking local files for %s" % pdb_id_filename)
     try:
-        with open(pdb_id_filename, 'r') as file:
+        with open("original_pdbs/%s" % pdb_id_filename, 'r') as file:
             print("Local file, %s, found." % pdb_id_filename)
+            #os.rename("original_pdb/%s" % pdb_id_filename, pdb_id_filename)
             pass
 
     # Exceptions MUST NOT be left naked.
@@ -55,55 +56,54 @@ for pdb_id in content:
 
             ### Writing TMsegments.txt ###
 
-            # Tries running the phobius program. If it is found the coordinates
-            # will automatically be entered. If the program fails, the user
-            # manually enters the TMH boundaries and these are passed to TMSOC.
-            tmh_results = subprocess.getoutput(
-                ["perl phobius.pl sequence.fasta"])
+            ### Attempts to find the ID in the PDBTM XML file
 
-            if "No such file or directory" in tmh_results:
-                print(tmh_results)
-                print("\nPhobius not installed properly.\n")
-                user_tmh_boundaries = input(
-                    "Please enter the start and stop locations of the TMH.\nSeparate start and stop by a comma, and a new TMH by a space.\nExample: 2,22 48,68 1023,1046\n")
-                with open('TMsegments.txt', 'w') as f:
-                    write_data = f.write(user_tmh_boundaries)
-            else:
-                # print(tmh_results)
 
-                protein_coordinates = []
-                for line in tmh_results.splitlines():
-                    if "TRANSMEM" in line:
-                        line_coordinates = []
-                        for item in line.split(" "):
-                            item.replace(" ", "")
-                            # Phobius output contains something like: TRANSMEM detected: FT   TRANSMEM     30     56
-                            # The two numbers can be extracted since they are
-                            # the only integers.
-                            try:
-                                line_coordinates.append(int(item))
-                            except(ValueError):
-                                pass
-                        # Now we check that there is only a start and a stop.
-                        if len(line_coordinates) == 2:
-                            protein_coordinates.append(line_coordinates)
-                        else:
-                            print(
-                                "ERROR in", pdb_id, ". The transmem line does not contain only start and stop coordinates.")
-                            print(line)
-                with open('TMsegments.txt', 'w') as f:
-                    for coordinates in protein_coordinates:
-                        for number, vector in enumerate(coordinates):
-                            write_data = f.write(str(vector))
-                            if number == 0:
-                                write_data = f.write(",")
-                        write_data = f.write(" ")
+                # Tries running the phobius program. If it is found the coordinates
+                # will automatically be entered. If the program fails, the user
+                # manually enters the TMH boundaries and these are passed to TMSOC.
+                tmh_results = subprocess.getoutput(
+                    ["perl phobius.pl sequence.fasta"])
 
-            ### Writing FASTA for the 1 chain only ###
+                if "No such file or directory" in tmh_results:
+                    print(tmh_results)
+                    print("\nPhobius not installed properly.\n")
+                    user_tmh_boundaries = input(
+                        "Please enter the start and stop locations of the TMH.\nSeparate start and stop by a comma, and a new TMH by a space.\nExample: 2,22 48,68 1023,1046\n")
+                    with open('TMsegments.txt', 'w') as f:
+                        write_data = f.write(user_tmh_boundaries)
+                else:
+                    # print(tmh_results)
 
-            with open('sequence.fasta', 'w') as f:
-                write_fasta = f.write(
-                    ">" + record.id + ":\n" + str(record.seq))
+                    protein_coordinates = []
+                    for line in tmh_results.splitlines():
+                        if "TRANSMEM" in line:
+                            line_coordinates = []
+                            for item in line.split(" "):
+                                item.replace(" ", "")
+                                # Phobius output contains something like: TRANSMEM detected: FT   TRANSMEM     30     56
+                                # The two numbers can be extracted since they are
+                                # the only integers.
+                                try:
+                                    line_coordinates.append(int(item))
+                                except(ValueError):
+                                    pass
+                            # Now we check that there is only a start and a stop.
+                            if len(line_coordinates) == 2:
+                                protein_coordinates.append(line_coordinates)
+                            else:
+                                print(
+                                    "ERROR in", pdb_id, ". The transmem line does not contain only start and stop coordinates.")
+                                print(line)
+                    with open('TMsegments.txt', 'w') as f:
+                        for coordinates in protein_coordinates:
+                            for number, vector in enumerate(coordinates):
+                                write_data = f.write(str(vector))
+                                if number == 0:
+                                    write_data = f.write(",")
+                            write_data = f.write(" ")
+
+
 
             # Let's set the TMH complexity to a null value incase of an
             # error.
@@ -117,17 +117,9 @@ for pdb_id in content:
             print("Running TMSOC...")
             results = str(check_output([command], shell=True))
 
-            print("\nTMSOC results:\n" + results)
+            print("\nTMSOC results:\n" + results + "\n")
 
-            print("\nTMH TMSOC outcome:\n")
-            # This will only work for single pass. needs to take into account
-            # multiple results else it will only report the last result.
-            if ";simple" in results:
-                tmh_complexity = "Simple"
-            elif ";complex" in results:
-                tmh_complexity = "Complex"
-            elif ";twilight" in results:
-                tmh_complexity = "Twilight"
-            else:
-                pass
-            print(tmh_complexity)
+            #Move files to download folders.
+
+            #os.rename(pdb_fasta_filename, "original_fasta/%s" % pdb_fasta_filename)
+            #os.rename(pdb_id_filename, "original_pdb/%s" % pdb_id_filename)
