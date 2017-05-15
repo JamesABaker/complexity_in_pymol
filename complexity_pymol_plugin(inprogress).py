@@ -19,7 +19,8 @@ def complexity(selection=u'all'):
     #print("File locations:", pwd)
 
     write_input_fasta_file = open("sequence.fasta", "w", encoding="utf-8")
-    write_segment_positions_file = open("TMsegments.txt", "w", encoding="utf-8")
+    write_segment_positions_file = open(
+        "TMsegments.txt", "w", encoding="utf-8")
 
     cmd.hide("all")
     cmd.show('cartoon', "all")
@@ -68,10 +69,10 @@ def complexity(selection=u'all'):
             # run tmsoc
             #'perl TMSOC.pl sequence.fasta TMsegments.txt '
 
-            command="perl TMSOC.pl sequence.fasta TMsegments.txt"
+            command = "perl TMSOC.pl sequence.fasta TMsegments.txt"
             print "Running", command
             results = check_output(
-                [command] , shell=True)
+                [command], shell=True)
 
             print "Result:"
             for line in results.split('\n'):

@@ -2,11 +2,14 @@
 
 This is a development project. The aim is to roll out [TMSOC](http://tmsoc.bii.a-star.edu.sg/) like function into 3D protein structures.
 
+The script takes a list of PDB IDs. It opens or downloads the PDB file. It then checks if the PDBTM database contains TMD boundary information. Phobius is also used as a backup. If phobius fails, and there is no PDBTM entry, then manual co-ordinates can be entered. After that, the TMHs are ran through TMSOC. The PDB file is copied and modified so that the B-factor column reflects the TMH complexity. All the information and logs are then added to a database.
+
 # To do
 
 - [x] TM prediction integration.
 - [x] Manual TMH location definitions.
 - [x] TMSOC integration.
+- [ ] PyMol compatible scipt.
 - [ ] PDBTM integration.
 - [ ] b-factor PDB generator indicating complexity.
 - [ ] Database builder.
