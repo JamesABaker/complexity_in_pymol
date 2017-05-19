@@ -78,7 +78,7 @@ def complexity(selection=u'all'):
             #results = check_output([command], shell=True)
 
             #subprocess.Popen(["perl", "TMSOC.pl", "sequence.fasta", "segments.txt"], stdout=PIPE, stderr=PIPE)
-            results = subprocess.Popen(["perl", "TMSOC.pl", "sequence.fasta", "segments.txt"], stdout=PIPE, stderr=PIPE)
+            results = subprocess.Popen(["perl", "TMSOC.pl", "sequence.fasta", "segments.txt"], shell=True, stdout=PIPE, stderr=PIPE)
             #results = print "Result:"
             print results.stdout.read()
             for line in str(results.stdout.read()).split('\n'):
