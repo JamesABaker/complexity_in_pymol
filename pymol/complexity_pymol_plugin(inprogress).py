@@ -8,6 +8,13 @@ from pymol import cmd, stored
 from io import open
 
 
+
+def tmsoc_run(a_tmh_sequence, list_of_coordinates):
+
+
+    return complexity_category
+
+
 def complexity(selection=u'all'):
     '''
     In pymol type `run Path/To/complexity_in_pymol/complexity.py` and hit enter. Then type `complexity` in the pymol terminal.
@@ -68,18 +75,20 @@ def complexity(selection=u'all'):
             # Let's set the TMH complexity to a null value incase of an error.
             tmh_complexity = "NONE"
 
-            location = subprocess.Popen(["pwd"])
-            print location.stdout.read()
+            # location = subprocess.Popen(["pwd"])
+            # print location.stdout.read()
+
             # run tmsoc
             #'perl TMSOC.pl sequence.fasta segments.txt '
 
             #command = "perl TMSOC.pl sequence.fasta segments.txt"
-            #print "Running", command
+            # print "Running", command
             #results = check_output([command], shell=True)
 
             #subprocess.Popen(["perl", "TMSOC.pl", "sequence.fasta", "segments.txt"], stdout=PIPE, stderr=PIPE)
-            results = subprocess.Popen(["perl", "TMSOC.pl", "sequence.fasta", "segments.txt"], shell=True, stdout=PIPE, stderr=PIPE)
-            #results = print "Result:"
+            results = subprocess.Popen(
+                ["perl", "TMSOC.pl", "sequence.fasta", "segments.txt"], shell=True, stdout=PIPE, stderr=PIPE)
+            # results = print "Result:"
             print results.stdout.read()
             for line in str(results.stdout.read()).split('\n'):
                 print line
