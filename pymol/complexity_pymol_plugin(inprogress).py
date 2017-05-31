@@ -38,6 +38,12 @@ def complexity(selection='all'):
     tmh_results_out, err = tmh_results.communicate()
     print(tmh_results_out)
 
+    if len(tmh_results_out)<1:
+        print("Phobius returned no results.\n")
+        tmh_list=input("Enter the position of the TMH you wish to colour. (i.e '5 25' without the apostrophes)")
+    else:
+        pass
+
 
     # Do sequence predition. Output should be simple start and stop sequences
     # in a list of lists.

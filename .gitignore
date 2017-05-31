@@ -14,3 +14,10 @@ tmh_list.txt
 TMsegments.txt
 TMSOCoutput.txt
 sequence.fasta
+
+#Log files
+TMsegments.txt
+sequence.fasta
+temp.fasta
+tmsoc_output.txt
+phobius_output.txt
