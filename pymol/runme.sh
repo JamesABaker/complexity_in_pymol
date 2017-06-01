@@ -9,7 +9,14 @@ rm tmsoc_output.txt
 rm phobius_output.txt
 rm bfactors.txt
 
-# Scripts in order. If you only have python installed, python3 can be renamed as python.
+# Regenerating empty log files. Some python setups need a file to exist in order to write to it.
+touch TMsegments.txt
+touch sequence.fasta
+touch tmsoc_output.txt
+touch phobius_output.txt
+touch bfactors.txt
+
+# Scripts that process the inputs and outputs in order. If you only have python installed, python3 can be renamed as python.
 python3 pdb2phobius.py "$pdb_id"
 sleep 0.5 #The pdb2phobius script takes a split second to run on some files, but for some reason, wait doesn't actually allow it to finish.
 python3 phobius2tmsoc.py

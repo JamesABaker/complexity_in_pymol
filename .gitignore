@@ -1,6 +1,7 @@
 #Generic files
 *.pdb
 *.fasta
+*.txt
 
 #Copyright issues
 decodeanhmm

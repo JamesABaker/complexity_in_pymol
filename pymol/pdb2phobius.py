@@ -2,7 +2,6 @@ import sys
 from Bio import PDB
 from Bio.PDB.PDBParser import PDBParser
 from Bio import SeqIO
-import wget
 import os
 import subprocess
 from subprocess import check_output
