@@ -4,11 +4,12 @@
 *.txt
 
 #Copyright issues
-decodeanhmm
-phobius.model
-phobius.options
-phobius.pl
-tmh_list.txt
+pymol/decodeanhmm
+pymol/phobius.model
+pymol/phobius.options
+pymol/phobius.pl
+database/tmh_list.txt
+pymol/README
 
 #TMSOC useful files
 TMsegments.txt
