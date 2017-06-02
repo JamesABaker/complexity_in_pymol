@@ -2,14 +2,21 @@
 *.pdb
 *.fasta
 *.txt
+*.png
+*.xcf
 
 #Copyright issues
 pymol/decodeanhmm
 pymol/phobius.model
 pymol/phobius.options
 pymol/phobius.pl
-database/tmh_list.txt
 pymol/README
+database/decodeanhmm
+database/phobius.model
+database/phobius.options
+database/phobius.pl
+database/tmh_list.txt
+database/README
 
 #TMSOC useful files
 TMsegments.txt

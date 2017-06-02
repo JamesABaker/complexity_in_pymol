@@ -29,7 +29,7 @@ The script uses Phobius to estimate TMH boundaries. TMSOC is then used to assess
 - twilight TMH = green
 - simple TMH = orange
 
-If a region is in grey, Phobius identified a TMH, however, TMSOC experienced an error.
+If a region is in red, Phobius identified a TMH, however, TMSOC experienced an error.
 
 ### Installation
 
@@ -37,11 +37,10 @@ This software requires linux, python3, biopython, and Pymol.
 
 ### Running the script
 #### Overview
-Move the pdb file into the complexity_in_pymol/pymol/ directory and then run `bash runme.sh` in a terminal from the complexity_in_pymol/pymol/ folder. In Pymol, navigate to the complexity_in_pymol/pymol/ and after loading the structure enter `run bfactors.py` and then `loadBfacts`.
+Move the pdb file into the complexity_in_pymol/pymol/ directory and then run `bash runme.sh` in a terminal from the complexity_in_pymol/pymol/ folder. In Pymol, navigate to the complexity_in_pymol/pymol/ and after loading the structure enter `run bfactors.py` and then `complexb YOURSTRUCTURENAME`.
 
 #### Step by step instructions
- 1. Move the pdb file you wish to work on into the pymol directory. For example in a terminal:
-`mv Downloads/1a91.pdb Downloads/complexity_in_pymol/pymol/1a91.pdb`
+ 1. Move the pdb file you wish to work on into the pymol directory. For exampl"maximum=4"ds/complexity_in_pymol/pymol/1a91.pdb`
  2. In a terminal, navigate to the pymol folder. For example:
  `cd Downloads/complexity_in_pymol/pymol`
  3. In a terminal, run the `runme.sh`. This runs a series of commands in order and manages and logs the various input and output files. For example:
@@ -53,7 +52,7 @@ Move the pdb file into the complexity_in_pymol/pymol/ directory and then run `ba
  7. In Pymol load the structure. For example:
  `load 1a91.pdb`
  8. In Pymol, load the bfactors script. Use `run bfactors.py`
- 9. In Pymol run the bfactor function. Use `loadBfacts`
+ 9. In Pymol run the bfactor function on your desired molecule. For example `complexb 1a91`
 
 
 ## Database
