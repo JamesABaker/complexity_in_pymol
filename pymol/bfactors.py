@@ -1,5 +1,5 @@
 from pymol import cmd, stored, math
-
+import sys
 
 def complexb(mol, startaa=1, source="bfactors.txt", visual="Y"):
     """
