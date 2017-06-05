@@ -16,10 +16,10 @@ def complexb(mol, startaa=1, source="bfactors.txt", visual="Y"):
     """
     obj = cmd.get_object_list(mol)[0]
     cmd.alter(mol, "b=-1.0")
-    inFile = open(source, 'r')
+    infile = open(source, 'r')
     counter = int(startaa)
     bfacts = []
-    for line in inFile.readlines():
+    for line in infile.readlines():
         bfact = float(line)
         bfacts.append(bfact)
         cmd.alter("%s and resi %s and n. CA" % (mol, counter), "b=%s" % bfact)
