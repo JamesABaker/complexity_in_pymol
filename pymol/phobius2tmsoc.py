@@ -6,7 +6,7 @@ with open("phobius_output.txt", 'r') as phobius_output:
     content = phobius_output.readlines()
     for line in content:
 
-        content_for_id_written=False
+        content_for_id_written = False
         # This needs tidying up.
         line = line.replace('  ', ' ')
         line = line.replace('  ', ' ')
@@ -32,7 +32,7 @@ with open("phobius_output.txt", 'r') as phobius_output:
                 # not be an issue.
                 with open("TMsegments.txt", 'a') as sequence_output:
                     sequence_output.write(output_locations + " ")
-                content_for_id_written=True
+                content_for_id_written = True
             else:
                 pass
 
@@ -44,7 +44,6 @@ with open("phobius_output.txt", 'r') as phobius_output:
 
         elif "//" in row_type:
 
-
             if content_for_id_written is False:
                 # This is a work around. TMSOC cannot interpret NONE type
                 # input, so a placeholder is needed.
@@ -55,7 +54,6 @@ with open("phobius_output.txt", 'r') as phobius_output:
 
             with open("TMsegments.txt", 'a') as sequence_output:
                 sequence_output.write("\n")
-
 
         else:
             pass

@@ -8,7 +8,6 @@ rm TMsegments.txt
 rm sequence.fasta
 rm tmsoc_output.txt
 rm phobius_output.txt
-rm bfactors.txt
 
 # Regenerating empty log files. Some python setups need a file to exist in order to write to it.
 echo 'Creating new log files.'
@@ -16,7 +15,7 @@ touch TMsegments.txt
 touch sequence.fasta
 touch tmsoc_output.txt
 touch phobius_output.txt
-touch bfactors.txt
+
 
 # Scripts that process the inputs and outputs in order. If you only have python installed, python3 can be renamed as python.
 echo 'Parsing' pdb_id 'to Phobius.'
