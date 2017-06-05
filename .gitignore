@@ -3,6 +3,7 @@
 *.fasta
 *.txt
 *.png
+!demo.png
 *.xcf
 
 #Copyright issues
