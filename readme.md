@@ -2,10 +2,10 @@
 
 [![Code Issues](https://www.quantifiedcode.com/api/v1/project/8a4ca942e31146de8448bb69a75c384f/badge.svg)](https://www.quantifiedcode.com/app/project/8a4ca942e31146de8448bb69a75c384f)
 
-
 - [ ] Consensus TMH definition.
   - [ ] PDBTM integration.
   - [ ] TMHMM integration.
+  - [ ] SignalP filter
   - [x] Phobius integration.
 - [x] TMSOC integration.
 - [x] PyMol compatible scipt.
