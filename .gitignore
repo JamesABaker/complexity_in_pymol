@@ -1,5 +1,7 @@
 #Generic files
 *.pdb
+*.cif
+*.pse
 *.fasta
 *.txt
 *.png

@@ -26,4 +26,4 @@ python3 phobius2tmsoc.py
 echo 'Running TMSOC.'
 perl TMSOC.pl sequence.fasta TMsegments.txt > tmsoc_output.txt
 echo 'Transforming TMSOC output to bfactor list.'
-python3 tmsoc2bfactorlist.py "$pdb_id"
+python3 tmsoc2bfactorlist.py
