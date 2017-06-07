@@ -12,23 +12,11 @@ The script uses Phobius to estimate TMH boundaries. TMSOC is then used to assess
 - Simple TMH = orange
 - Signal peptide = red
 
-![alt text](demo.png "Logo Title Text 1")
+![alt text](images/demo.png "A crystal structure coloured by the software.")
 
 # Installation
 
-This software requires Linux, python3, biopython, Phobius, and Pymol.
-
-## Phobius
-
-For copyright reasons, the Phobius package cannot be distributed alongside this software. To install Phobius, follow [this link](http://software.sbc.su.se/cgi-bin/request.cgi?project=phobius) and enter your details. The package will be emailed to you at an academic email address. Extract the files and copy them into the `complexity_in_pymol/pymol/` folder so it looks that the Pymol folder now has these additional files:
-
-```
-pymol/decodeanhmm
-pymol/phobius.model
-pymol/phobius.options
-pymol/phobius.pl
-pymol/README
-```
+This software requires Linux, python3, biopython, TMSOC (included), Phobius (included), and Pymol.
 
 # Running the script
 
@@ -64,4 +52,25 @@ Move the pdb file into the `complexity_in_pymol/pymol/` directory and then run `
 - [x] PyMol compatible scipt.
 - [x] b-factor PDB generator indicating complexity.
 
-These scripts are in development and are provided as is. Use at your own risk.
+---
+
+# Copyright
+
+**These scripts are in development and are provided as is. Use at your own risk.**
+
+Complexity In Pymol  Copyright (C) 2017 James Alexander Baker
+
+This program comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to redistribute it under certain conditions.
+
+---
+
+An unmodified copy of Phobius (provided on 3rd April 2017) is included along with these scripts.
+Phobius was licensed for private study, education or non-profit research only,
+granted to James Baker, who agreed to these conditions on http://software.sbc.su.se/cgi-bin/request.cgi?project=phobius
+
+To cite Phobius:
+
+Lukas Käll, Anders Krogh and Erik L. L. Sonnhammer.
+A Combined Transmembrane Topology and Signal Peptide Prediction Method.
+Journal of Molecular Biology, 338(5):1027-1036, May 2004.

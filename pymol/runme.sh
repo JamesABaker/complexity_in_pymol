@@ -1,3 +1,8 @@
+echo "Complexity For Pymol  Copyright (C) 2017 James Alexander Baker"
+echo "This program comes with ABSOLUTELY NO WARRANTY."
+echo "This is free software, and you are welcome to redistribute it"
+echo "under certain conditions."
+
 echo -n 'What is the file name of the PDB? Example answer: 1a91.pdb'
 echo
 read pdb_id

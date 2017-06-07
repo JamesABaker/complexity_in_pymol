@@ -1,27 +1,27 @@
-#Generic files
+# Generic files
 *.pdb
 *.cif
 *.pse
 *.fasta
 *.txt
 *.png
-!demo.png
 *.xcf
+*.html
 
-#Copyright issues
-pymol/decodeanhmm
-pymol/phobius.model
-pymol/phobius.options
-pymol/phobius.pl
-pymol/README
-database/decodeanhmm
-database/phobius.model
-database/phobius.options
-database/phobius.pl
-database/tmh_list.txt
-database/README
+#Some PNG files are used in the readme
+!demo.png
 
-#TMSOC useful files
+# Copyright issues.
+
+## Phobius is under GNU license.
+#pymol/decodeanhmm
+#pymol/phobius.model
+#pymol/phobius.options
+#pymol/phobius.pl
+#pymol/README
+pymol/save_colored_fasta.py
+
+# TMSOC useful files
 TMsegments.txt
 TMSOCoutput.txt
 sequence.fasta
