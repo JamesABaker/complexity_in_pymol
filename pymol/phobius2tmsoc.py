@@ -1,3 +1,19 @@
+#    This file is part of 3D TMH Complexity.
+#
+#    3D TMH Complexity is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    3D TMH Complexity is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with 3D TMH Complexity.  If not, see <http://www.gnu.org/licenses/>.
+
+
 import sys
 from io import open
 
@@ -23,6 +39,19 @@ with open("phobius_output.txt", 'r') as phobius_output:
             if structure == "TRANSMEM":
                 # Writes the segment location file
                 print("Checking tmh at positions %s-%s..." %
+                      (start_position, end_position))
+                output_locations = str(start_position) + \
+                    "," + str(end_position)
+                print("Writing segments.txt file...")
+
+                # The shell script removes this file between runs, so append should
+                # not be an issue.
+                with open("TMsegments.txt", 'a') as sequence_output:
+                    sequence_output.write(output_locations + " ")
+                content_for_id_written = True
+            elif structure == "SIGNAL":
+                # Writes the segment location file
+                print("Checking tmh of signal sequence at positions %s-%s..." %
                       (start_position, end_position))
                 output_locations = str(start_position) + \
                     "," + str(end_position)
