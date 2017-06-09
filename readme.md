@@ -15,6 +15,8 @@ The script uses Phobius to estimate TMH boundaries. TMSOC is then used to assess
 - Signal peptide = red
 
 ![alt text](images/demo.png "A crystal structure coloured by the software.")
+
+
 _Figure._ Cartoon of a structure coloured according to Simple, Twilight, and Complex TMHs.
 
 ## Installation
