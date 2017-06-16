@@ -29,9 +29,53 @@ print("Opening %s..." % pdb_fasta_filename)
 # with open("sequence.fasta", "w") as output_handle:
 #    sequences = SeqIO.parse(input_handle, "pdb-seqres")
 #    count = SeqIO.write(sequences, output_handle, "fasta")
-count = SeqIO.convert(pdb_fasta_filename, "pdb-seqres",
-                      "sequence.fasta", "fasta")
-print("Converted %i records" % count)
+
+
+one_letter = {'VAL': 'V', 'ILE': 'I', 'LEU': 'L', 'GLU': 'E', 'GLN': 'Q',
+              'ASP': 'D', 'ASN': 'N', 'HIS': 'H', 'TRP': 'W', 'PHE': 'F', 'TYR': 'Y',
+              'ARG': 'R', 'LYS': 'K', 'SER': 'S', 'THR': 'T', 'MET': 'M', 'ALA': 'A',
+              'GLY': 'G', 'PRO': 'P', 'CYS': 'C'}
+
+parser = PDBParser()
+structure = parser.get_structure('pdb_structure', pdb_fasta_filename)
+for model in structure:
+    for chain in model:
+        print(chain.id, "\n")
+        sequence = []
+        residue_numbers=[]
+        new_chain = True
+        discontinuation_events = []
+        for residue in chain:
+            if residue.get_resname() in one_letter:
+                print(one_letter[residue.get_resname()], residue.id[1])
+                sequence.append(one_letter[residue.get_resname()])
+                residue_numbers.append(residue.id[1])
+                if new_chain == True:
+                    continuous_sequence_number = residue.id[1]
+                new_chain = False
+                if residue.id[1] == continuous_sequence_number:
+                    continuous_sequence_number = continuous_sequence_number + 1
+                else:
+                    discontinuation_events.append[residue.id[1]]
+                    continuous_sequence_number = residue.id[1] + 1
+                    print("Discontinuation detected. Skips and missing regions are usually because because parts of the structure could not be confidently resolved.")
+                if residue.id[1] < 0:
+                    print(
+                        "Position below 0 detected. This could be the result of imperfect tag cleavage.")
+            else:
+                print("Skipping", residue.get_resname(),
+                      "at position", residue.id[1])
+        with open("sequence.fasta", "a") as fasta_file:
+            header=">"+";"+pdb_fasta_filename.split('.')[0]+";"+chain.id+";"+str(min(residue_numbers))+";"+str(max(residue_numbers))+";"+str(discontinuation_events)
+            fasta_file.write(header)
+            fasta_file.write("\n")
+            fasta_file.write("".join(sequence))
+            fasta_file.write("\n")
+
+
+#count = SeqIO.convert(pdb_fasta_filename, "pdb-seqres",
+#                      "sequence.fasta", "fasta")
+#print("Converted %i records" % count)
 
 ### Writing TMsegments.txt ###
 
