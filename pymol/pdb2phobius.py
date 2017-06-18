@@ -66,7 +66,7 @@ for model in structure:
                 print("Skipping", residue.get_resname(),
                       "at position", residue.id[1])
         with open("sequence.fasta", "a") as fasta_file:
-            header=">"+";"+pdb_fasta_filename.split('.')[0]+";"+chain.id+";"+str(min(residue_numbers))+";"+str(max(residue_numbers))+";"+str(discontinuation_events)
+            header=">"+";"+pdb_fasta_filename.split('.')[0]+";"+chain.id+";"+str(min(residue_numbers))+";"+str(max(residue_numbers))+";"+str(discontinuation_events)+";"
             fasta_file.write(header)
             fasta_file.write("\n")
             fasta_file.write("".join(sequence))
