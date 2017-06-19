@@ -32,6 +32,7 @@ with open("phobius_output.txt", 'r') as phobius_output:
         line = line.split(' ')
         # print(line)
         row_type = line[0]
+
         if row_type == "FT":
             structure = line[1]
             start_position = line[2]
