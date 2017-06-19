@@ -17,7 +17,7 @@
 from pymol import cmd, stored, math
 import sys
 
-def complexb(mol, startaa=1, source="bfactors.txt", visual="Y"):
+def complexb(mol, startaa=0, visual="Y"):
     """
     Replaces B-factors with a list of values contained in a plain txt file
 
@@ -30,22 +30,24 @@ def complexb(mol, startaa=1, source="bfactors.txt", visual="Y"):
 
     example: complexb 1LVM and chain A
     """
-    obj = cmd.get_object_list(mol)[0]
-    cmd.alter(mol, "b=-1.0")
-    infile = open(source, 'r')
-    counter = int(startaa)
-    bfacts = []
-    for line in infile.readlines():
-        bfact = float(line)
-        bfacts.append(bfact)
-        cmd.alter("%s and resi %s and n. CA" % (mol, counter), "b=%s" % bfact)
-        counter = counter + 1
-    if visual == "Y":
-        cmd.show_as("cartoon", mol)
-        cmd.cartoon("putty", mol)
-        cmd.spectrum("b", "rainbow", "%s and n. CA " % mol,0,4)
-        cmd.ramp_new("count", obj, [0, 4], "rainbow")
-        cmd.recolor()
+    for subchains in cmd.get_chains(mol):
+        source="bfactors_%s_%s.txt" % (mol, subchains)
+        obj = cmd.get_object_list(mol)[0]
+        cmd.alter(mol, "b=-1.0")
+        infile = open(source, 'r')
+        counter = int(startaa)
+        bfacts = []
+        for line in infile.readlines():
+            bfact = float(line)
+            bfacts.append(bfact)
+            cmd.alter("%s and resi %s and n. CA" % (mol, counter), "b=%s" % bfact)
+            counter = counter + 1
+        if visual == "Y":
+            cmd.show_as("cartoon", mol)
+            cmd.cartoon("putty", mol)
+            cmd.spectrum("b", "rainbow", "%s and n. CA " % mol,0,4)
+            cmd.ramp_new("count", obj, [0, 4], "rainbow")
+            cmd.recolor()
 
 # This is needed to load the script in pymol
 cmd.extend("complexb", complexb)
