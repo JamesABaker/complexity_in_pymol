@@ -17,7 +17,7 @@
 from pymol import cmd, stored, math
 import sys
 
-def complexb(mol, startaa=0, visual="Y"):
+def complexb(mol, startaa=1, visual="Y"):
     """
     Replaces B-factors with a list of values contained in a plain txt file
 
@@ -28,8 +28,9 @@ def complexb(mol, startaa=0, visual="Y"):
     source = name of the file containing new B-factor values (default=newBfactors.txt)
     visual = redraws structure as cartoon_putty and displays bar with min/max values (default=Y)
 
-    example: complexb 1LVM and chain A
+    example: complexb 1LVM
     """
+
     for subchains in cmd.get_chains(mol):
         source="bfactors_%s_%s.txt" % (mol, subchains)
         obj = cmd.get_object_list(mol)[0]
@@ -37,17 +38,26 @@ def complexb(mol, startaa=0, visual="Y"):
         infile = open(source, 'r')
         counter = int(startaa)
         bfacts = []
+
+
         for line in infile.readlines():
             bfact = float(line)
             print(bfact)
             bfacts.append(bfact)
+            #the counter method will break for skips encoded in fasta header file. Needs fixing.
             cmd.alter("%s and chain %s and resi %s and n. CA" % (mol,subchains, counter), "b=%s" % bfact)
             counter = counter + 1
+
         if visual == "Y":
             cmd.show_as("cartoon", mol)
             cmd.cartoon("putty", mol)
             cmd.spectrum("b", "rainbow", "%s and n. CA " % mol,1,3)
+            #print(b)
             cmd.ramp_new("count", obj, [1, 3], "rainbow")
+            #turn into a function if possible.
+            #Need to set none to white.
+            #cmd.iterate('(all)', cmd.color("white", resi) if b == 0)
+
             cmd.recolor()
 
 # This is needed to load the script in pymol

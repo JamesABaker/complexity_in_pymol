@@ -2,6 +2,8 @@
 
 ## About
 
+This readme is out of date. Currently the scripts are in development. This readme will be updated once a stable version is achieved.
+
 The aim is to roll out [TMSOC](http://tmsoc.bii.a-star.edu.sg/) like function into 3D protein structures. This allows us to study the role of anchors (identified by TMSOC as simple TMHs), as well as TMHs with function beyond anchorage (twilight and complex TMHs), in 3D space.
 
 Currently, **the software is available for Linux distributions only** since it is dependent on the `decodeanhmm` file underlying [Phobius](http://software.sbc.su.se/cgi-bin/request.cgi?project=phobius).
