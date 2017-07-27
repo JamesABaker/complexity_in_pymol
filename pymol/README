@@ -1,0 +1,33 @@
+----------------------------------------------------------------------------------------------------------------------------------
+DESCRIPTION
+----------------------------------------------------------------------------------------------------------------------------------
+This archive contains only the command-line TM classification module of TMSOC webserver. It does not include the 
+TM predictor module. The command-line TMSOC can be executed as long as the associated TM segments of the sequences 
+are provided. Note that command-line TMSOC can handle more than one input sequence.
+
+----------------------------------------------------------------------------------------------------------------------------------
+CONTENTS OF ARCHIVE
+----------------------------------------------------------------------------------------------------------------------------------
+PERL script:	TMSOC.pl
+
+PERL modules:	generateTMclassification.pm computeZscore.pm computeSeqAAEntropyGrpIVL.pm computeSeqAAHydrophobicity.pm 
+		computeSummaryStatistics.pm getAAHydrophobicity.pm
+
+Sample data:	inputseq.fasta TMsegments.txt
+
+----------------------------------------------------------------------------------------------------------------------------------
+USAGE
+----------------------------------------------------------------------------------------------------------------------------------
+To use the command-line TMSOC, users should first decompress the file to a folder. At the command prompt, users 
+should type : perl TMSOC.pl inputseq.fasta TMsegments.txt
+
+For the input files, the sequences should be in FASTA format (see "inputseq.fasta") while the corresponding TM segments
+follow the format in "TMsegments.txt".
+
+For the output, users should expect the (1) TM classification summary and (2) masked sequence (if any exists) to be 
+displayed on screen. 
+
+To show only the masked sequences, users can execute command-line TMSOC with a '-m' option : 
+perl TMSOC.pl inputseq.fasta TMsegments.txt -m
+
+----------------------------------------------------------------------------------------------------------------------------------

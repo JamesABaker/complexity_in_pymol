@@ -9,18 +9,18 @@
 # Bioinformatics Institute (BII) A*STAR Singapore
 
 # This software is subjected to license restrictions. The software is
-# provided as is. In its present form and without written consent of
+# provided as is. In its present form and without written consent of 
 # the copyright holder, the software is provided in accordance with GPL
 # (www.gnu.org/licenses/gpl.html). Among other issues, this excludes any
 # warranty and indemnity when using this software. For a commercial license,
 # please approach the authors (via email to wongwc@bii.a-star.edu.sg).
 
 # When publishing results with this software, please refer to:
-# Wing-Cheong Wong, Sebastian Maurer-Stroh, Frank Eisenhaber, 2011,
-# "Not all transmembrane helices are born equal: Towards the extension of
+# Wing-Cheong Wong, Sebastian Maurer-Stroh, Frank Eisenhaber, 2011, 
+# "Not all transmembrane helices are born equal: Towards the extension of 
 # the sequence homology concept to the membrane proteins", Biology Direct
 
-# When observing bugs or strange behavior of the software, the user is
+# When observing bugs or strange behavior of the software, the user is 
 # encouraged to contact the authors.
 
 #---------------------------------------------------------------------------
@@ -197,8 +197,8 @@ sub generateTMclassification {
 		($aveOct2Intf, $stdOct2Intf) = computeSummaryStatistics($oct2IntfVector);
 
 		# Compute the zscore of the TM segment
-#		$zscore = computeZscore($aveEntropy, $aveOct2Intf, 2.4, 0.30, -0.64, 2.85, 0, 0);	# against functional-TM (UniProt)
-		$zscore = computeZscore($aveEntropy, $aveOct2Intf, 2.42, 0.295, -0.41, 2.91, 0, 0);	# against functional-TM (SCOP)
+		$zscore = computeZscore($aveEntropy, $aveOct2Intf, 2.4, 0.30, -0.64, 2.85, 0, 0);	# against functional-TM (UniProt)
+#		$zscore = computeZscore($aveEntropy, $aveOct2Intf, 2.42, 0.295, -0.41, 2.91, 0, 0);	# against functional-TM (SCOP)
 
 		# Determine the type of TM segment whether complex(z>=-3.29), simple(z<=-5.41) or twilight(-5.41<z<-3.29)
 		if ($zscore >= -3.29) {
