@@ -17,9 +17,10 @@
 from pymol import cmd, stored, math
 import sys
 
+
 def complexb(mol, startaa=1, visual="Y"):
     """
-    Replaces B-factors with a list of values contained in a plain txt file
+    Replaces B-factors with a list of values contained in a plain txt file and colours the structure accordingly if in visual mode.
 
     usage: complexb mol, [startaa, [visual]]]
 
@@ -32,33 +33,31 @@ def complexb(mol, startaa=1, visual="Y"):
     """
 
     for subchains in cmd.get_chains(mol):
-        source="bfactors_%s_%s.txt" % (mol, subchains)
+        source = "bfactors_%s_%s.txt" % (mol, subchains)
         obj = cmd.get_object_list(mol)[0]
         cmd.alter("%s and chain %s" % (mol, subchains), "b=-1.0")
         infile = open(source, 'r')
         counter = int(startaa)
         bfacts = []
 
-
         for line in infile.readlines():
             bfact = float(line)
             print(bfact)
             bfacts.append(bfact)
-            #the counter method will break for skips encoded in fasta header file. Needs fixing.
-            cmd.alter("%s and chain %s and resi %s and n. CA" % (mol,subchains, counter), "b=%s" % bfact)
+            # the counter method will break for skips encoded in fasta header
+            # file. Needs fixing.
+            cmd.alter("%s and chain %s and resi %s" %
+                      (mol, subchains, counter), "b=%s" % bfact)
             counter = counter + 1
 
         if visual == "Y":
-            cmd.show_as("cartoon", mol)
-            cmd.cartoon("putty", mol)
-            cmd.spectrum("b", "rainbow", "%s and n. CA " % mol,1,3)
-            #print(b)
+            cmd.cartoon("tube", mol)
+            cmd.spectrum("b", "rainbow", "%s" % mol, 1, 3)
+            # print(b)
             cmd.ramp_new("count", obj, [1, 3], "rainbow")
-            #turn into a function if possible.
-            #Need to set none to white.
-            #cmd.iterate('(all)', cmd.color("white", resi) if b == 0)
-
             cmd.recolor()
+            # Need to set none to white.
+            # cmd.iterate('(all)', cmd.color("white", resi) if b == 0)
 
 # This is needed to load the script in pymol
 cmd.extend("complexb", complexb)

@@ -8,6 +8,9 @@
 *.xcf
 *.html
 
+#Demo files
+!pymol/1a91.pdb
+
 #Some PNG files are used in the readme
 !demo.png
 
@@ -26,9 +29,12 @@ TMsegments.txt
 TMSOCoutput.txt
 sequence.fasta
 
-#Log files
+# Log files
 TMsegments.txt
 sequence.fasta
 temp.fasta
 tmsoc_output.txt
 phobius_output.txt
+
+# Useless files and folders on James' PC
+pymol/pics_images/

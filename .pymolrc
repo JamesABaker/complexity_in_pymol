@@ -1,0 +1,20 @@
+bg white
+hide lines
+set ray_trace_mode, 0
+set two_sided_lighting, 1
+set antialias, 2
+set surface_quality, 1
+set ray_opaque_background, on
+util.cbaw
+set light_count,8
+set spec_count,1
+set shininess, 10
+set specular, 0.25
+set ambient,0
+set direct,0
+set reflect,1.5
+set ray_shadow_decay_factor, 0.1
+set ray_shadow_decay_range, 2
+unset depth_cue
+set cartoon_tube_radius, 1.2
+space cmyk
