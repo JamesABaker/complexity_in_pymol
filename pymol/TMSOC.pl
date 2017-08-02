@@ -28,6 +28,9 @@
 #use warnings;
 #use strict;	# Forces variables to be declared
 
+# Avoids awkward @INC path errors on some systems.
+use FindBin;
+use lib $FindBin::Bin;
 use generateTMclassification;
 
 my $i;
@@ -82,7 +85,7 @@ if (scalar(@ARGV)>=2 && scalar(@ARGV)<=3) {
 	if (scalar(@FASTAseq)==scalar(@TMsegments) && scalar(@FASTAseq)>0) {
 
 		for ($i=0; $i<scalar(@FASTAseq); $i++) {
-			
+
 			# Needs to offset the position values by -1; assumes first position starts at 1
 			@tmp1 = split(/\s+/, $TMsegments[$i]);
 			for ($j=0,$segment=""; $j<scalar(@tmp1); $j++) {
@@ -90,14 +93,14 @@ if (scalar(@ARGV)>=2 && scalar(@ARGV)<=3) {
 				if ($segment eq "") { $segment = ($tmp2[0]-1).",".($tmp2[1]-1); }
 				else { $segment = $segment." ".($tmp2[0]-1).",".($tmp2[1]-1); }
 			}
-					
+
 			# Classify the TM region(s)
 			($resultsRef, $newFASTAseq) = generateTMclassification($segment, $FASTAseq[$i]);
 			@results = @$resultsRef;
 			if (uc($FASTAseq[$i]) eq uc($newFASTAseq)) {
 				$newFASTAseq = "none";
 			}
-			
+
 			# Output the results
 			if ($ARGV[2] eq '-m') {
 				print $seqname[$i]."\n".$newFASTAseq."\n\n";

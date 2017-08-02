@@ -19,6 +19,7 @@ echo "This program comes with ABSOLUTELY NO WARRANTY."
 echo "This is free software, and you are welcome to redistribute it"
 echo "under certain conditions."
 
+# The current parameter should be just the pdb code.
 pdb_id=$1
 
 # Clearing files from previous run.
