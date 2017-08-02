@@ -38,43 +38,52 @@ one_letter = {'VAL': 'V', 'ILE': 'I', 'LEU': 'L', 'GLU': 'E', 'GLN': 'Q',
 
 parser = PDBParser()
 structure = parser.get_structure('pdb_structure', pdb_fasta_filename)
+
+# First model prevents multi-model NMRs from generating duplcate
+# sequences. This let's us access the PDB using Biopython without
+# generating duplicate sequence files.
+
+first_model = True
+
 for model in structure:
-    for chain in model:
-        print(chain.id, "\n")
-        sequence = []
-        residue_numbers = []
-        new_chain = True
-        discontinuation_events = []
-        for residue in chain:
-            if residue.get_resname() in one_letter:
-                print(one_letter[residue.get_resname()], residue.id[1])
-                sequence.append(one_letter[residue.get_resname()])
-                residue_numbers.append(residue.id[1])
-                if new_chain == True:
-                    continuous_sequence_number = residue.id[1]
-                new_chain = False
-                if residue.id[1] == continuous_sequence_number:
-                    continuous_sequence_number = continuous_sequence_number + 1
+    while first_model == True:
+        for chain in model:
+            print(chain.id, "\n")
+            sequence = []
+            residue_numbers = []
+            new_chain = True
+            discontinuation_events = []
+            for residue in chain:
+                if residue.get_resname() in one_letter:
+                    print(one_letter[residue.get_resname()], residue.id[1])
+                    sequence.append(one_letter[residue.get_resname()])
+                    residue_numbers.append(residue.id[1])
+                    if new_chain == True:
+                        continuous_sequence_number = residue.id[1]
+                    new_chain = False
+                    if residue.id[1] == continuous_sequence_number:
+                        continuous_sequence_number = continuous_sequence_number + 1
+                    else:
+                        discontinuation_event = int(residue.id[1])
+                        discontinuation_events.append(discontinuation_event)
+                        continuous_sequence_number = residue.id[1] + 1
+                        print(
+                            "Discontinuation detected. Skips and missing regions are usually because because parts of the structure could not be confidently resolved.")
+                    if residue.id[1] < 0:
+                        print(
+                            "Position below 0 detected. This could be the result of imperfect tag cleavage.")
                 else:
-                    discontinuation_event = int(residue.id[1])
-                    discontinuation_events.append(discontinuation_event)
-                    continuous_sequence_number = residue.id[1] + 1
-                    print("Discontinuation detected. Skips and missing regions are usually because because parts of the structure could not be confidently resolved.")
-                if residue.id[1] < 0:
-                    print(
-                        "Position below 0 detected. This could be the result of imperfect tag cleavage.")
-            else:
-                print("Skipping", residue.get_resname(),
-                      "at position", residue.id[1])
-        with open("sequence.fasta", "a") as fasta_file:
-            header = ">" + ";" + pdb_fasta_filename.split('.')[0] + ";" + chain.id + ";" + str(min(
-                residue_numbers)) + ";" + str(max(residue_numbers)) + ";" + str(discontinuation_events) + ";"
-            fasta_file.write(header)
-            fasta_file.write("\n")
-            fasta_file.write("".join(sequence))
-            fasta_file.write("\n")
+                    print("Skipping", residue.get_resname(),
+                          "at position", residue.id[1])
+            with open("sequence.fasta", "a") as fasta_file:
+                header = ">" + ";" + pdb_fasta_filename.split('.')[0] + ";" + chain.id + ";" + str(min(
+                    residue_numbers)) + ";" + str(max(residue_numbers)) + ";" + str(discontinuation_events) + ";"
+                fasta_file.write(header)
+                fasta_file.write("\n")
+                fasta_file.write("".join(sequence))
+                fasta_file.write("\n")
 
-
+        first_model = False
 # count = SeqIO.convert(pdb_fasta_filename, "pdb-seqres",
 #                      "sequence.fasta", "fasta")
 #print("Converted %i records" % count)
