@@ -11,6 +11,9 @@
 #Demo files
 !pymol/1a91.pdb
 
+#Essential files
+!pymol/pdb-list.txt
+
 #Some PNG files are used in the readme
 !demo.png
 
