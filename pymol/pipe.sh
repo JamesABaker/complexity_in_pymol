@@ -23,14 +23,14 @@ echo "under certain conditions."
 pdb_id=$1
 
 # Clearing files from previous run.
-echo 'Removing old log files.'
+echo 'Removing old log files...'
 rm TMsegments.txt
 rm sequence.fasta
 rm tmsoc_output.txt
 rm phobius_output.txt
 
 # Regenerating empty log files. Some python setups need a file to exist in order to write to it.
-echo 'Creating new log files.'
+echo 'Creating new log files...'
 touch TMsegments.txt
 touch sequence.fasta
 touch tmsoc_output.txt

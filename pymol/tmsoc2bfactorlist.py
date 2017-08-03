@@ -1,3 +1,6 @@
+from __future__ import division
+
+
 #    This file is part of 3D TMH Complexity.
 #
 #    3D TMH Complexity is free software: you can redistribute it and/or modify
@@ -17,7 +20,16 @@
 from Bio.PDB import PDBParser
 from Bio import SeqIO
 
+import matplotlib
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+from matplotlib.ticker import MaxNLocator
+import scipy
+from scipy import stats
+import numpy as np
+import pylab
 import sys
+from decimal import *
 
 
 def b_factor_complexity(complexity):
@@ -116,6 +128,9 @@ for current_result in all_results:
                     "Record contained the wrong number of items, skipping to next record.")
                 pass
 
+    # This is the list that will be printed as a graph.
+    complexity_scores_for_plot = []
+
     for item_position, line in enumerate(current_result):
         line = line.replace(',', ";")
         line = line.split(';')
@@ -128,24 +143,54 @@ for current_result in all_results:
             # the fasta file sequence.
             start_position = int(line[1])
             end_position = int(line[2])
-            complexity_score = line[3]
-            hydrophobicity_score = line[4]
+            complexity_score = float(line[3])
+            hydrophobicity_score = float(line[4])
             z_score = line[5]
             complexity = line[6]
+            if start_position == -1 and end_position == -1:
+                print("Skipping placeholder entry")
+                pass
+            else:
+                complexity_scores_for_plot.append(complexity_score)
 
-            for residue_number, residue in enumerate(current_result_record_sequence):
-                if residue_number <= end_position and residue_number >= start_position and end_position - start_position > 1:
-                    # need to add option for complexity interpretation
-                    b_factors[
-                        residue_number + current_result_record_start_location] = str(complexity_score)
-                    #b_factors[residue_number+current_result_record_start_location] = b_factor_complexity(str(complexity))
-                else:
-                    pass
+                for residue_number, residue in enumerate(current_result_record_sequence):
+                    if residue_number <= end_position and residue_number >= start_position and end_position - start_position > 1:
+                        # need to add option for complexity interpretation
+                        b_factors[
+                            residue_number + current_result_record_start_location] = str(complexity_score)
+                        #b_factors[residue_number+current_result_record_start_location] = b_factor_complexity(str(complexity))
+                    else:
+                        pass
 
         # elif str(">") in str(line):
             #subchain_id = line[0].replace('\n', '')
             #subchain_id = subchain_id.replace('>', '_')
             #subchain_id = subchain_id.replace(':', '_')
+
+
+    #Plot the complexity histogram.
+    print("Complexity scores")
+    start_count=0
+    complexity_count=[]
+    for i in complexity_scores_for_plot:
+        start_count=start_count+1
+        print(start_count, i)
+        complexity_count.append(start_count)
+
+
+    plt.plot(complexity_count,complexity_scores_for_plot)
+    plt.xlabel('%s Helix Number for' % record_pdb_code)
+    plt.ylabel('Complexity')
+    plt.tick_params(labelsize=16)
+
+
+    filename = record_pdb_code.replace('.pdb', '') + ".pdf"
+    plt.gcf().subplots_adjust(bottom=0.2)
+    plt.savefig(filename)
+    #plt.show()
+
+    plt.clf()
+    plt.cla()
 
     with open("bfactors_%s_%s.txt" % (record_pdb_code, current_result_record_chain_id), 'w') as bfactors_output_file:
         for i in b_factors:

@@ -28,7 +28,7 @@
 #use warnings;
 #use strict;	# Forces variables to be declared
 
-# Avoids awkward @INC path errors on some systems.
+# Avoids awkward @INC path errors on some systems. Fixes Issue #5.
 use FindBin;
 use lib $FindBin::Bin;
 use generateTMclassification;
