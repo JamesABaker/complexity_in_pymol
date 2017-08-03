@@ -39,11 +39,11 @@ touch phobius_output.txt
 
 # Scripts that process the inputs and outputs in order. If you only have python installed, python3 can be renamed as python.
 echo 'Parsing' pdb_id 'to Phobius.'
-python3 pdb2phobius.py "$pdb_id"
+python3 pdb2phobius.py "$pdb_id" #Converts the pdb file to a sequence and then runs phobius on it.
 sleep 1 #The pdb2phobius script takes a split second to run on some files, but for some reason, wait doesn't actually allow it to finish.
 echo 'Parsing Phobius output to TMSOC.'
-python3 phobius2tmsoc.py
+python3 phobius2tmsoc.py # Takes the output from phobius and makes the TMSOC input files.
 echo 'Running TMSOC.'
-perl TMSOC.pl sequence.fasta TMsegments.txt > tmsoc_output.txt
+perl TMSOC.pl sequence.fasta TMsegments.txt > tmsoc_output.txt #This is a standard TMSOC run, but the results are dumped in an output file.
 echo 'Transforming TMSOC output to bfactor list.'
-python3 tmsoc2bfactorlist.py
+python3 tmsoc2bfactorlist.py #This takes the TMSOC output and makes the bfactor list files and other graphs from the complexity information.

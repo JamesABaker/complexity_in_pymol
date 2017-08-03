@@ -167,30 +167,32 @@ for current_result in all_results:
             #subchain_id = subchain_id.replace('>', '_')
             #subchain_id = subchain_id.replace(':', '_')
 
+    # Plot the complexity histogram.
+    if len(complexity_scores_for_plot) == 0:
+        print("Skipping chain %s since no complexity scores were found. This is most likely because there are no TMHs in this chain." %
+              current_result_record_chain_id)
+        pass
+    else:
+        print("Complexity scores")
+        start_count = 0
+        complexity_count = []
+        for i in complexity_scores_for_plot:
+            start_count = start_count + 1
+            print(start_count, i)
+            complexity_count.append(start_count)
 
-    #Plot the complexity histogram.
-    print("Complexity scores")
-    start_count=0
-    complexity_count=[]
-    for i in complexity_scores_for_plot:
-        start_count=start_count+1
-        print(start_count, i)
-        complexity_count.append(start_count)
+        plt.plot(complexity_count, complexity_scores_for_plot)
+        plt.xlabel('Helix Number for %s_%s' %
+                   (record_pdb_code, current_result_record_chain_id))
+        plt.ylabel('Complexity')
+        filename = record_pdb_code.replace(
+            '.pdb', '') + "_" + current_result_record_chain_id + ".pdf"
+        plt.gcf().subplots_adjust(bottom=0.2)
+        plt.savefig(filename)
+        # plt.show()
 
-
-    plt.plot(complexity_count,complexity_scores_for_plot)
-    plt.xlabel('%s Helix Number for' % record_pdb_code)
-    plt.ylabel('Complexity')
-    plt.tick_params(labelsize=16)
-
-
-    filename = record_pdb_code.replace('.pdb', '') + ".pdf"
-    plt.gcf().subplots_adjust(bottom=0.2)
-    plt.savefig(filename)
-    #plt.show()
-
-    plt.clf()
-    plt.cla()
+        plt.clf()
+        plt.cla()
 
     with open("bfactors_%s_%s.txt" % (record_pdb_code, current_result_record_chain_id), 'w') as bfactors_output_file:
         for i in b_factors:
