@@ -1,0 +1,30 @@
+#GPCRs
+1u19.pdb
+2z73.pdb
+2vt4.pdb
+2lnl.pdb
+4mbs.pdb
+4xt1.pdb
+4ea3.pdb
+
+#Channels K, Na, H
+1bl8.pdb
+2kyh.pdb
+4h33.pdb
+2ahy.pdb
+3beh.pdb
+4f4l.pdb
+
+#Channels mechanosensitive
+2oar.pdb
+4y7k.pdb
+2oau.pdb
+4pgr.pdb
+3bkd.pdb
+2loj.pdb
+2kix.pdb
+2ljb.pdb
+2m6x.pdb
+2yvx.pdb
+3m71.pdb
+3h9v.pdb

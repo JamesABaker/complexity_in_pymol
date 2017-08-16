@@ -21,6 +21,6 @@ echo "under certain conditions."
 
 while read pdb; do
 
-pipe.sh -$pdb
+bash pipe.sh $pdb
 
 done < pdb-list.txt

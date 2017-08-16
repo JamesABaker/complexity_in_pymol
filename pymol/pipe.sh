@@ -36,7 +36,6 @@ touch sequence.fasta
 touch tmsoc_output.txt
 touch phobius_output.txt
 
-
 # Scripts that process the inputs and outputs in order. If you only have python installed, python3 can be renamed as python.
 echo 'Parsing' pdb_id 'to Phobius.'
 python3 pdb2phobius.py "$pdb_id" #Converts the pdb file to a sequence and then runs phobius on it.

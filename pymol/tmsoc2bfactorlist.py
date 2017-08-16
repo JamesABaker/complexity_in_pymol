@@ -180,6 +180,8 @@ for current_result in all_results:
             start_count = start_count + 1
             print(start_count, i)
             complexity_count.append(start_count)
+        print("Complexity scores for vector of %s\n" % record_pdb_code)
+        print(','.join(str(i) for i in complexity_scores_for_plot))
 
         plt.plot(complexity_count, complexity_scores_for_plot)
         plt.xlabel('Helix Number for %s_%s' %
