@@ -1,12 +1,10 @@
 from __future__ import division
 from Bio import SeqIO
-import numpy as np
 import os
 import subprocess
 import re
 import sys
 from Bio.PDB import PDBParser
-from Bio import SeqIO
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -15,7 +13,6 @@ import scipy
 from scipy import stats
 import numpy as np
 import pylab
-import sys
 from decimal import *
 
 
@@ -34,6 +31,17 @@ from decimal import *
 #    You should have received a copy of the GNU General Public License
 #    along with 3D TMH Complexity.  If not, see <http://www.gnu.org/licenses/>.
 
+# Input files should be obtained in text format downloaded from Uniprot
+# and moved to the same directory as this script.
+input_filenames = [
+    "GPCR_UniRef50.txt"
+]
+
+# Parameters for tmh allowances
+minimum_tmd_length = 16
+maximum_tmd_length = 38
+feature_type = "TRANSMEM"
+alternative_feature = "INTRAMEM"
 
 #### Complexity code ####
 
@@ -169,18 +177,7 @@ def complexity_extraction(sequence, tmh_locations):
                             pass
 
 
-# Input files should be obtained in text format downloaded from Uniprot
-# and moved to the same directory as this script.
-input_filenames = [
-    "GPCR_UniRef50.txt"
-]
 
-# Parameters for tmh allowances
-minimum_tmd_length = 16
-maximum_tmd_length = 38
-length_excluded_tmds = []
-feature_type = "TRANSMEM"
-alternative_feature = "INTRAMEM"
 
 # Before we conduct the analysis we must determine how many empty TMH
 # lists to make. For example if the protein with the most TMHs in the
@@ -209,27 +206,24 @@ for input_file in input_filenames:
         if this_record_tmd_count > tmd_count:
             tmd_count = this_record_tmd_count
 
+    # Generate a list of empty lists, one for each tmh set. This avoids issues
+    # of exceeding list indices in advance.
     print("Maximum tmh count in", input_file, "is", tmd_count)
     list_of_complexity_scores_in_tmh = []
     for n in range(tmd_count):
         list_of_complexity_scores_in_tmh.append([])
 
-    # Check lists are empty.
-    for complexity_list in list_of_complexity_scores_in_tmh:
-        if not complexity_list:
-            print("Lists not empty.")
-    # Checks the max_tmh_count is the same length as the number of lists
-    if max_tmh_count != len(list_of_complexity_scores_in_tmh):
-        print("Lists do not match the max number of TMHs in this dataset")
-
     # Now we can iterate through the records inserting complexity scores into
-    # the list.
+    # the empty lists.
     for record in SeqIO.parse(filename, input_format):
         this_record_tmd_count = 0
-        #Sequence fasta file
-        header=str(">",record.id)
-        sequence=record.seq
-        
-        #TMH positions file
+        # Sequence fasta file
+        sequence = record.seq
+        # TMH positions file
+        tmh_positions = str("")
         for i, f in enumerate(record.features):
             if f.type == feature_type:
+                tmh_positions=tmh_positions+(str(f.location.start)+ ","+ str(f.location.end) + " ")
+
+        for n, i in enumerate(complexity_extraction(sequence, tmh_positions)):
+            list_of_complexity_scores_in_tmh[n].append(i)
