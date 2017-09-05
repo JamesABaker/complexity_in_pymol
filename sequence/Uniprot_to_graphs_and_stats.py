@@ -44,32 +44,31 @@ alternative_feature = "INTRAMEM"
 
 #### Complexity calculation code ####
 
+
 def complexity_extraction(sequence, tmh_locations):
     '''
     Returns a list with values of complexities of TMHs.
     '''
-    list_of_complexities=[]
+    list_of_complexities = []
     # Generates the TMSOC input files from the source file.
     with open("TMsegments.txt", 'w') as tm_segments_file:
         tm_segments_file.write(tmh_locations)
-
     with open("sequence.fasta", 'w') as fasta_file:
         fasta_file.write(">placeholderheader\n")
         fasta_file.write(str(sequence))
-
     # Runs TMSOC.
-    perl_script_output=subprocess.check_output(["perl", "TMSOC.pl", "sequence.fasta", "TMsegments.txt"])
-
-    # Processes the TMSOC input files. Normally the TMSOC output would be a multi-line file, not a string.
-    list_of_output_lines=str(perl_script_output.decode('UTF-8'))
-    list_of_output_lines=list_of_output_lines.replace("\n", ":")
-    list_of_output_lines=list_of_output_lines.split(":")
+    perl_script_output = subprocess.check_output(
+        ["perl", "TMSOC.pl", "sequence.fasta", "TMsegments.txt"])
+    # Processes the TMSOC input files. Normally the TMSOC output would be a
+    # multi-line file, not a string.
+    list_of_output_lines = str(perl_script_output.decode('UTF-8'))
+    list_of_output_lines = list_of_output_lines.replace("\n", ":")
+    list_of_output_lines = list_of_output_lines.split(":")
     for line in list_of_output_lines:
-
         line = str(line.replace(',', ";"))
         line = line.split(";")
-        #First we can ignore the "junk" lines
-        if len(line)==7:
+        # First we can ignore the "junk" lines
+        if len(line) == 7:
             tmh_sequence = line[0]
             start_position = int(line[1])
             end_position = int(line[2])
@@ -77,12 +76,11 @@ def complexity_extraction(sequence, tmh_locations):
             hydrophobicity_score = float(line[4])
             z_score = line[5]
             complexity = line[6]
-            #Lenght restrictions
-            if start_position == -1 and end_position == -1:
-                print("Skipping placeholder entry")
-                pass
-            else:
-                list_of_complexities.append(complexity_score)
+            # Lenght restrictions-these should obey parameters given at begining of script.
+            # if start_position == -1 and end_position == -1:
+            #    print("Skipping placeholder entry")
+            #    complexity_score="null"
+            list_of_complexities.append(complexity_score)
     return(list_of_complexities)
 
 # Before we conduct the analysis we must determine how many empty TMH
@@ -102,7 +100,7 @@ for input_file in input_filenames:
     # disrupt very much so the alignment of the flanking regions.
 
     # We iterate through each record, parsed by biopython to find the most
-    # number of TMDs.
+    # number of TMDs. This avoids list index exceeded errors later on.
     tmd_count = 0
     for record in SeqIO.parse(filename, input_format):
         this_record_tmd_count = 0
@@ -112,8 +110,7 @@ for input_file in input_filenames:
         if this_record_tmd_count > tmd_count:
             tmd_count = this_record_tmd_count
 
-    # Generate a list of empty lists, one for each tmh set. This avoids issues
-    # of exceeding list indices in advance.
+    # Generate a list of empty lists, one for each tmh set.
     print("Maximum tmh count in", input_file, "is", tmd_count)
     list_of_complexity_scores_in_tmh = []
     for n in range(tmd_count):
@@ -122,14 +119,27 @@ for input_file in input_filenames:
     # Now we can iterate through the records inserting complexity scores into
     # the empty lists.
     for record in SeqIO.parse(filename, input_format):
-        this_record_tmd_count = 0
+
         # Sequence fasta file
         sequence = record.seq
+
         # TMH positions file
         tmh_positions = str("")
         for i, f in enumerate(record.features):
             if f.type == feature_type:
-                tmh_positions=tmh_positions+(str(f.location.start)+ ","+ str(f.location.end) + " ")
+                tmh_positions = tmh_positions + \
+                    (str(f.location.start) + "," + str(f.location.end) + " ")
 
         for n, i in enumerate(complexity_extraction(sequence, tmh_positions)):
-            list_of_complexity_scores_in_tmh[n].append(i)
+            list_of_complexity_scores_in_tmh[n].append(int(i))
+
+    for n, i in enumerate(list_of_complexity_scores_in_tmh):
+        # n is the index, so for human readable numbers we need to add 1. i.e
+        # the first helix is n=0, so we report it as n+1.
+
+        print("TMH ", n + 1)
+        print("Mean:", np.mean(i), ", N:", len(i))
+
+        if n + 1 < len(list_of_complexity_scores_in_tmh):
+            print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
+                list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
