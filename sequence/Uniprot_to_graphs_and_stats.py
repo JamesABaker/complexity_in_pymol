@@ -1,6 +1,5 @@
 from __future__ import division
 from Bio import SeqIO
-import os
 import subprocess
 import re
 import sys
@@ -43,17 +42,25 @@ maximum_tmd_length = 38
 feature_type = "TRANSMEM"
 alternative_feature = "INTRAMEM"
 
-#### Complexity code ####
+#### Complexity calculation code ####
 
 def complexity_extraction(sequence, tmh_locations):
     '''
-    Fills the empty lists with values of complexities of TMHs.
+    Returns a list with values of complexities of TMHs.
     '''
 
     # Generates the TMSOC input files from the source file.
+    with open("TMsegments.txt", 'w') as tm_segments_file:
+        tm_segments_file.write(tmh_locations)
+
+    with open("sequence.fasta", 'w') as fasta_file:
+        fasta_file.write(">placeholderheader\n")
+        fasta_file.write(str(sequence))
 
     # Runs TMSOC.
-
+    # The command we need to run is perl TMSOC.pl sequence.fasta TMsegments.txt > tmsoc_output.txt
+    perl_script=subprocess.check_output(["perl", "TMSOC.pl", "sequence.fasta", "TMsegments.txt"])
+    print(perl_script)
     # Processes the TMSOC input files.
     new_tmsoc_result = "1. TM segment(s) summary:"
     all_results = []
