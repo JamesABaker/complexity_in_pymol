@@ -1,18 +1,10 @@
 from __future__ import division
+from decimal import *
 from Bio import SeqIO
 import subprocess
-import re
-import sys
-from Bio.PDB import PDBParser
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.patches as patches
-from matplotlib.ticker import MaxNLocator
 import scipy
 from scipy import stats
 import numpy as np
-import pylab
-from decimal import *
 
 
 #    This file is part of 3D TMH Complexity.
@@ -30,6 +22,13 @@ from decimal import *
 #    You should have received a copy of the GNU General Public License
 #    along with 3D TMH Complexity.  If not, see <http://www.gnu.org/licenses/>.
 
+
+# To do:
+# Separate hydrophobicity calculation - more efficient and flexible
+# Length restrictions and statistics for final results
+# Control datasets
+# Generate graphics
+
 # Input files should be obtained in text format downloaded from Uniprot
 # and moved to the same directory as this script.
 input_filenames = [
@@ -45,11 +44,12 @@ alternative_feature = "INTRAMEM"
 #### Complexity calculation code ####
 
 
-def complexity_extraction(sequence, tmh_locations):
+def tmsoc_calculation(sequence, tmh_locations):
     '''
     Returns a list with values of complexities of TMHs.
     '''
-    list_of_complexities = []
+
+    list_of_tmh_features = []
     # Generates the TMSOC input files from the source file.
     with open("TMsegments.txt", 'w') as tm_segments_file:
         tm_segments_file.write(tmh_locations)
@@ -76,12 +76,14 @@ def complexity_extraction(sequence, tmh_locations):
             hydrophobicity_score = float(line[4])
             z_score = line[5]
             complexity = line[6]
-            # Lenght restrictions-these should obey parameters given at begining of script.
-            # if start_position == -1 and end_position == -1:
-            #    print("Skipping placeholder entry")
-            #    complexity_score="null"
-            list_of_complexities.append(complexity_score)
-    return(list_of_complexities)
+            # Lenght restrictions-these should obey parameters given at
+            # begining of script.
+            if abs(start_position - end_position) < minimum_tmd_length or abs(start_position - end_position) > maximum_tmd_length:
+                complexity_score = str("null")
+
+            list_of_tmh_features.append(complexity_score)
+
+    return(list_of_tmh_features)
 
 # Before we conduct the analysis we must determine how many empty TMH
 # lists to make. For example if the protein with the most TMHs in the
@@ -109,12 +111,18 @@ for input_file in input_filenames:
                 this_record_tmd_count = this_record_tmd_count + 1
         if this_record_tmd_count > tmd_count:
             tmd_count = this_record_tmd_count
+            if this_record_tmd_count > 7:
+                print(record.id, " contained more than 7 TMHs.")
 
     # Generate a list of empty lists, one for each tmh set.
     print("Maximum tmh count in", input_file, "is", tmd_count)
+
     list_of_complexity_scores_in_tmh = []
+    list_of_hydrophobicity_scores_in_tmh = []
+
     for n in range(tmd_count):
         list_of_complexity_scores_in_tmh.append([])
+        list_of_hydrophobicity_scores_in_tmh.append([])
 
     # Now we can iterate through the records inserting complexity scores into
     # the empty lists.
@@ -130,16 +138,47 @@ for input_file in input_filenames:
                 tmh_positions = tmh_positions + \
                     (str(f.location.start) + "," + str(f.location.end) + " ")
 
-        for n, i in enumerate(complexity_extraction(sequence, tmh_positions)):
-            list_of_complexity_scores_in_tmh[n].append(int(i))
+        # Adds the complexity score of a helix at (for example the 4th helix)
+        # to the complexity list of lists (for example in the 4th position)
+        for n, i in enumerate(tmsoc_calculation(sequence, tmh_positions)):
+            # Null entries are added for TMHs that are not within length
+            # restrictions.
+            if i == "null":
+                pass
+            else:
+                list_of_complexity_scores_in_tmh[n].append(int(i))
 
+        # Adds to the hydrophobicity list of lists
+        # for n, i in enumerate(hydrophobicity_calculation(sequence, tmh_positions)):
+        #    list_of_hydrophobicity_scores_in_tmh[n].append(int(i))
+
+    # Reporting the results
+    print(filename, "results\n")
+
+    # stats for complexity
     for n, i in enumerate(list_of_complexity_scores_in_tmh):
+
         # n is the index, so for human readable numbers we need to add 1. i.e
         # the first helix is n=0, so we report it as n+1.
-
         print("TMH ", n + 1)
-        print("Mean:", np.mean(i), ", N:", len(i))
+        print("Mean complexity:", np.mean(i), ", N:", len(i))
 
         if n + 1 < len(list_of_complexity_scores_in_tmh):
             print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
                 list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
+
+    print("\n")
+
+    '''
+    # stats for hydrophobicity
+    for n, i in enumerate(list_of_hydrophobicity_scores_in_tmh):
+        # n is the index, so for human readable numbers we need to add 1. i.e
+        # the first helix is n=0, so we report it as n+1.
+
+        print("TMH ", n + 1)
+        print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
+
+        if n + 1 < len(list_of_hydrophobicity_scores_in_tmh):
+            print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.kruskal(
+                list_of_hydrophobicity_scores_in_tmh[n], list_of_hydrophobicity_scores_in_tmh[n + 1]))
+    '''
