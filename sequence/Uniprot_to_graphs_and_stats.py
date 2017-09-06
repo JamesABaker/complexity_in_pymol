@@ -41,6 +41,134 @@ maximum_tmd_length = 38
 feature_type = "TRANSMEM"
 alternative_feature = "INTRAMEM"
 
+# Several dictionaries of hydrophobicity values are needed to verify findings.
+
+white_and_wimley_hydrophobicity = {
+    'type': ' White and Wimley',
+    'A': 0.33,
+    'C': 0.22,
+    'D': 2.41,
+    'E': 1.61,
+    'F': -0.58,
+    'G': 0.12,
+    'H': 1.37,
+    'I': -0.81,
+    'K': 1.81,
+    'L': -0.69,
+    'M': -0.44,
+    'N': 0.43,
+    'P': -0.31,
+    'Q': 0.19,
+    'R': 1.00,
+    'S': 0.33,
+    'T': 0.11,
+    'V': -0.53,
+    'W': -0.24,
+    'Y': 0.23,
+}
+
+eisenberg_hydrophobicity = {
+    'type': "Eisenberg",
+    'A': 0.620,
+    'C': 0.290,
+    'D': -0.900,
+    'E': -0.740,
+    'F': 1.190,
+    'G': 0.480,
+    'H': -0.400,
+    'I': 1.380,
+    'K': -1.500,
+    'L': 1.060,
+    'M': 0.640,
+    'N': -0.900,
+    'P': 0.120,
+    'Q': -0.850,
+    'R': -2.530,
+    'S': -0.180,
+    'T': -0.050,
+    'V': 1.080,
+    'W': 0.810,
+    'Y': 0.260,
+}
+
+kyte_doolittle_hydrophobicity = {
+    'type': "Kyte & Doolittle",
+    'A'	: 1.800,
+    'C'	: 2.500,
+    'D'	: -3.500,
+    'E'	: -3.500,
+    'F'	: 2.800,
+    'G'	: -0.400,
+    'H'	: -3.200,
+    'I'	: 4.500,
+    'K'	: -3.900,
+    'L'	: 3.800,
+    'M'	: 1.900,
+    'N'	: -3.500,
+    'P'	: -1.600,
+    'Q'	: -3.500,
+    'R'	: -4.500,
+    'S'	: -0.800,
+    'T'	: -0.700,
+    'V'	: 4.200,
+    'W'	: -0.900,
+    'Y'	: -1.300,
+}
+
+### Hydrophobicity calculation code###
+
+
+def hydrophobicity_calculation(sequence, tmh_locations):
+    '''
+    Returns a list of lists, and a list of the hydrophocity scales used in the list of lists.
+    Each child lists contains a further list of hydrophobicity values
+    ordered by tmh number. The parent list is used to split the child lists up according to
+    the different hydrophobicity scales.
+    '''
+
+    list_of_hydrophobicity_dictionaries = [
+        kyte_doolittle_hydrophobicity, eisenberg_hydrophobicity, white_and_wimley_hydrophobicity]
+    list_of_tmhs_from_different_hyrodobicity_dictionaries = []
+    list_of_dictionary_types = []
+
+    # tmh locations exists as a string in the format: start,end start,end
+    tmh_locations = tmh_locations.split(" ")
+    for hydrophobicity_type in list_of_hydrophobicity_dictionaries:
+        list_of_dictionary_types.append(hydrophobicity_type.get("type"))
+        list_of_hydrophobicity_by_tmh_number = []
+        for n, i in enumerate(tmh_locations):
+            location = i.split(",")
+            if len(location) == 2:
+                # Some sequence positions given are reported as <0 or >N. These cases
+                # will be treated as length restrictions.
+                if '<' in str(location):
+                    list_of_hydrophobicity_by_tmh_number.append("null")
+                elif '>' in str(location):
+                    list_of_hydrophobicity_by_tmh_number.append("null")
+                else:
+                    start = int(location[0])
+                    end = int(location[1])
+
+                    # location start and end are human readable locations,
+                    # whereas the slices start counting at 0.
+                    tmh_sequence = sequence[start - 1:end - 1]
+
+                    # Length restriction and 'X' residues are counted together.
+                    if len(tmh_sequence) < maximum_tmd_length and len(tmh_sequence) > minimum_tmd_length and 'X' not in tmh_sequence:
+                        hydrophobicity_values_in_tmh = []
+                        for residue in tmh_sequence:
+                            hydrophobicity_values_in_tmh.append(
+                                hydrophobicity_type.get(residue))
+                        tmh_hydrophobicity = np.mean(
+                            hydrophobicity_values_in_tmh)
+                        list_of_hydrophobicity_by_tmh_number.append(
+                            tmh_hydrophobicity)
+                    else:
+                        list_of_hydrophobicity_by_tmh_number.append("null")
+        list_of_tmhs_from_different_hyrodobicity_dictionaries.append(
+            list_of_hydrophobicity_by_tmh_number)
+    return(list_of_tmhs_from_different_hyrodobicity_dictionaries, list_of_dictionary_types)
+
 #### Complexity calculation code ####
 
 
@@ -118,11 +246,10 @@ for input_file in input_filenames:
     print("Maximum tmh count in", input_file, "is", tmd_count)
 
     list_of_complexity_scores_in_tmh = []
-    list_of_hydrophobicity_scores_in_tmh = []
+    list_of_hydrophobicity_scores_in_tmh = [[]]
 
     for n in range(tmd_count):
         list_of_complexity_scores_in_tmh.append([])
-        list_of_hydrophobicity_scores_in_tmh.append([])
 
     # Now we can iterate through the records inserting complexity scores into
     # the empty lists.
@@ -149,11 +276,15 @@ for input_file in input_filenames:
                 list_of_complexity_scores_in_tmh[n].append(int(i))
 
         # Adds to the hydrophobicity list of lists
-        # for n, i in enumerate(hydrophobicity_calculation(sequence, tmh_positions)):
-        #    list_of_hydrophobicity_scores_in_tmh[n].append(int(i))
-
-    # Reporting the results
-    print(filename, "results\n")
+        hydrophobicity_for_record = hydrophobicity_calculation(
+            sequence, tmh_positions)
+        for scale_number, hydrophobicity_scale in enumerate(range(len(hydrophobicity_for_record[1]))):
+            list_of_hydrophobicity_scores_in_tmh.append([])
+            for n in range(tmd_count):
+                list_of_hydrophobicity_scores_in_tmh[scale_number].append([])
+            for tmh_number, i in enumerate(hydrophobicity_for_record[0][scale_number]):
+                list_of_hydrophobicity_scores_in_tmh[
+                    scale_number][tmh_number].append(i)
 
     # stats for complexity
     for n, i in enumerate(list_of_complexity_scores_in_tmh):
@@ -169,16 +300,17 @@ for input_file in input_filenames:
 
     print("\n")
 
-    '''
-    # stats for hydrophobicity
-    for n, i in enumerate(list_of_hydrophobicity_scores_in_tmh):
-        # n is the index, so for human readable numbers we need to add 1. i.e
-        # the first helix is n=0, so we report it as n+1.
+    # stats for hydrophobicity.
+    for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh):
+        print("Hydrophobicity scale:",
+              hydrophobicity_for_record[1][scale_number])
+        for n, i in enumerate(list_of_hydrophobicity_scores_in_tmh[scale_number]):
+            # n is the index, so for human readable numbers we need to add 1. i.e
+            # the first helix is n=0, so we report it as n+1.
+            print(i)
+            print("TMH ", n + 1)
+            print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
 
-        print("TMH ", n + 1)
-        print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
-
-        if n + 1 < len(list_of_hydrophobicity_scores_in_tmh):
-            print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.kruskal(
-                list_of_hydrophobicity_scores_in_tmh[n], list_of_hydrophobicity_scores_in_tmh[n + 1]))
-    '''
+            if n + 1 < len(list_of_hydrophobicity_scores_in_tmh):
+                print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
+                    list_of_hydrophobicity_scores_in_tmh[n], list_of_hydrophobicity_scores_in_tmh[n + 1]))
