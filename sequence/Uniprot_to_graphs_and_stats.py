@@ -283,8 +283,11 @@ for input_file in input_filenames:
             for n in range(tmd_count):
                 list_of_hydrophobicity_scores_in_tmh[scale_number].append([])
             for tmh_number, i in enumerate(hydrophobicity_for_record[0][scale_number]):
-                list_of_hydrophobicity_scores_in_tmh[
-                    scale_number][tmh_number].append(i)
+                if i == "null":
+                    pass
+                else:
+                    list_of_hydrophobicity_scores_in_tmh[
+                        scale_number][tmh_number].append(i)
 
     # stats for complexity
     for n, i in enumerate(list_of_complexity_scores_in_tmh):
@@ -301,16 +304,21 @@ for input_file in input_filenames:
     print("\n")
 
     # stats for hydrophobicity.
+    # Remove empty lists created previously as a one liner.
+    list_of_hydrophobicity_scores_in_tmh = [
+        x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
     for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh):
         print("Hydrophobicity scale:",
               hydrophobicity_for_record[1][scale_number])
-        for n, i in enumerate(list_of_hydrophobicity_scores_in_tmh[scale_number]):
+
+        no_empty_tmh_list_of_hydrophobicity_scores_in_tmh = [
+            x for x in list_of_hydrophobicity_scores_in_tmh[scale_number] if x != []]
+        for n, i in enumerate(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
             # n is the index, so for human readable numbers we need to add 1. i.e
             # the first helix is n=0, so we report it as n+1.
-            print(i)
             print("TMH ", n + 1)
             print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
 
-            if n + 1 < len(list_of_hydrophobicity_scores_in_tmh):
+            if n + 1 < len(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
                 print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
-                    list_of_hydrophobicity_scores_in_tmh[n], list_of_hydrophobicity_scores_in_tmh[n + 1]))
+                    no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n], no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n + 1]))
