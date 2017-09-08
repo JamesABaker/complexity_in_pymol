@@ -32,7 +32,7 @@ import numpy as np
 # Input files should be obtained in text format downloaded from Uniprot
 # and moved to the same directory as this script.
 input_filenames = [
-    "GPCR_UniRef50.txt"
+    "GPCR_UniRef50_test.txt"
 ]
 
 # Parameters for tmh allowances
@@ -169,7 +169,36 @@ def hydrophobicity_calculation(sequence, tmh_locations):
             list_of_hydrophobicity_by_tmh_number)
     return(list_of_tmhs_from_different_hyrodobicity_dictionaries, list_of_dictionary_types)
 
-#### Complexity calculation code ####
+#### Length sorting for TMHs ####
+
+
+def length_sorting(sequence, tmh_locations):
+    '''
+    Returns a list with values of complexities of TMHs.
+    '''
+    list_of_tmh_features = []
+
+    tmh_locations = tmh_locations.split(" ")
+
+    for n, i in enumerate(tmh_locations):
+        location = i.split(",")
+        if len(location) == 2:
+            if '<' in str(location):
+                list_of_tmh_features.append("null")
+            elif '>' in str(location):
+                list_of_tmh_features.append("null")
+            else:
+                start = int(location[0])
+                end = int(location[1])
+
+                # Lenght restrictions-these should obey parameters given at
+                # begining of script.
+                if abs(start - end) < minimum_tmd_length or abs(start - end) > maximum_tmd_length:
+                    list_of_tmh_features.append(str("null"))
+                else:
+                    list_of_tmh_features.append(abs(start - end))
+
+    return(list_of_tmh_features)
 
 
 def tmsoc_calculation(sequence, tmh_locations):
@@ -179,11 +208,7 @@ def tmsoc_calculation(sequence, tmh_locations):
 
     list_of_tmh_features = []
     # Generates the TMSOC input files from the source file.
-    with open("TMsegments.txt", 'w') as tm_segments_file:
-        tm_segments_file.write(tmh_locations)
-    with open("sequence.fasta", 'w') as fasta_file:
-        fasta_file.write(">placeholderheader\n")
-        fasta_file.write(str(sequence))
+
     # Runs TMSOC.
     perl_script_output = subprocess.check_output(
         ["perl", "TMSOC.pl", "sequence.fasta", "TMsegments.txt"])
@@ -208,8 +233,8 @@ def tmsoc_calculation(sequence, tmh_locations):
             # begining of script.
             if abs(start_position - end_position) < minimum_tmd_length or abs(start_position - end_position) > maximum_tmd_length:
                 complexity_score = str("null")
-
-            list_of_tmh_features.append(complexity_score)
+            else:
+                list_of_tmh_features.append(complexity_score)
 
     return(list_of_tmh_features)
 
@@ -246,10 +271,14 @@ for input_file in input_filenames:
     print("Maximum tmh count in", input_file, "is", tmd_count)
 
     list_of_complexity_scores_in_tmh = []
+    list_of_lengths_in_tmh = []
     list_of_hydrophobicity_scores_in_tmh = [[]]
 
     for n in range(tmd_count):
         list_of_complexity_scores_in_tmh.append([])
+
+    for n in range(tmd_count):
+        list_of_lengths_in_tmh.append([])
 
     # Now we can iterate through the records inserting complexity scores into
     # the empty lists.
@@ -273,9 +302,20 @@ for input_file in input_filenames:
             if i == "null":
                 pass
             else:
-                list_of_complexity_scores_in_tmh[n].append(int(i))
+                list_of_complexity_scores_in_tmh[n].append(i)
+        print(list_of_complexity_scores_in_tmh)
+        # Adds the complexity score of a helix at (for example the 4th helix)
+        # to the complexity list of lists (for example in the 4th position)
+        for n, i in enumerate(length_sorting(sequence, tmh_positions)):
+            # Null entries are added for TMHs that are not within length
+            # restrictions.
+            if i == "null":
+                pass
+            else:
+                list_of_lengths_in_tmh[n].append(i)
 
-        # Adds to the hydrophobicity list of lists
+        # Adds to the hydrophobicity list of lists. The structure is different
+        # to complexity since there are 3 different hydrophobicity scales.
         hydrophobicity_for_record = hydrophobicity_calculation(
             sequence, tmh_positions)
         for scale_number, hydrophobicity_scale in enumerate(range(len(hydrophobicity_for_record[1]))):
@@ -295,11 +335,23 @@ for input_file in input_filenames:
         # n is the index, so for human readable numbers we need to add 1. i.e
         # the first helix is n=0, so we report it as n+1.
         print("TMH ", n + 1)
+        print(i)
         print("Mean complexity:", np.mean(i), ", N:", len(i))
-
+        #list_of_complexity_scores_in_tmh = [
+        #    x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
         if n + 1 < len(list_of_complexity_scores_in_tmh):
-            print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
+            print("TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
                 list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
+
+    print("\n")
+
+    for n, i in enumerate(list_of_lengths_in_tmh):
+        print("TMH ", n + 1)
+        print("Mean length:", np.mean(i), ", N:", len(i))
+
+        if n + 1 < len(list_of_lengths_in_tmh):
+            print("TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
+                list_of_lengths_in_tmh[n], list_of_lengths_in_tmh[n + 1]))
 
     print("\n")
 
@@ -320,5 +372,6 @@ for input_file in input_filenames:
             print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
 
             if n + 1 < len(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
-                print("KS of TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
+                print("TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
                     no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n], no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n + 1]))
+            print("\n")
