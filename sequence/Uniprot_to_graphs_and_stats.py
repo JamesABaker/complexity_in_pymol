@@ -5,6 +5,11 @@ import subprocess
 import scipy
 from scipy import stats
 import numpy as np
+import matplotlib.pyplot as plt
+import time
+from matplotlib import rcParams
+
+
 
 
 #    This file is part of 3D TMH Complexity.
@@ -169,13 +174,50 @@ def hydrophobicity_calculation(sequence, tmh_locations):
             list_of_hydrophobicity_by_tmh_number)
     return(list_of_tmhs_from_different_hyrodobicity_dictionaries, list_of_dictionary_types)
 
-
+# The bahadur statistic allows statistical comparison of P-values.
 def bahadur_statistic(p_value, sample_size):
     bahadur_value = (abs(np.log(p_value))) / sample_size
     return(bahadur_value)
 
-#### Length sorting for TMHs ####
+# Violin plots for datasets.
+rcParams.update({'figure.autolayout': True})
+def violin_plot(dataset, name, input_file):
+    '''
+    Gausian Kernel Density Estimation
+    Violin plots are similar to histograms and box plots in that they show
+    an abstract representation of the probability distribution of the
+    sample. Rather than showing counts of data points that fall into bins
+    or order statistics, violin plots use kernel density estimation (KDE) to
+    compute an empirical distribution of the sample. That computation
+    is controlled by several parameters. This example demonstrates how to
+    modify the number of points at which the KDE is evaluated (``points``)
+    and how to modify the band-width of the KDE (``bw_method``).
 
+    For more information on violin plots and KDE, the scikit-learn docs
+    have a great section: http://scikit-learn.org/stable/modules/density.html
+    '''
+
+    fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(5, 4))
+
+    # plot violin plot
+    axes.violinplot(dataset,showmeans=False, showmedians=True)
+    # axes[0].set_title('violin plot')
+
+    axes.yaxis.grid(False)
+    axes.set_xticks([y+1 for y in range(len(dataset))])
+    axes.set_xlabel('TMH number')
+    axes.set_ylabel(name)
+
+    # add x-tick labels
+    plt.setp(axes, xticks=[y+1 for y in range(len(dataset))],
+             xticklabels=[x+1 for x in range(len(dataset))])
+    #plt.show()
+    date_time=time.strftime("%d:%m:%Y_%H:%M:%S")
+    file_name=str(input_file+"_"+name+"_"+date_time+".pdf")
+    plt.savefig(file_name)
+    plt.close(fig)
+
+#### Length sorting for TMHs ####
 
 def length_sorting(sequence, tmh_locations):
     '''
@@ -231,7 +273,8 @@ def tmsoc_calculation(sequence, tmh_locations):
     for line in list_of_output_lines:
         line = str(line.replace(',', ";"))
         line = line.split(";")
-        # First we can ignore the "junk" lines
+        # First we can ignore the "junk" lines. This 7 is not referring to the
+        # number of TMHs, but the number of items in the TMSOC output.
         if len(line) == 7:
             tmh_sequence = line[0]
             start_position = int(line[1])
@@ -355,6 +398,12 @@ for input_file in input_filenames:
 
 
 
+    # Graphs
+    violin_plot(list_of_complexity_scores_in_tmh[0:7], str("Complexity"), input_file)
+    violin_plot(list_of_lengths_in_tmh[0:7], str("Length"), input_file)
+    for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh[0:len(hydrophobicity_for_record[1])]):
+        violin_plot(list_of_hydrophobicity_scores_in_tmh[scale_number][0:7] , str(hydrophobicity_for_record[1][scale_number]+" hydrophobiciity scale"),input_file)
+
 
     stat_tests_list = [scipy.stats.kruskal, scipy.stats.ks_2samp]
 
@@ -370,10 +419,14 @@ for input_file in input_filenames:
             print("Mean complexity:", np.mean(i), ", N:", len(i))
             # list_of_complexity_scores_in_tmh = [
             #    x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
-            if len(i) > 5:
+
+            # Only calculating stats if the sample size is >5.
+            if len(i) > 10:
                 if n + 1 < len(list_of_complexity_scores_in_tmh):
                     print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
                         list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
+
+
 
         print("\n")
 
@@ -382,7 +435,7 @@ for input_file in input_filenames:
             print("TMH ", n + 1)
             print("Mean length:", np.mean(i), ", N:", len(i))
 
-            if len(i) > 5:
+            if len(i) > 10:
                 if n + 1 < len(list_of_lengths_in_tmh):
                     print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
                         list_of_lengths_in_tmh[n], list_of_lengths_in_tmh[n + 1]))
@@ -404,7 +457,7 @@ for input_file in input_filenames:
                 # the first helix is n=0, so we report it as n+1.
                 print("TMH ", n + 1)
                 print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
-                if len(i) > 5:
+                if len(i) > 10:
                     if n + 1 < len(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
                         print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
                             no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n], no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n + 1]))
