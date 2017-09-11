@@ -169,6 +169,11 @@ def hydrophobicity_calculation(sequence, tmh_locations):
             list_of_hydrophobicity_by_tmh_number)
     return(list_of_tmhs_from_different_hyrodobicity_dictionaries, list_of_dictionary_types)
 
+
+def bahadur_statistic(p_value, sample_size):
+    bahadur_value = (abs(np.log(p_value))) / sample_size
+    return(bahadur_value)
+
 #### Length sorting for TMHs ####
 
 
@@ -319,7 +324,7 @@ for input_file in input_filenames:
                     pass
                 else:
                     list_of_complexity_scores_in_tmh[n].append(i)
-            #print(list_of_complexity_scores_in_tmh)
+            # print(list_of_complexity_scores_in_tmh)
 
             # Adds the lengths of a helix at (for example the 4th helix)
             # to the complexity list of lists (for example in the 4th position)
@@ -348,49 +353,59 @@ for input_file in input_filenames:
                         list_of_hydrophobicity_scores_in_tmh[
                             scale_number][tmh_number].append(i)
 
-    # stats for complexity
-    for n, i in enumerate(list_of_complexity_scores_in_tmh):
 
-        # n is the index, so for human readable numbers we need to add 1. i.e
-        # the first helix is n=0, so we report it as n+1.
-        print("TMH ", n + 1)
-        #print(i)
-        print("Mean complexity:", np.mean(i), ", N:", len(i))
-        # list_of_complexity_scores_in_tmh = [
-        #    x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
-        if n + 1 < len(list_of_complexity_scores_in_tmh):
-            print("TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
-                list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
 
-    print("\n")
 
-    for n, i in enumerate(list_of_lengths_in_tmh):
-        print("TMH ", n + 1)
-        print("Mean length:", np.mean(i), ", N:", len(i))
+    stat_tests_list = [scipy.stats.kruskal, scipy.stats.ks_2samp]
 
-        if n + 1 < len(list_of_lengths_in_tmh):
-            print("TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
-                list_of_lengths_in_tmh[n], list_of_lengths_in_tmh[n + 1]))
+    for stat_tests in stat_tests_list:
 
-    print("\n")
+        # stats for complexity
+        for n, i in enumerate(list_of_complexity_scores_in_tmh):
 
-    # stats for hydrophobicity.
-    # Remove empty lists created previously as a one liner.
-    list_of_hydrophobicity_scores_in_tmh = [
-        x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
-    for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh):
-        print("Hydrophobicity scale:",
-              hydrophobicity_for_record[1][scale_number])
-
-        no_empty_tmh_list_of_hydrophobicity_scores_in_tmh = [
-            x for x in list_of_hydrophobicity_scores_in_tmh[scale_number] if x != []]
-        for n, i in enumerate(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
             # n is the index, so for human readable numbers we need to add 1. i.e
             # the first helix is n=0, so we report it as n+1.
             print("TMH ", n + 1)
-            print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
+            # print(i)
+            print("Mean complexity:", np.mean(i), ", N:", len(i))
+            # list_of_complexity_scores_in_tmh = [
+            #    x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
+            if len(i) > 5:
+                if n + 1 < len(list_of_complexity_scores_in_tmh):
+                    print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
+                        list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
 
-            if n + 1 < len(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
-                print("TMH ", n + 1, " to ", n + 2, ":", scipy.stats.ks_2samp(
-                    no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n], no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n + 1]))
-            print("\n")
+        print("\n")
+
+        # Stats for lengths
+        for n, i in enumerate(list_of_lengths_in_tmh):
+            print("TMH ", n + 1)
+            print("Mean length:", np.mean(i), ", N:", len(i))
+
+            if len(i) > 5:
+                if n + 1 < len(list_of_lengths_in_tmh):
+                    print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
+                        list_of_lengths_in_tmh[n], list_of_lengths_in_tmh[n + 1]))
+
+        print("\n")
+
+        # stats for hydrophobicity.
+        # Remove empty lists created previously as a one liner.
+        list_of_hydrophobicity_scores_in_tmh = [
+            x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
+        for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh):
+            print("Hydrophobicity scale:",
+                  hydrophobicity_for_record[1][scale_number])
+
+            no_empty_tmh_list_of_hydrophobicity_scores_in_tmh = [
+                x for x in list_of_hydrophobicity_scores_in_tmh[scale_number] if x != []]
+            for n, i in enumerate(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
+                # n is the index, so for human readable numbers we need to add 1. i.e
+                # the first helix is n=0, so we report it as n+1.
+                print("TMH ", n + 1)
+                print("Mean Hydrophobicity:", np.mean(i), ", N:", len(i))
+                if len(i) > 5:
+                    if n + 1 < len(no_empty_tmh_list_of_hydrophobicity_scores_in_tmh):
+                        print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
+                            no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n], no_empty_tmh_list_of_hydrophobicity_scores_in_tmh[n + 1]))
+                print("\n")
