@@ -10,8 +10,6 @@ import time
 from matplotlib import rcParams
 
 
-
-
 #    This file is part of 3D TMH Complexity.
 #
 #    3D TMH Complexity is free software: you can redistribute it and/or modify
@@ -175,12 +173,16 @@ def hydrophobicity_calculation(sequence, tmh_locations):
     return(list_of_tmhs_from_different_hyrodobicity_dictionaries, list_of_dictionary_types)
 
 # The bahadur statistic allows statistical comparison of P-values.
+
+
 def bahadur_statistic(p_value, sample_size):
     bahadur_value = (abs(np.log(p_value))) / sample_size
     return(bahadur_value)
 
 # Violin plots for datasets.
 rcParams.update({'figure.autolayout': True})
+
+
 def violin_plot(dataset, name, input_file):
     '''
     Gausian Kernel Density Estimation
@@ -200,24 +202,36 @@ def violin_plot(dataset, name, input_file):
     fig, axes = plt.subplots(nrows=1, ncols=1, figsize=(5, 4))
 
     # plot violin plot
-    axes.violinplot(dataset,showmeans=False, showmedians=True)
+    parts = axes.violinplot(dataset, showmeans=True,
+                            showmedians=True, showextrema=False)
     # axes[0].set_title('violin plot')
+    # Colour palette is colour blind friendly according to Wong B 2011 Points
+    # of view: Color blindness Nature Methods 8:441.
+    for pc in parts['bodies']:
+        pc.set_facecolor('#56b4e9')
+        pc.set_alpha(0.5)
+        pc.set_edgecolor('black')
+        pc.set_linewidth(0.2)
+
+    parts['cmedians'].set_color('black')
+    parts['cmeans'].set_color('#e69f00')
 
     axes.yaxis.grid(False)
-    axes.set_xticks([y+1 for y in range(len(dataset))])
+    axes.set_xticks([y + 1 for y in range(len(dataset))])
     axes.set_xlabel('TMH number')
     axes.set_ylabel(name)
 
     # add x-tick labels
-    plt.setp(axes, xticks=[y+1 for y in range(len(dataset))],
-             xticklabels=[x+1 for x in range(len(dataset))])
-    #plt.show()
-    date_time=time.strftime("%d:%m:%Y_%H:%M:%S")
-    file_name=str(input_file+"_"+name+"_"+date_time+".pdf")
+    plt.setp(axes, xticks=[y + 1 for y in range(len(dataset))],
+             xticklabels=[x + 1 for x in range(len(dataset))])
+    # plt.show()
+    date_time = time.strftime("%H:%M:%S_%d:%m:%Y")
+    file_name = str(date_time + "_" + input_file + "_" + name + ".pdf")
     plt.savefig(file_name)
     plt.close(fig)
 
 #### Length sorting for TMHs ####
+
 
 def length_sorting(sequence, tmh_locations):
     '''
@@ -396,14 +410,13 @@ for input_file in input_filenames:
                         list_of_hydrophobicity_scores_in_tmh[
                             scale_number][tmh_number].append(i)
 
-
-
     # Graphs
-    violin_plot(list_of_complexity_scores_in_tmh[0:7], str("Complexity"), input_file)
+    violin_plot(list_of_complexity_scores_in_tmh[
+                0:7], str("Complexity"), input_file)
     violin_plot(list_of_lengths_in_tmh[0:7], str("Length"), input_file)
     for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh[0:len(hydrophobicity_for_record[1])]):
-        violin_plot(list_of_hydrophobicity_scores_in_tmh[scale_number][0:7] , str(hydrophobicity_for_record[1][scale_number]+" hydrophobiciity scale"),input_file)
-
+        violin_plot(list_of_hydrophobicity_scores_in_tmh[scale_number][0:7], str(
+            hydrophobicity_for_record[1][scale_number] + " hydrophobiciity scale"), input_file)
 
     stat_tests_list = [scipy.stats.kruskal, scipy.stats.ks_2samp]
 
@@ -425,8 +438,6 @@ for input_file in input_filenames:
                 if n + 1 < len(list_of_complexity_scores_in_tmh):
                     print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
                         list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
-
-
 
         print("\n")
 
