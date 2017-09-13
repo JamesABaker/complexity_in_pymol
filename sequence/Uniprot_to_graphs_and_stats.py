@@ -35,7 +35,10 @@ from matplotlib import rcParams
 # Input files should be obtained in text format downloaded from Uniprot
 # and moved to the same directory as this script.
 input_filenames = [
-    "GPCR_UniRef50.txt"
+    "GPCR_controlledvocabularyquery_UniRef50.txt",
+    "Opsins_UniRef50.txt",
+    "t2r_UniRef50.txt",
+    "7TM_list_UniRef50.txt"
 ]
 
 # Parameters for tmh allowances
@@ -225,9 +228,13 @@ def violin_plot(dataset, name, input_file):
     plt.setp(axes, xticks=[y + 1 for y in range(len(dataset))],
              xticklabels=[x + 1 for x in range(len(dataset))])
     # plt.show()
+
+    #Save bitmap and vector images of figure, then flush figure.
     date_time = time.strftime("%H:%M:%S_%d:%m:%Y")
     file_name = str(date_time + "_" + input_file + "_" + name + ".pdf")
-    plt.savefig(file_name)
+    plt.savefig(file_name, dpi=700)
+    file_name = str(date_time + "_" + input_file + "_" + name + ".png")
+    plt.savefig(file_name, dpi=700)
     plt.close(fig)
 
 #### Length sorting for TMHs ####
@@ -420,6 +427,8 @@ for input_file in input_filenames:
 
     stat_tests_list = [scipy.stats.kruskal, scipy.stats.ks_2samp]
 
+    print("\n\n", "###", input_file, "###\n")
+
     for stat_tests in stat_tests_list:
 
         # stats for complexity
@@ -433,11 +442,16 @@ for input_file in input_filenames:
             # list_of_complexity_scores_in_tmh = [
             #    x for x in list_of_hydrophobicity_scores_in_tmh if x != []]
 
-            # Only calculating stats if the sample size is >5.
-            if len(i) > 10:
+            # Only calculating stats if the sample size is large enough to be worth it.
+            sample_size_threshold = 10
+            if len(i) > sample_size_threshold:
                 if n + 1 < len(list_of_complexity_scores_in_tmh):
-                    print("TMH ", n + 1, " to ", n + 2, ":", stat_tests(
-                        list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[n + 1]))
+                    for x in range(len(list_of_complexity_scores_in_tmh)):
+                        if x>n and len(list_of_complexity_scores_in_tmh[x]) > sample_size_threshold:
+                            sample_size_for_bahadur = len(list_of_complexity_scores_in_tmh[x]) + len(i)
+                            statistic_test_result=stat_tests(list_of_complexity_scores_in_tmh[n], list_of_complexity_scores_in_tmh[x])
+                            print(sample_size_for_bahadur, statistic_test_result[1])
+                            print("TMH ", n + 1, " to ", x + 1, ":",  statistic_test_result, ", Bahadur slope=", bahadur_statistic(statistic_test_result[1], sample_size_for_bahadur))
 
         print("\n")
 
