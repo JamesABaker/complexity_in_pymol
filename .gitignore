@@ -13,6 +13,9 @@
 !pymol/1a91.pdb
 !pymol/bfactors_1a91_A.txt
 
+#Git track input sequence files.
+!/sequence/*.txt
+
 #Essential files
 !pymol/pdb-list.txt
 

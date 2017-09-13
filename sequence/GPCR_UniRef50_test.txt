@@ -1,0 +1,2916 @@
+ID   APJB_DANRE              Reviewed;         359 AA.
+AC   A0T2N3; Q4V905;
+DT   04-DEC-2007, integrated into UniProtKB/Swiss-Prot.
+DT   09-JAN-2007, sequence version 1.
+DT   05-JUL-2017, entry version 78.
+DE   RecName: Full=Apelin receptor B;
+DE   AltName: Full=Angiotensin II receptor-like 1b;
+DE   AltName: Full=Angiotensin receptor-like 1b;
+DE   AltName: Full=G-protein coupled receptor APJ B;
+DE   AltName: Full=Protein grinch;
+GN   Name=aplnrb; Synonyms=agtrl1b, grn {ECO:0000303|PubMed:17336906};
+GN   ORFNames=zgc:114063;
+OS   Danio rerio (Zebrafish) (Brachydanio rerio).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Actinopterygii; Neopterygii; Teleostei; Ostariophysi; Cypriniformes;
+OC   Cyprinidae; Danio.
+OX   NCBI_TaxID=7955;
+RN   [1] {ECO:0000305, ECO:0000312|EMBL:ABK63803.1}
+RP   NUCLEOTIDE SEQUENCE [MRNA], FUNCTION, AND TISSUE SPECIFICITY.
+RX   PubMed=17336905; DOI=10.1016/j.devcel.2007.01.011;
+RA   Zeng X.-X.I., Wilm T.P., Sepich D.S., Solnica-Krezel L.;
+RT   "Apelin and its receptor control heart field formation during
+RT   zebrafish gastrulation.";
+RL   Dev. Cell 12:391-402(2007).
+RN   [2] {ECO:0000312|EMBL:AAH97125.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Embryo {ECO:0000312|EMBL:AAH97125.1};
+RG   NIH - Zebrafish Gene Collection (ZGC) project;
+RL   Submitted (JUN-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [3] {ECO:0000305}
+RP   FUNCTION, AND MUTAGENESIS OF TRP-90.
+RX   PubMed=17336906; DOI=10.1016/j.devcel.2007.01.012;
+RA   Scott I.C., Masri B., D'Amico L.A., Jin S.-W., Jungblut B.,
+RA   Wehman A.M., Baier H., Audigier Y., Stainier D.Y.R.;
+RT   "The G protein-coupled receptor Agtrl1b regulates early development of
+RT   myocardial progenitors.";
+RL   Dev. Cell 12:403-413(2007).
+RN   [4] {ECO:0000305}
+RP   REVIEW.
+RX   PubMed=17336895; DOI=10.1016/j.devcel.2007.02.005;
+RA   Quertermous T.;
+RT   "Apelin and its G protein-coupled receptor regulate cardiac
+RT   development as well as cardiac function.";
+RL   Dev. Cell 12:319-320(2007).
+RN   [5]
+RP   FUNCTION, INTERACTION WITH APELA, AND MUTAGENESIS OF TRP-90.
+RX   PubMed=24316148; DOI=10.1016/j.devcel.2013.11.002;
+RA   Chng S.C., Ho L., Tian J., Reversade B.;
+RT   "ELABELA: a hormone essential for heart development signals via the
+RT   apelin receptor.";
+RL   Dev. Cell 27:672-680(2013).
+RN   [6]
+RP   FUNCTION, AND INTERACTION WITH APELA.
+RX   PubMed=24407481; DOI=10.1126/science.1248636;
+RA   Pauli A., Norris M.L., Valen E., Chew G.L., Gagnon J.A., Zimmerman S.,
+RA   Mitchell A., Ma J., Dubrulle J., Reyon D., Tsai S.Q., Joung J.K.,
+RA   Saghatelian A., Schier A.F.;
+RT   "Toddler: an embryonic signal that promotes cell movement via apelin
+RT   receptors.";
+RL   Science 343:1248636-1248636(2014).
+CC   -!- FUNCTION: Receptor for apelin receptor early endogenous ligand
+CC       (apela) and apelin (apln) hormones coupled to G proteins that
+CC       inhibit adenylate cyclase activity (PubMed:17336905,
+CC       PubMed:17336906, PubMed:24316148, PubMed:24407481). Plays a key
+CC       role in early development such as gastrulation and heart
+CC       morphogenesis by acting as a receptor for apela hormone, promoting
+CC       endoderm and mesendoderm cell migration and regulating the
+CC       migration of cells fated to become myocardial progenitors,
+CC       respectively (PubMed:17336905, PubMed:17336906, PubMed:24316148,
+CC       PubMed:24407481). Plays a role in various processes in adults such
+CC       as regulation of blood vessel formation, blood pressure, heart
+CC       contractility, and heart failure (By similarity). Acts redundantly
+CC       with agtrl1a in heart development (PubMed:17336906).
+CC       {ECO:0000250|UniProtKB:P35414, ECO:0000269|PubMed:17336905,
+CC       ECO:0000269|PubMed:17336906, ECO:0000269|PubMed:24316148,
+CC       ECO:0000269|PubMed:24407481}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane
+CC       {ECO:0000250|UniProtKB:P79960}; Multi-pass membrane protein
+CC       {ECO:0000250|UniProtKB:P79960}. Note=Internalized to the cytoplasm
+CC       after exposure to apelin (apln). After exposure to apelin receptor
+CC       early endogenous ligand (apela), internalized from the cell
+CC       surface into an endosomal recycling compartment, from where it is
+CC       recycled to the cell membrane. {ECO:0000250|UniProtKB:P35414,
+CC       ECO:0000250|UniProtKB:P79960}.
+CC   -!- TISSUE SPECIFICITY: Mesendodermal expression at the blastoderm
+CC       margin appears by 4.5 hpf. At early gastrulation, expression is
+CC       maintained ventrolaterally while expression in dorsal cells and
+CC       random deep cells declines. During gastrulation and segmentation,
+CC       expression is maintained in adaxial, intermediate, and lateral
+CC       plate mesoderm. During late segmentation, expressed in several
+CC       regions including the forming heart. By 24 hpf, expressed in the
+CC       dorsal aorta, caudal vein, and intersomitic blood vessels.
+CC       {ECO:0000269|PubMed:17336905}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAH97125.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; EF079888; ABK63803.1; -; mRNA.
+DR   EMBL; BC097125; AAH97125.1; ALT_INIT; mRNA.
+DR   RefSeq; NP_001025368.2; NM_001030197.2.
+DR   UniGene; Dr.88828; -.
+DR   ProteinModelPortal; A0T2N3; -.
+DR   STRING; 7955.ENSDARP00000108783; -.
+DR   PaxDb; A0T2N3; -.
+DR   Ensembl; ENSDART00000129643; ENSDARP00000108783; ENSDARG00000036670.
+DR   GeneID; 565492; -.
+DR   KEGG; dre:565492; -.
+DR   CTD; 565492; -.
+DR   ZFIN; ZDB-GENE-050913-90; aplnrb.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   GeneTree; ENSGT00760000119055; -.
+DR   HOGENOM; HOG000234122; -.
+DR   HOVERGEN; HBG104998; -.
+DR   InParanoid; A0T2N3; -.
+DR   KO; K04174; -.
+DR   OMA; VMVFRST; -.
+DR   OrthoDB; EOG091G0BIX; -.
+DR   PhylomeDB; A0T2N3; -.
+DR   TreeFam; TF330024; -.
+DR   Reactome; R-DRE-418594; G alpha (i) signalling events.
+DR   PRO; PR:A0T2N3; -.
+DR   Proteomes; UP000000437; Chromosome 10.
+DR   Bgee; ENSDARG00000036670; -.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; ISS:UniProtKB.
+DR   GO; GO:0060182; F:apelin receptor activity; IDA:ZFIN.
+DR   GO; GO:0035479; P:angioblast cell migration from lateral mesoderm to midline; IMP:ZFIN.
+DR   GO; GO:0048738; P:cardiac muscle tissue development; IMP:UniProtKB.
+DR   GO; GO:0016477; P:cell migration; IMP:UniProtKB.
+DR   GO; GO:0035987; P:endodermal cell differentiation; IGI:ZFIN.
+DR   GO; GO:0090162; P:establishment of epithelial cell polarity; IMP:ZFIN.
+DR   GO; GO:0007369; P:gastrulation; IMP:ZFIN.
+DR   GO; GO:0001702; P:gastrulation with mouth forming second; IMP:UniProtKB.
+DR   GO; GO:0007507; P:heart development; IMP:UniProtKB.
+DR   GO; GO:0008078; P:mesodermal cell migration; IMP:ZFIN.
+DR   GO; GO:0043951; P:negative regulation of cAMP-mediated signaling; ISS:UniProtKB.
+DR   GO; GO:0045766; P:positive regulation of angiogenesis; ISS:UniProtKB.
+DR   GO; GO:1904325; P:positive regulation of inhibitory G-protein coupled receptor phosphorylation; ISS:UniProtKB.
+DR   GO; GO:0051281; P:positive regulation of release of sequestered calcium ion into cytosol; ISS:UniProtKB.
+DR   GO; GO:1900107; P:regulation of nodal signaling pathway; IGI:ZFIN.
+DR   InterPro; IPR000248; ATII_rcpt.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00241; ANGIOTENSINR.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Complete proteome; Developmental protein;
+KW   G-protein coupled receptor; Gastrulation; Glycoprotein; Membrane;
+KW   Receptor; Reference proteome; Transducer; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN         1    359       Apelin receptor B.
+FT                                /FTId=PRO_0000312594.
+FT   TOPO_DOM      1     36       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     37     57       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     58     75       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     76     96       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM     97    108       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    109    129       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    130    151       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    152    172       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    173    213       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    214    234       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    235    251       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    252    272       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    273    286       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    287    307       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    308    359       Cytoplasmic. {ECO:0000255}.
+FT   CARBOHYD      6      6       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     21     21       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    182    182       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   MUTAGEN      90     90       W->L: In grns608; defective in early
+FT                                myocardial specification.
+FT                                {ECO:0000269|PubMed:17336906,
+FT                                ECO:0000269|PubMed:24316148}.
+SQ   SEQUENCE   359 AA;  40147 MW;  8D88B8A3EB169FCD CRC64;
+     MNAMDNMTAD YSPDYFDDAV NSSMCEYDEW EPSYSLIPVL YMLIFILGLT GNGVVIFTVW
+     RAQSKRRAAD VYIGNLALAD LTFVVTLPLW AVYTALGYHW PFGVALCKIS SYVVLLNMYA
+     SVFCLTCLSL DRYMAIVHSL TSTQLRTRGH MRASLTAIWL LSGVLAAPTL LFRTTVYDVE
+     TNRTSCAMDF NLVVSQPGQE TYWIAGLSIS STALGFLIPL LAMMVCYGFI GCTVTRHFNS
+     LRKEDQRKRR LLKIITTLVV VFAACWMPFH VVKTMDALSY LNLAPDSCTF LNLLLLAHPY
+     ATCLAYVNSC LNPLLYAFFD LRFRSQCLCL LNLKKALHAS PASSLSSQKT EAQSLATKV
+//
+ID   LPHN_DROME              Reviewed;        1697 AA.
+AC   A1Z7G7; B7YZT6; Q6GKZ7; Q8T3I8;
+DT   20-APR-2010, integrated into UniProtKB/Swiss-Prot.
+DT   03-MAR-2009, sequence version 2.
+DT   05-JUL-2017, entry version 92.
+DE   RecName: Full=Latrophilin Cirl {ECO:0000303|PubMed:10798391, ECO:0000312|EMBL:AAF59067.3};
+GN   Name=Cirl {ECO:0000312|EMBL:AAF59067.3,
+GN   ECO:0000312|FlyBase:FBgn0033313}; ORFNames=CG8639;
+OS   Drosophila melanogaster (Fruit fly).
+OC   Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+OC   Pterygota; Neoptera; Holometabola; Diptera; Brachycera; Muscomorpha;
+OC   Ephydroidea; Drosophilidae; Drosophila; Sophophora.
+OX   NCBI_TaxID=7227;
+RN   [1] {ECO:0000312|EMBL:AAF59067.3}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Berkeley {ECO:0000312|EMBL:AAF59067.3};
+RX   PubMed=10731132; DOI=10.1126/science.287.5461.2185;
+RA   Adams M.D., Celniker S.E., Holt R.A., Evans C.A., Gocayne J.D.,
+RA   Amanatides P.G., Scherer S.E., Li P.W., Hoskins R.A., Galle R.F.,
+RA   George R.A., Lewis S.E., Richards S., Ashburner M., Henderson S.N.,
+RA   Sutton G.G., Wortman J.R., Yandell M.D., Zhang Q., Chen L.X.,
+RA   Brandon R.C., Rogers Y.-H.C., Blazej R.G., Champe M., Pfeiffer B.D.,
+RA   Wan K.H., Doyle C., Baxter E.G., Helt G., Nelson C.R., Miklos G.L.G.,
+RA   Abril J.F., Agbayani A., An H.-J., Andrews-Pfannkoch C., Baldwin D.,
+RA   Ballew R.M., Basu A., Baxendale J., Bayraktaroglu L., Beasley E.M.,
+RA   Beeson K.Y., Benos P.V., Berman B.P., Bhandari D., Bolshakov S.,
+RA   Borkova D., Botchan M.R., Bouck J., Brokstein P., Brottier P.,
+RA   Burtis K.C., Busam D.A., Butler H., Cadieu E., Center A., Chandra I.,
+RA   Cherry J.M., Cawley S., Dahlke C., Davenport L.B., Davies P.,
+RA   de Pablos B., Delcher A., Deng Z., Mays A.D., Dew I., Dietz S.M.,
+RA   Dodson K., Doup L.E., Downes M., Dugan-Rocha S., Dunkov B.C., Dunn P.,
+RA   Durbin K.J., Evangelista C.C., Ferraz C., Ferriera S., Fleischmann W.,
+RA   Fosler C., Gabrielian A.E., Garg N.S., Gelbart W.M., Glasser K.,
+RA   Glodek A., Gong F., Gorrell J.H., Gu Z., Guan P., Harris M.,
+RA   Harris N.L., Harvey D.A., Heiman T.J., Hernandez J.R., Houck J.,
+RA   Hostin D., Houston K.A., Howland T.J., Wei M.-H., Ibegwam C.,
+RA   Jalali M., Kalush F., Karpen G.H., Ke Z., Kennison J.A., Ketchum K.A.,
+RA   Kimmel B.E., Kodira C.D., Kraft C.L., Kravitz S., Kulp D., Lai Z.,
+RA   Lasko P., Lei Y., Levitsky A.A., Li J.H., Li Z., Liang Y., Lin X.,
+RA   Liu X., Mattei B., McIntosh T.C., McLeod M.P., McPherson D.,
+RA   Merkulov G., Milshina N.V., Mobarry C., Morris J., Moshrefi A.,
+RA   Mount S.M., Moy M., Murphy B., Murphy L., Muzny D.M., Nelson D.L.,
+RA   Nelson D.R., Nelson K.A., Nixon K., Nusskern D.R., Pacleb J.M.,
+RA   Palazzolo M., Pittman G.S., Pan S., Pollard J., Puri V., Reese M.G.,
+RA   Reinert K., Remington K., Saunders R.D.C., Scheeler F., Shen H.,
+RA   Shue B.C., Siden-Kiamos I., Simpson M., Skupski M.P., Smith T.J.,
+RA   Spier E., Spradling A.C., Stapleton M., Strong R., Sun E.,
+RA   Svirskas R., Tector C., Turner R., Venter E., Wang A.H., Wang X.,
+RA   Wang Z.-Y., Wassarman D.A., Weinstock G.M., Weissenbach J.,
+RA   Williams S.M., Woodage T., Worley K.C., Wu D., Yang S., Yao Q.A.,
+RA   Ye J., Yeh R.-F., Zaveri J.S., Zhan M., Zhang G., Zhao Q., Zheng L.,
+RA   Zheng X.H., Zhong F.N., Zhong W., Zhou X., Zhu S.C., Zhu X.,
+RA   Smith H.O., Gibbs R.A., Myers E.W., Rubin G.M., Venter J.C.;
+RT   "The genome sequence of Drosophila melanogaster.";
+RL   Science 287:2185-2195(2000).
+RN   [2] {ECO:0000305, ECO:0000312|EMBL:AAF59067.3}
+RP   GENOME REANNOTATION, AND ALTERNATIVE SPLICING.
+RC   STRAIN=Berkeley;
+RX   PubMed=12537572; DOI=10.1186/gb-2002-3-12-research0083;
+RA   Misra S., Crosby M.A., Mungall C.J., Matthews B.B., Campbell K.S.,
+RA   Hradecky P., Huang Y., Kaminker J.S., Millburn G.H., Prochnik S.E.,
+RA   Smith C.D., Tupy J.L., Whitfield E.J., Bayraktaroglu L., Berman B.P.,
+RA   Bettencourt B.R., Celniker S.E., de Grey A.D.N.J., Drysdale R.A.,
+RA   Harris N.L., Richter J., Russo S., Schroeder A.J., Shu S.Q.,
+RA   Stapleton M., Yamada C., Ashburner M., Gelbart W.M., Rubin G.M.,
+RA   Lewis S.E.;
+RT   "Annotation of the Drosophila melanogaster euchromatic genome: a
+RT   systematic review.";
+RL   Genome Biol. 3:RESEARCH0083.1-RESEARCH0083.22(2002).
+RN   [3] {ECO:0000305, ECO:0000312|EMBL:AAT47768.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] (ISOFORM B).
+RC   STRAIN=Berkeley {ECO:0000312|EMBL:AAT47768.1}; TISSUE=Embryo;
+RA   Stapleton M., Carlson J.W., Chavez C., Frise E., George R.A.,
+RA   Pacleb J.M., Park S., Wan K.H., Yu C., Rubin G.M., Celniker S.E.;
+RL   Submitted (JUN-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [4] {ECO:0000305, ECO:0000312|EMBL:AAM11425.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 1238-1697 (ISOFORMS B/C).
+RC   STRAIN=Berkeley {ECO:0000312|EMBL:AAM11425.1};
+RC   TISSUE=Embryo {ECO:0000269|PubMed:12537569};
+RX   PubMed=12537569; DOI=10.1186/gb-2002-3-12-research0080;
+RA   Stapleton M., Carlson J.W., Brokstein P., Yu C., Champe M.,
+RA   George R.A., Guarin H., Kronmiller B., Pacleb J.M., Park S., Wan K.H.,
+RA   Rubin G.M., Celniker S.E.;
+RT   "A Drosophila full-length cDNA resource.";
+RL   Genome Biol. 3:RESEARCH0080.1-RESEARCH0080.8(2002).
+RN   [5] {ECO:0000305}
+RP   IDENTIFICATION.
+RX   PubMed=10798391; DOI=10.1016/S0896-6273(00)81136-8;
+RA   Lloyd T.E., Verstreken P., Ostrin E.J., Phillippi A., Lichtarge O.,
+RA   Bellen H.J.;
+RT   "A genome-wide search for synaptic vesicle cycle proteins in
+RT   Drosophila.";
+RL   Neuron 26:45-50(2000).
+RN   [6] {ECO:0000305}
+RP   PHOSPHORYLATION [LARGE SCALE ANALYSIS] AT SER-1142; SER-1239;
+RP   SER-1246; SER-1315 AND SER-1316, AND IDENTIFICATION BY MASS
+RP   SPECTROMETRY.
+RC   TISSUE=Embryo {ECO:0000269|PubMed:18327897};
+RX   PubMed=18327897; DOI=10.1021/pr700696a;
+RA   Zhai B., Villen J., Beausoleil S.A., Mintseris J., Gygi S.P.;
+RT   "Phosphoproteome analysis of Drosophila melanogaster embryos.";
+RL   J. Proteome Res. 7:1675-1682(2008).
+RN   [7] {ECO:0000305}
+RP   GLYCOSYLATION [LARGE SCALE ANALYSIS] AT ASN-242 AND ASN-641, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RX   PubMed=19349973; DOI=10.1038/nbt.1532;
+RA   Wollscheid B., Bausch-Fluck D., Henderson C., O'Brien R., Bibel M.,
+RA   Schiess R., Aebersold R., Watts J.D.;
+RT   "Mass-spectrometric identification and relative quantification of N-
+RT   linked cell surface glycoproteins.";
+RL   Nat. Biotechnol. 27:378-386(2009).
+CC   -!- SUBUNIT: Forms a heterodimer, consisting of a large extracellular
+CC       region non-covalently linked to a seven-transmembrane moiety.
+CC       {ECO:0000250|UniProtKB:O88923}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255}; Multi-pass
+CC       membrane protein {ECO:0000250|UniProtKB:O88923, ECO:0000255}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=C {ECO:0000269|PubMed:10731132};
+CC         IsoId=A1Z7G7-1; Sequence=Displayed;
+CC         Note=No experimental confirmation available. {ECO:0000305};
+CC       Name=B {ECO:0000269|PubMed:10731132};
+CC         IsoId=A1Z7G7-2; Sequence=VSP_038966;
+CC         Note=No experimental confirmation available. {ECO:0000305};
+CC   -!- PTM: Proteolytically cleaved into 2 subunits, an extracellular
+CC       subunit and a seven-transmembrane subunit.
+CC       {ECO:0000250|UniProtKB:O88923}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 2 family.
+CC       LN-TM7 subfamily. {ECO:0000255}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAM11425.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+CC       Sequence=AAT47768.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AE013599; AAF59067.3; -; Genomic_DNA.
+DR   EMBL; AE013599; ACL83074.1; -; Genomic_DNA.
+DR   EMBL; BT014917; AAT47768.1; ALT_INIT; mRNA.
+DR   EMBL; AY095097; AAM11425.1; ALT_INIT; mRNA.
+DR   RefSeq; NP_001137620.1; NM_001144148.4. [A1Z7G7-2]
+DR   RefSeq; NP_001246205.1; NM_001259276.2. [A1Z7G7-2]
+DR   RefSeq; NP_610397.4; NM_136553.5.
+DR   UniGene; Dm.21990; -.
+DR   ProteinModelPortal; A1Z7G7; -.
+DR   SMR; A1Z7G7; -.
+DR   IntAct; A1Z7G7; 1.
+DR   STRING; 7227.FBpp0302596; -.
+DR   MEROPS; P02.A01; -.
+DR   iPTMnet; A1Z7G7; -.
+DR   PaxDb; A1Z7G7; -.
+DR   PRIDE; A1Z7G7; -.
+DR   EnsemblMetazoa; FBtr0310448; FBpp0302596; FBgn0033313.
+DR   GeneID; 35846; -.
+DR   KEGG; dme:Dmel_CG8639; -.
+DR   UCSC; CG8639-RB; d. melanogaster.
+DR   CTD; 35846; -.
+DR   FlyBase; FBgn0033313; Cirl.
+DR   eggNOG; KOG4193; Eukaryota.
+DR   eggNOG; KOG4729; Eukaryota.
+DR   eggNOG; ENOG410XSD2; LUCA.
+DR   GeneTree; ENSGT00830000128227; -.
+DR   InParanoid; A1Z7G7; -.
+DR   OrthoDB; EOG091G01O6; -.
+DR   PhylomeDB; A1Z7G7; -.
+DR   Reactome; R-DME-373080; Class B/2 (Secretin family receptors).
+DR   Reactome; R-DME-6798695; Neutrophil degranulation.
+DR   ChiTaRS; Cirl; fly.
+DR   GenomeRNAi; 35846; -.
+DR   PRO; PR:A1Z7G7; -.
+DR   Proteomes; UP000000803; Chromosome 2R.
+DR   Bgee; FBgn0033313; -.
+DR   ExpressionAtlas; A1Z7G7; differential.
+DR   Genevisible; A1Z7G7; DM.
+DR   GO; GO:0016021; C:integral component of membrane; ISS:FlyBase.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008021; C:synaptic vesicle; NAS:FlyBase.
+DR   GO; GO:0030246; F:carbohydrate binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004930; F:G-protein coupled receptor activity; IEA:UniProtKB-KW.
+DR   GO; GO:0016524; F:latrotoxin receptor activity; ISS:FlyBase.
+DR   GO; GO:0008344; P:adult locomotory behavior; IMP:FlyBase.
+DR   GO; GO:0007166; P:cell surface receptor signaling pathway; IEA:InterPro.
+DR   GO; GO:0007186; P:G-protein coupled receptor signaling pathway; ISS:FlyBase.
+DR   GO; GO:0007269; P:neurotransmitter secretion; NAS:FlyBase.
+DR   GO; GO:0016192; P:vesicle-mediated transport; NAS:FlyBase.
+DR   Gene3D; 2.130.10.10; -; 1.
+DR   InterPro; IPR032471; GAIN_dom_N.
+DR   InterPro; IPR017981; GPCR_2-like.
+DR   InterPro; IPR000203; GPS.
+DR   InterPro; IPR000922; Lectin_gal-bd_dom.
+DR   InterPro; IPR015943; WD40/YVTN_repeat-like_dom.
+DR   Pfam; PF16489; GAIN; 1.
+DR   Pfam; PF02140; Gal_Lectin; 1.
+DR   Pfam; PF01825; GPS; 1.
+DR   SMART; SM00303; GPS; 1.
+DR   PROSITE; PS50261; G_PROTEIN_RECEP_F2_4; 1.
+DR   PROSITE; PS50221; GPS; 1.
+DR   PROSITE; PS50228; SUEL_LECTIN; 1.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Cell membrane; Complete proteome;
+KW   G-protein coupled receptor; Glycoprotein; Lectin; Membrane;
+KW   Phosphoprotein; Receptor; Reference proteome; Transducer;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1   1697       Latrophilin Cirl.
+FT                                /FTId=PRO_0000393375.
+FT   TOPO_DOM      1    753       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    754    774       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM    775    787       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    788    808       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM    809    814       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    815    835       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    836    861       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    862    882       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    883    906       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    907    927       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    928    954       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    955    975       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    976    985       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    986   1006       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM   1007   1697       Cytoplasmic. {ECO:0000255}.
+FT   DOMAIN       11    100       SUEL-type lectin. {ECO:0000255|PROSITE-
+FT                                ProRule:PRU00260}.
+FT   DOMAIN      692    739       GPS. {ECO:0000255|PROSITE-
+FT                                ProRule:PRU00098}.
+FT   COMPBIAS    112    168       Pro-rich. {ECO:0000255}.
+FT   COMPBIAS   1292   1358       Gln-rich. {ECO:0000255}.
+FT   COMPBIAS   1452   1468       Gln-rich. {ECO:0000255}.
+FT   COMPBIAS   1648   1677       His-rich. {ECO:0000255}.
+FT   MOD_RES    1142   1142       Phosphoserine.
+FT                                {ECO:0000269|PubMed:18327897}.
+FT   MOD_RES    1239   1239       Phosphoserine.
+FT                                {ECO:0000269|PubMed:18327897}.
+FT   MOD_RES    1246   1246       Phosphoserine.
+FT                                {ECO:0000269|PubMed:18327897}.
+FT   MOD_RES    1315   1315       Phosphoserine.
+FT                                {ECO:0000269|PubMed:18327897}.
+FT   MOD_RES    1316   1316       Phosphoserine.
+FT                                {ECO:0000269|PubMed:18327897}.
+FT   CARBOHYD    128    128       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    242    242       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000269|PubMed:19349973}.
+FT   CARBOHYD    288    288       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    327    327       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    384    384       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    641    641       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000269|PubMed:19349973}.
+FT   CARBOHYD    689    689       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    716    716       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   VAR_SEQ       1     54       Missing (in isoform B).
+FT                                {ECO:0000303|PubMed:10731132,
+FT                                ECO:0000303|Ref.3}.
+FT                                /FTId=VSP_038966.
+FT   CONFLICT    633    636       Missing (in Ref. 3; AAT47768).
+FT                                {ECO:0000305}.
+FT   CONFLICT    772    772       L -> I (in Ref. 3; AAT47768).
+FT                                {ECO:0000305}.
+FT   CONFLICT    882    882       I -> V (in Ref. 3; AAT47768).
+FT                                {ECO:0000305}.
+FT   CONFLICT    975    975       A -> G (in Ref. 3; AAT47768).
+FT                                {ECO:0000305}.
+FT   CONFLICT   1458   1458       K -> N (in Ref. 4; AAM11425).
+FT                                {ECO:0000305}.
+FT   CONFLICT   1584   1584       L -> M (in Ref. 4; AAM11425).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   1697 AA;  186065 MW;  51FBB405BBECE6F3 CRC64;
+     MILSKYQTAY ACEGKKLTIE CDPGDVINLI RANYGRFSIT ICNDHGNVEW SVNCMFPKSL
+     SVLNSRCAHK QSCGVLAATS MFGDPCPGTH KYLEAHYQCI SAAQTSTTTN RPSPPPWVLS
+     NGPPIFGNGS GLIHPPGVGA GAPPPPRLPT LPGVVGISGN PGLFNVPPQH TAVTHSTPSS
+     STTAVGGGRL KGGATSTTTT KHPAGRHDGL PPPPQLHHHH NHHGEDTASP TKPSSKLPAG
+     GNATSPSNTR ILTGVGGSGT DDGTLLTTKS SPNRPPGTAA SGSVVPGNGS VVRTINNINL
+     NAAGMSGGDD ESKLFCGPTH ARNLYWNMTR VGDVNVQPCP GGAAGIAKWR CVLMKRIPDS
+     GYDEYDDDIS STTPAPSGGD CLHNSSSCEP PVSMAHKVNQ RLRNFEPTWH PATPDLTQCR
+     SLWLNNLEMR VNQRDSSLIS IANDMSEVTS SKTLYGGDML VTTKIIQTVS EKMMHDKETF
+     PDQRQREAMI MELLHCVVKT GSNLLDESQL SSWLDLNPED QMRVATSLLT GLEYNAFLLA
+     DTIIRERSVV QKVKNILLSV RVLETKTIQS SVVFPDSDQW PLSSDRIELP RAALIDNSEG
+     GLVRIVFAAF DRLESILKPS YDHFDLKSSR SYVRNTAILS NDSDVNAGEI QQRLRILNSK
+     VISASLGKGR HIQLSQPITL TLKHLKTENV TNPTCVFWNY IDHAWSANGC SLESTNRTHS
+     VCSCNHLTNF AILMDVVDEH QHSLFTMFDG NMRIFIYISI GICVVFIVIA LLTLKLFNGV
+     FVKSARTSIY TSIYLCLLAI ELLFLLGIEQ TETSIFCGFI TIFLHCAILS GTAWFCYEAF
+     HSYSTLTSDE LLLEVDQTPK VNCYYLLSYG LSLSVVAISL VIDPSTYTQN DYCVLMEANA
+     LFYATFVIPV LVFFVAAIGY TFLSWIIMCR KSRTGLKTKE HTRLASVRFD IRCSFVFLLL
+     LSAVWCSAYF YLRGAKMDDD TADVYGYCFI CFNTLLGLYI FVFHCIQNEK IRREYRKYVR
+     QHAWLPKCLR CSKTSISSGI VTGNGPTAGT LCSVSTSKKP KLPLGVSEEA HDDPQQQQQT
+     PVPITEDAIM GATSDCELNE AQQRRTLKSG LMTGTLQAPP QTLGGHVVLE RGSTLRSTGH
+     ASPTSSAGST HLIFAHKQQQ QQQQQGPLGE SYYHQPDYYS WKQPSTGTGG LKTPREYYNN
+     AGAAASSPQQ AHEVFYWTQK PNSGHNGKKK RGAGGVPASP SGSLHSRTAA ASQVLFYPSY
+     KKTKPGQPTG YPQYAEALDP PLATGNAAAY YQQQQQLRRQ QLHQQQQQQQ QQQLSSDEEQ
+     AEQHAHLLHL QRRAGSQQQL PAPPPHMAQY QQEFMQRQYR NKHSNCDLGM GDAYYNQGSV
+     GGADGGPVYE EILSNRNSDV QHYEVGDFDV DEVYNNSVGT GVFNNMRAAV AAGGSRYGGG
+     SLSGGSVSSR SQQQQLKKQQ QQQSLAQQRS ARRCTADDDD DEDEEEDEEA TAAEQLHDSV
+     CDEDEEEDES DLEDDAHGLP PQSDERMRRL MAMQDEDFKR RFQRQLRKHG APLDYGALPP
+     GAGPQPEHNG AVFGVSGGVG EGSLRGAFRQ QQQQALNAKS PGGRLAVNEL FGHGNSGPPL
+     PPANQTPAQK RQQLQKLSPQ STTSSSSHTS HSNPNPHPHQ LTHPHPHQHP PHHQQRHLSA
+     MLDENNTVRC YLEPLAK
+//
+ID   CCH1R_DROME             Reviewed;         499 AA.
+AC   A1ZAX0;
+DT   09-DEC-2015, integrated into UniProtKB/Swiss-Prot.
+DT   13-NOV-2007, sequence version 2.
+DT   05-JUL-2017, entry version 100.
+DE   RecName: Full=Neuropeptide CCHamide-1 receptor {ECO:0000303|PubMed:21110953};
+GN   Name=CCHa1-R {ECO:0000312|FlyBase:FBgn0050106};
+GN   ORFNames=CG30106 {ECO:0000312|FlyBase:FBgn0050106};
+OS   Drosophila melanogaster (Fruit fly).
+OC   Eukaryota; Metazoa; Ecdysozoa; Arthropoda; Hexapoda; Insecta;
+OC   Pterygota; Neoptera; Holometabola; Diptera; Brachycera; Muscomorpha;
+OC   Ephydroidea; Drosophilidae; Drosophila; Sophophora.
+OX   NCBI_TaxID=7227 {ECO:0000312|Proteomes:UP000000803};
+RN   [1] {ECO:0000312|EMBL:AAX58700.1}
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND FUNCTION.
+RX   PubMed=21110953; DOI=10.1016/j.bbrc.2010.11.089;
+RA   Hansen K.K., Hauser F., Williamson M., Weber S.B.,
+RA   Grimmelikhuijzen C.J.;
+RT   "The Drosophila genes CG14593 and CG30106 code for G-protein-coupled
+RT   receptors specifically activated by the neuropeptides CCHamide-1 and
+RT   CCHamide-2.";
+RL   Biochem. Biophys. Res. Commun. 404:184-189(2011).
+RN   [2] {ECO:0000312|Proteomes:UP000000803}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Berkeley {ECO:0000312|Proteomes:UP000000803};
+RX   PubMed=10731132; DOI=10.1126/science.287.5461.2185;
+RA   Adams M.D., Celniker S.E., Holt R.A., Evans C.A., Gocayne J.D.,
+RA   Amanatides P.G., Scherer S.E., Li P.W., Hoskins R.A., Galle R.F.,
+RA   George R.A., Lewis S.E., Richards S., Ashburner M., Henderson S.N.,
+RA   Sutton G.G., Wortman J.R., Yandell M.D., Zhang Q., Chen L.X.,
+RA   Brandon R.C., Rogers Y.-H.C., Blazej R.G., Champe M., Pfeiffer B.D.,
+RA   Wan K.H., Doyle C., Baxter E.G., Helt G., Nelson C.R., Miklos G.L.G.,
+RA   Abril J.F., Agbayani A., An H.-J., Andrews-Pfannkoch C., Baldwin D.,
+RA   Ballew R.M., Basu A., Baxendale J., Bayraktaroglu L., Beasley E.M.,
+RA   Beeson K.Y., Benos P.V., Berman B.P., Bhandari D., Bolshakov S.,
+RA   Borkova D., Botchan M.R., Bouck J., Brokstein P., Brottier P.,
+RA   Burtis K.C., Busam D.A., Butler H., Cadieu E., Center A., Chandra I.,
+RA   Cherry J.M., Cawley S., Dahlke C., Davenport L.B., Davies P.,
+RA   de Pablos B., Delcher A., Deng Z., Mays A.D., Dew I., Dietz S.M.,
+RA   Dodson K., Doup L.E., Downes M., Dugan-Rocha S., Dunkov B.C., Dunn P.,
+RA   Durbin K.J., Evangelista C.C., Ferraz C., Ferriera S., Fleischmann W.,
+RA   Fosler C., Gabrielian A.E., Garg N.S., Gelbart W.M., Glasser K.,
+RA   Glodek A., Gong F., Gorrell J.H., Gu Z., Guan P., Harris M.,
+RA   Harris N.L., Harvey D.A., Heiman T.J., Hernandez J.R., Houck J.,
+RA   Hostin D., Houston K.A., Howland T.J., Wei M.-H., Ibegwam C.,
+RA   Jalali M., Kalush F., Karpen G.H., Ke Z., Kennison J.A., Ketchum K.A.,
+RA   Kimmel B.E., Kodira C.D., Kraft C.L., Kravitz S., Kulp D., Lai Z.,
+RA   Lasko P., Lei Y., Levitsky A.A., Li J.H., Li Z., Liang Y., Lin X.,
+RA   Liu X., Mattei B., McIntosh T.C., McLeod M.P., McPherson D.,
+RA   Merkulov G., Milshina N.V., Mobarry C., Morris J., Moshrefi A.,
+RA   Mount S.M., Moy M., Murphy B., Murphy L., Muzny D.M., Nelson D.L.,
+RA   Nelson D.R., Nelson K.A., Nixon K., Nusskern D.R., Pacleb J.M.,
+RA   Palazzolo M., Pittman G.S., Pan S., Pollard J., Puri V., Reese M.G.,
+RA   Reinert K., Remington K., Saunders R.D.C., Scheeler F., Shen H.,
+RA   Shue B.C., Siden-Kiamos I., Simpson M., Skupski M.P., Smith T.J.,
+RA   Spier E., Spradling A.C., Stapleton M., Strong R., Sun E.,
+RA   Svirskas R., Tector C., Turner R., Venter E., Wang A.H., Wang X.,
+RA   Wang Z.-Y., Wassarman D.A., Weinstock G.M., Weissenbach J.,
+RA   Williams S.M., Woodage T., Worley K.C., Wu D., Yang S., Yao Q.A.,
+RA   Ye J., Yeh R.-F., Zaveri J.S., Zhan M., Zhang G., Zhao Q., Zheng L.,
+RA   Zheng X.H., Zhong F.N., Zhong W., Zhou X., Zhu S.C., Zhu X.,
+RA   Smith H.O., Gibbs R.A., Myers E.W., Rubin G.M., Venter J.C.;
+RT   "The genome sequence of Drosophila melanogaster.";
+RL   Science 287:2185-2195(2000).
+RN   [3] {ECO:0000312|Proteomes:UP000000803}
+RP   GENOME REANNOTATION.
+RC   STRAIN=Berkeley {ECO:0000312|Proteomes:UP000000803};
+RX   PubMed=12537572; DOI=10.1186/gb-2002-3-12-research0083;
+RA   Misra S., Crosby M.A., Mungall C.J., Matthews B.B., Campbell K.S.,
+RA   Hradecky P., Huang Y., Kaminker J.S., Millburn G.H., Prochnik S.E.,
+RA   Smith C.D., Tupy J.L., Whitfield E.J., Bayraktaroglu L., Berman B.P.,
+RA   Bettencourt B.R., Celniker S.E., de Grey A.D.N.J., Drysdale R.A.,
+RA   Harris N.L., Richter J., Russo S., Schroeder A.J., Shu S.Q.,
+RA   Stapleton M., Yamada C., Ashburner M., Gelbart W.M., Rubin G.M.,
+RA   Lewis S.E.;
+RT   "Annotation of the Drosophila melanogaster euchromatic genome: a
+RT   systematic review.";
+RL   Genome Biol. 3:RESEARCH0083.1-RESEARCH0083.22(2002).
+RN   [4] {ECO:0000305}
+RP   FUNCTION.
+RX   PubMed=23293632; DOI=10.3389/fendo.2012.00177;
+RA   Ida T., Takahashi T., Tominaga H., Sato T., Sano H., Kume K.,
+RA   Ozaki M., Hiraguchi T., Shiotani H., Terajima S., Nakamura Y.,
+RA   Mori K., Yoshida M., Kato J., Murakami N., Miyazato M., Kangawa K.,
+RA   Kojima M.;
+RT   "Isolation of the bioactive peptides CCHamide-1 and CCHamide-2 from
+RT   Drosophila and their putative role in appetite regulation as ligands
+RT   for G protein-coupled receptors.";
+RL   Front. Endocrinol. 3:177-177(2012).
+RN   [5] {ECO:0000305}
+RP   TISSUE SPECIFICITY, AND DEVELOPMENTAL STAGE.
+RC   STRAIN=Canton-S;
+RX   PubMed=24098432; DOI=10.1371/journal.pone.0076131;
+RA   Li S., Torre-Muruzabal T., Soegaard K.C., Ren G.R., Hauser F.,
+RA   Engelsen S.M., Poedenphanth M.D., Desjardins A.,
+RA   Grimmelikhuijzen C.J.;
+RT   "Expression patterns of the Drosophila neuropeptide CCHamide-2 and its
+RT   receptor may suggest hormonal signaling from the gut to the brain.";
+RL   PLoS ONE 8:E76131-E76131(2013).
+RN   [6] {ECO:0000305}
+RP   FUNCTION.
+RX   PubMed=24067446; DOI=10.1038/srep02765;
+RA   Farhan A., Gulati J., Grobetae-Wilde E., Vogel H., Hansson B.S.,
+RA   Knaden M.;
+RT   "The CCHamide 1 receptor modulates sensory perception and olfactory
+RT   behavior in starved Drosophila.";
+RL   Sci. Rep. 3:2765-2765(2013).
+CC   -!- FUNCTION: Receptor for the neuropeptide CCHamide-1
+CC       (PubMed:21110953, PubMed:23293632). Plays a role in the modulation
+CC       of starvation-induced olfactory behavior where starved flies show
+CC       increased responsiveness to food odorants, repellants and
+CC       pheromones (PubMed:24067446). {ECO:0000269|PubMed:21110953,
+CC       ECO:0000269|PubMed:23293632, ECO:0000269|PubMed:24067446}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000255}.
+CC   -!- TISSUE SPECIFICITY: Low levels in larval brain and gut with higher
+CC       levels in adult brain and gut. {ECO:0000269|PubMed:24098432}.
+CC   -!- DEVELOPMENTAL STAGE: Very low expression in eggs. Expression
+CC       increases during the first and second instar larval stages,
+CC       decreases in the third instar larval stage and increases again in
+CC       pupae and adults. {ECO:0000269|PubMed:24098432}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AY842252; AAX58700.1; -; mRNA.
+DR   EMBL; AE013599; AAF57819.3; -; Genomic_DNA.
+DR   RefSeq; NP_611241.2; NM_137397.3.
+DR   UniGene; Dm.26950; -.
+DR   ProteinModelPortal; A1ZAX0; -.
+DR   STRING; 7227.FBpp0086052; -.
+DR   PaxDb; A1ZAX0; -.
+DR   PRIDE; A1ZAX0; -.
+DR   EnsemblMetazoa; FBtr0086893; FBpp0086052; FBgn0050106.
+DR   GeneID; 37004; -.
+DR   KEGG; dme:Dmel_CG30106; -.
+DR   UCSC; CG30106-RA; d. melanogaster.
+DR   CTD; 37004; -.
+DR   FlyBase; FBgn0050106; CCHa1-R.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   KO; K04169; -.
+DR   OMA; PGEMQGA; -.
+DR   OrthoDB; EOG091G0FH4; -.
+DR   PhylomeDB; A1ZAX0; -.
+DR   Reactome; R-DME-375276; Peptide ligand-binding receptors.
+DR   GenomeRNAi; 37004; -.
+DR   PRO; PR:A1ZAX0; -.
+DR   Proteomes; UP000000803; Chromosome 2R.
+DR   Bgee; FBgn0050106; -.
+DR   GO; GO:0016021; C:integral component of membrane; IDA:FlyBase.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:FlyBase.
+DR   GO; GO:0008261; F:allatostatin receptor activity; IDA:FlyBase.
+DR   GO; GO:0008188; F:neuropeptide receptor activity; IDA:FlyBase.
+DR   GO; GO:0007186; P:G-protein coupled receptor signaling pathway; ISM:FlyBase.
+DR   GO; GO:0007218; P:neuropeptide signaling pathway; IDA:FlyBase.
+DR   InterPro; IPR001556; Bombsn_rcpt-like.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00358; BOMBESINR.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Membrane; Receptor;
+KW   Reference proteome; Transducer; Transmembrane; Transmembrane helix.
+FT   CHAIN         1    499       Neuropeptide CCHamide-1 receptor.
+FT                                {ECO:0000305}.
+FT                                /FTId=PRO_0000435023.
+FT   TOPO_DOM      1     85       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     86    106       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM    107    117       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    118    138       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM    139    162       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    163    183       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    184    203       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    204    224       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    225    259       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    260    280       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    281    309       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    310    330       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    331    348       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    349    369       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    370    499       Cytoplasmic. {ECO:0000255}.
+FT   CARBOHYD     33     33       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255|PROSITE-ProRule:PRU00498}.
+FT   CARBOHYD     61     61       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255|PROSITE-ProRule:PRU00498}.
+FT   DISULFID    154    240       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+SQ   SEQUENCE   499 AA;  55549 MW;  620CC8AA12F9E48A CRC64;
+     MIANLVSMET DLAMNIGLDT SGEAPTALPP MPNVTETLWD LAMVVSQSTQ WPLLDTGSSE
+     NFSELVTTET PYVPYGRRPE TYIVPILFAL IFVVGVLGNG TLIVVFLSVR QMRNVPNTYI
+     LSLALADLLV IITTVPLAST VYTVEYWPYG SFLCSLSEFM KDVSIGVSVF TLTALSGDRY
+     FAIVDPLRKF HAHGGGRRAT RMTLATAVSI WLLAILCGLP ALIGSNLKHL GINEKSIVIC
+     YPYPEEWGIN YAKSMVLLHF LVYYAIPLVV IAVFYVLIAL HLMYSASVPG EIQGAVRQVR
+     ARRKVAVTVL AFVVIFGICF LPYHVFFLWF YFWPTAQDDY NAFWHVLRIV AYCMSFANSC
+     ANPVALYFVS GAFRKHFNRY LFCRGASGRR KKRGQHDTFC MHRDTSLTST ASKRFQSRHS
+     CYQSTIRSCR LQETTITTLP NGGNQNGANI SAVELALPVL QAPGHNEAHA PPSYGFLPLN
+     EIVQQTRSSP AKFQESLLN
+//
+ID   LGR4_MOUSE              Reviewed;         951 AA.
+AC   A2ARI4; A2ARI3; Q6PHA3; Q80T31; Q8BXS9;
+DT   11-SEP-2007, integrated into UniProtKB/Swiss-Prot.
+DT   20-FEB-2007, sequence version 1.
+DT   07-JUN-2017, entry version 92.
+DE   RecName: Full=Leucine-rich repeat-containing G-protein coupled receptor 4;
+DE   AltName: Full=G-protein coupled receptor 48;
+DE   Flags: Precursor;
+GN   Name=Lgr4; Synonyms=Gpr48;
+OS   Mus musculus (Mouse).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Glires; Rodentia; Myomorpha;
+OC   Muroidea; Muridae; Murinae; Mus; Mus.
+OX   NCBI_TaxID=10090;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=C57BL/6J;
+RX   PubMed=19468303; DOI=10.1371/journal.pbio.1000112;
+RA   Church D.M., Goodstadt L., Hillier L.W., Zody M.C., Goldstein S.,
+RA   She X., Bult C.J., Agarwala R., Cherry J.L., DiCuccio M., Hlavina W.,
+RA   Kapustin Y., Meric P., Maglott D., Birtle Z., Marques A.C., Graves T.,
+RA   Zhou S., Teague B., Potamousis K., Churas C., Place M., Herschleb J.,
+RA   Runnheim R., Forrest D., Amos-Landgraf J., Schwartz D.C., Cheng Z.,
+RA   Lindblad-Toh K., Eichler E.E., Ponting C.P.;
+RT   "Lineage-specific biology revealed by a finished genome assembly of
+RT   the mouse.";
+RL   PLoS Biol. 7:E1000112-E1000112(2009).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 63-196.
+RX   PubMed=12679517; DOI=10.1073/pnas.0230374100;
+RA   Vassilatis D.K., Hohmann J.G., Zeng H., Li F., Ranchalis J.E.,
+RA   Mortrud M.T., Brown A., Rodriguez S.S., Weller J.R., Wright A.C.,
+RA   Bergmann J.E., Gaitanaris G.A.;
+RT   "The G protein-coupled receptor repertoires of human and mouse.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:4903-4908(2003).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 74-951.
+RC   STRAIN=C57BL/6J; TISSUE=Retina;
+RX   PubMed=16141072; DOI=10.1126/science.1112014;
+RA   Carninci P., Kasukawa T., Katayama S., Gough J., Frith M.C., Maeda N.,
+RA   Oyama R., Ravasi T., Lenhard B., Wells C., Kodzius R., Shimokawa K.,
+RA   Bajic V.B., Brenner S.E., Batalov S., Forrest A.R., Zavolan M.,
+RA   Davis M.J., Wilming L.G., Aidinis V., Allen J.E.,
+RA   Ambesi-Impiombato A., Apweiler R., Aturaliya R.N., Bailey T.L.,
+RA   Bansal M., Baxter L., Beisel K.W., Bersano T., Bono H., Chalk A.M.,
+RA   Chiu K.P., Choudhary V., Christoffels A., Clutterbuck D.R.,
+RA   Crowe M.L., Dalla E., Dalrymple B.P., de Bono B., Della Gatta G.,
+RA   di Bernardo D., Down T., Engstrom P., Fagiolini M., Faulkner G.,
+RA   Fletcher C.F., Fukushima T., Furuno M., Futaki S., Gariboldi M.,
+RA   Georgii-Hemming P., Gingeras T.R., Gojobori T., Green R.E.,
+RA   Gustincich S., Harbers M., Hayashi Y., Hensch T.K., Hirokawa N.,
+RA   Hill D., Huminiecki L., Iacono M., Ikeo K., Iwama A., Ishikawa T.,
+RA   Jakt M., Kanapin A., Katoh M., Kawasawa Y., Kelso J., Kitamura H.,
+RA   Kitano H., Kollias G., Krishnan S.P., Kruger A., Kummerfeld S.K.,
+RA   Kurochkin I.V., Lareau L.F., Lazarevic D., Lipovich L., Liu J.,
+RA   Liuni S., McWilliam S., Madan Babu M., Madera M., Marchionni L.,
+RA   Matsuda H., Matsuzawa S., Miki H., Mignone F., Miyake S., Morris K.,
+RA   Mottagui-Tabar S., Mulder N., Nakano N., Nakauchi H., Ng P.,
+RA   Nilsson R., Nishiguchi S., Nishikawa S., Nori F., Ohara O.,
+RA   Okazaki Y., Orlando V., Pang K.C., Pavan W.J., Pavesi G., Pesole G.,
+RA   Petrovsky N., Piazza S., Reed J., Reid J.F., Ring B.Z., Ringwald M.,
+RA   Rost B., Ruan Y., Salzberg S.L., Sandelin A., Schneider C.,
+RA   Schoenbach C., Sekiguchi K., Semple C.A., Seno S., Sessa L., Sheng Y.,
+RA   Shibata Y., Shimada H., Shimada K., Silva D., Sinclair B.,
+RA   Sperling S., Stupka E., Sugiura K., Sultana R., Takenaka Y., Taki K.,
+RA   Tammoja K., Tan S.L., Tang S., Taylor M.S., Tegner J., Teichmann S.A.,
+RA   Ueda H.R., van Nimwegen E., Verardo R., Wei C.L., Yagi K.,
+RA   Yamanishi H., Zabarovsky E., Zhu S., Zimmer A., Hide W., Bult C.,
+RA   Grimmond S.M., Teasdale R.D., Liu E.T., Brusic V., Quackenbush J.,
+RA   Wahlestedt C., Mattick J.S., Hume D.A., Kai C., Sasaki D., Tomaru Y.,
+RA   Fukuda S., Kanamori-Katayama M., Suzuki M., Aoki J., Arakawa T.,
+RA   Iida J., Imamura K., Itoh M., Kato T., Kawaji H., Kawagashira N.,
+RA   Kawashima T., Kojima M., Kondo S., Konno H., Nakano K., Ninomiya N.,
+RA   Nishio T., Okada M., Plessy C., Shibata K., Shiraki T., Suzuki S.,
+RA   Tagami M., Waki K., Watahiki A., Okamura-Oho Y., Suzuki H., Kawai J.,
+RA   Hayashizaki Y.;
+RT   "The transcriptional landscape of the mammalian genome.";
+RL   Science 309:1559-1563(2005).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA] OF 464-951.
+RC   STRAIN=Czech II; TISSUE=Mammary tumor;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [5]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=15192078; DOI=10.1210/me.2004-0133;
+RA   Mazerbourg S., Bouley D.M., Sudo S., Klein C.A., Zhang J.V.,
+RA   Kawamura K., Goodrich L.V., Rayburn H., Tessier-Lavigne M.,
+RA   Hsueh A.J.;
+RT   "Leucine-rich repeat-containing, G protein-coupled receptor 4 null
+RT   mice exhibit intrauterine growth retardation associated with embryonic
+RT   and perinatal lethality.";
+RL   Mol. Endocrinol. 18:2241-2254(2004).
+RN   [6]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=16406039; DOI=10.1016/j.ydbio.2005.11.043;
+RA   Mendive F., Laurent P., Van Schoore G., Skarnes W., Pochet R.,
+RA   Vassart G.;
+RT   "Defective postnatal development of the male reproductive tract in
+RT   LGR4 knockout mice.";
+RL   Dev. Biol. 290:421-434(2006).
+RN   [7]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=16785743; DOI=10.1159/000093999;
+RA   Kato S., Matsubara M., Matsuo T., Mohri Y., Kazama I., Hatano R.,
+RA   Umezawa A., Nishimori K.;
+RT   "Leucine-rich repeat-containing G protein-coupled receptor-4 (LGR4,
+RT   Gpr48) is essential for renal development in mice.";
+RL   Nephron Exp. Nephrol. 104:E63-E75(2006).
+RN   [8]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=17079737; DOI=10.1095/biolreprod.106.054619;
+RA   Hoshii T., Takeo T., Nakagata N., Takeya M., Araki K., Yamamura K.;
+RT   "LGR4 regulates the postnatal development and integrity of male
+RT   reproductive tracts in mice.";
+RL   Biol. Reprod. 76:303-313(2007).
+RN   [9]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=17850793; DOI=10.1016/j.febslet.2007.08.064;
+RA   Kato S., Mohri Y., Matsuo T., Ogawa E., Umezawa A., Okuyama R.,
+RA   Nishimori K.;
+RT   "Eye-open at birth phenotype with reduced keratinocyte motility in
+RT   LGR4 null mice.";
+RL   FEBS Lett. 581:4685-4690(2007).
+RN   [10]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=18651655; DOI=10.1002/dvdy.21639;
+RA   Mohri Y., Kato S., Umezawa A., Okuyama R., Nishimori K.;
+RT   "Impaired hair placode formation with reduced expression of hair
+RT   follicle-related genes in mice lacking Lgr4.";
+RL   Dev. Dyn. 237:2235-2242(2008).
+RN   [11]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=18955481; DOI=10.1074/jbc.M800721200;
+RA   Song H., Luo J., Luo W., Weng J., Wang Z., Li B., Li D., Liu M.;
+RT   "Inactivation of G-protein-coupled receptor 48 (Gpr48/Lgr4) impairs
+RT   definitive erythropoiesis at midgestation through down-regulation of
+RT   the ATF4 signaling pathway.";
+RL   J. Biol. Chem. 283:36687-36697(2008).
+RN   [12]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=18424556; DOI=10.1073/pnas.0708257105;
+RA   Weng J., Luo J., Cheng X., Jin C., Zhou X., Qu J., Tu L., Ai D.,
+RA   Li D., Wang J., Martin J.F., Amendt B.A., Liu M.;
+RT   "Deletion of G protein-coupled receptor 48 leads to ocular anterior
+RT   segment dysgenesis (ASD) through down-regulation of Pitx2.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 105:6081-6086(2008).
+RN   [13]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=19605502; DOI=10.1242/dev.033571;
+RA   Luo J., Zhou W., Zhou X., Li D., Weng J., Yi Z., Cho S.G., Li C.,
+RA   Yi T., Wu X., Li X.Y., de Crombrugghe B., Hook M., Liu M.;
+RT   "Regulation of bone formation and remodeling by G-protein-coupled
+RT   receptor 48.";
+RL   Development 136:2747-2756(2009).
+RN   [14]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=20638054; DOI=10.1016/j.fertnstert.2010.05.050;
+RA   Mohri Y., Umezu T., Hidema S., Tomisawa H., Akamatsu A., Kato S.,
+RA   Nawa A., Nishimori K.;
+RT   "Reduced fertility with impairment of early-stage embryos observed in
+RT   mice lacking Lgr4 in epithelial tissues.";
+RL   Fertil. Steril. 94:2878-2881(2010).
+RN   [15]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=21523854; DOI=10.1002/dvdy.22651;
+RA   Mohri Y., Oyama K., Akamatsu A., Kato S., Nishimori K.;
+RT   "Lgr4-deficient mice showed premature differentiation of ureteric bud
+RT   with reduced expression of Wnt effector Lef1 and Gata3.";
+RL   Dev. Dyn. 240:1626-1634(2011).
+RN   [16]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=21508962; DOI=10.1038/embor.2011.52;
+RA   Mustata R.C., Van Loy T., Lefort A., Libert F., Strollo S.,
+RA   Vassart G., Garcia M.I.;
+RT   "Lgr4 is required for Paneth cell differentiation and maintenance of
+RT   intestinal stem cells ex vivo.";
+RL   EMBO Rep. 12:558-564(2011).
+RN   [17]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=21727895; DOI=10.1038/nature10337;
+RA   de Lau W., Barker N., Low T.Y., Koo B.K., Li V.S., Teunissen H.,
+RA   Kujala P., Haegebarth A., Peters P.J., van de Wetering M.,
+RA   Stange D.E., van Es J.E., Guardavaccaro D., Schasfoort R.B., Mohri Y.,
+RA   Nishimori K., Mohammed S., Heck A.J., Clevers H.;
+RT   "Lgr5 homologues associate with Wnt receptors and mediate R-spondin
+RT   signalling.";
+RL   Nature 476:293-297(2011).
+RN   [18]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND INTERACTION WITH RSPO1; RSPO2;
+RP   RSPO3 AND RSPO4.
+RX   PubMed=21693646; DOI=10.1073/pnas.1106083108;
+RA   Carmon K.S., Gong X., Lin Q., Thomas A., Liu Q.;
+RT   "R-spondins function as ligands of the orphan receptors LGR4 and LGR5
+RT   to regulate Wnt/beta-catenin signaling.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 108:11452-11457(2011).
+RN   [19]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=23533175; DOI=10.1242/dev.093641;
+RA   Qian Y., Liu S., Guan Y., Pan H., Guan X., Qiu Z., Li L., Gao N.,
+RA   Zhao Y., Li X., Lu Y., Liu M., Li D.;
+RT   "Lgr4-mediated Wnt/beta-catenin signaling in peritubular myoid cells
+RT   is essential for spermatogenesis.";
+RL   Development 140:1751-1761(2013).
+RN   [20]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=23393138; DOI=10.1074/jbc.M112.436204;
+RA   Liu S., Qian Y., Li L., Wei G., Guan Y., Pan H., Guan X., Zhang L.,
+RA   Lu X., Zhao Y., Liu M., Li D.;
+RT   "Lgr4 gene deficiency increases susceptibility and severity of dextran
+RT   sodium sulfate-induced inflammatory bowel disease in mice.";
+RL   J. Biol. Chem. 288:8794-8803(2013).
+RN   [21]
+RP   FUNCTION, DISRUPTION PHENOTYPE, AND MUTAGENESIS OF THR-755.
+RX   PubMed=23589304; DOI=10.1074/jbc.M113.455535;
+RA   Du B., Luo W., Li R., Tan B., Han H., Lu X., Li D., Qian M., Zhang D.,
+RA   Zhao Y., Liu M.;
+RT   "Lgr4/Gpr48 negatively regulates TLR2/4 associated pattern recognition
+RT   and innate immunity by targeting CD14 expression.";
+RL   J. Biol. Chem. 288:15131-15141(2013).
+RN   [22]
+RP   FUNCTION.
+RX   PubMed=23444378; DOI=10.1242/jcs.123471;
+RA   Deng C., Reddy P., Cheng Y., Luo C.W., Hsiao C.L., Hsueh A.J.;
+RT   "Multi-functional norrin is a ligand for the LGR4 receptor.";
+RL   J. Cell Sci. 126:2060-2068(2013).
+RN   [23]
+RP   FUNCTION, AND INDUCTION.
+RX   PubMed=24353284; DOI=10.1530/JME-13-0042;
+RA   Wang F., Zhang X., Wang J., Chen M., Fan N., Ma Q., Liu R., Wang R.,
+RA   Li X., Liu M., Ning G.;
+RT   "LGR4 acts as a link between the peripheral circadian clock and lipid
+RT   metabolism in liver.";
+RL   J. Mol. Endocrinol. 52:133-143(2014).
+CC   -!- FUNCTION: Receptor for R-spondins that potentiates the canonical
+CC       Wnt signaling pathway and is involved in the formation of various
+CC       organs. Upon binding to R-spondins (RSPO1, RSPO2, RSPO3 or RSPO4),
+CC       associates with phosphorylated LRP6 and frizzled receptors that
+CC       are activated by extracellular Wnt receptors, triggering the
+CC       canonical Wnt signaling pathway to increase expression of target
+CC       genes. In contrast to classical G-protein coupled receptors, does
+CC       not activate heterotrimeric G-proteins to transduce the signal.
+CC       Its function as activator of the Wnt signaling pathway is required
+CC       for the development of various organs, including liver, kidney,
+CC       intestine, bone, reproductive tract and eye. May also act as a
+CC       receptor for norrin (NDP), such results however require additional
+CC       confirmation in vivo. Required during spermatogenesis to activate
+CC       the Wnt signaling pathway in peritubular myoid cells. Required for
+CC       the maintenance of intestinal stem cells and Paneth cell
+CC       differentiation in postnatal intestinal crypts. Acts as a
+CC       regulator of bone formation and remodeling. Involved in kidney
+CC       development; required for maintaining the ureteric bud in an
+CC       undifferentiated state. Involved in the development of the
+CC       anterior segment of the eye. Required during erythropoiesis. Also
+CC       acts as a negative regulator of innate immunity by inhibiting
+CC       TLR2/TLR4 associated pattern-recognition and proinflammatory
+CC       cytokine production. Plays an important role in regulating the
+CC       circadian rhythms of plasma lipids, partially through regulating
+CC       the rhythmic expression of MTTP (PubMed:24353284).
+CC       {ECO:0000269|PubMed:18955481, ECO:0000269|PubMed:19605502,
+CC       ECO:0000269|PubMed:21508962, ECO:0000269|PubMed:21693646,
+CC       ECO:0000269|PubMed:21727895, ECO:0000269|PubMed:23393138,
+CC       ECO:0000269|PubMed:23444378, ECO:0000269|PubMed:23533175,
+CC       ECO:0000269|PubMed:23589304, ECO:0000269|PubMed:24353284}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000269|PubMed:21693646};
+CC       Multi-pass membrane protein {ECO:0000269|PubMed:21693646}.
+CC   -!- ALTERNATIVE PRODUCTS:
+CC       Event=Alternative splicing; Named isoforms=2;
+CC       Name=1;
+CC         IsoId=A2ARI4-1; Sequence=Displayed;
+CC       Name=2;
+CC         IsoId=A2ARI4-2; Sequence=VSP_047137;
+CC   -!- INDUCTION: Expressed in a circadian manner in the liver.
+CC       {ECO:0000269|PubMed:24353284}.
+CC   -!- DISRUPTION PHENOTYPE: Strong variations in phenotypes, probably
+CC       depending on the strain background used in the different
+CC       experiments. According to a first report done in a C57BL/6
+CC       background, mice show intra-uterine growth retardation leading to
+CC       embryonic and perinatal lethality (PubMed:15192078). A lethal
+CC       phenotype was confirmed by other groups. In some cases however,
+CC       few mice survive until adulthood. Mice that survive show wide
+CC       spectrum of anterior segment dysgenesis phenotypes, including
+CC       microphthalmia, iris hypoplasia, irdiocorneal angle malformation,
+CC       cornea dysgenesis and cataract (PubMed:18424556). Defects in
+CC       osteoblast differentiation and mineralization during embryonic
+CC       bone formation are also observed. Postnatal mice that survive show
+CC       defects in bone remodeling (PubMed:19605502). According to other
+CC       reports done in other strain backgrounds, mice do not die and
+CC       display defects in the male reproductive tract during the
+CC       postnatal period (PubMed:16406039, PubMed:17079737,
+CC       PubMed:23533175). Mice also show small kidneys, in which the total
+CC       number and density of the glomeruli are decreased
+CC       (PubMed:16785743). The use of conditional knockouts, leads to
+CC       defects in hair placode formation, possibly due to reduced
+CC       keratinocyte migration (PubMed:17079737, PubMed:17850793).
+CC       Decrease in epithelial cell proliferation and strong reduction in
+CC       terminal differentiation of Paneth cells in postnatal intestinal
+CC       crypts (PubMed:21508962, PubMed:23393138). Fetuses display
+CC       transient anemia during midgestation and abnormal definitive
+CC       erythropoiesis (PubMed:18955481). Mice are also more susceptible
+CC       and have much higher mortality to lipopolysaccharide (LPS)
+CC       stimulation due to over-activated innate immune response
+CC       (PubMed:23589304). Conditional knockout of both Lgr4 and Lgr5 in
+CC       the gut results in Wnt signaling inhibition and results in the
+CC       rapid demise of intestinal crypts (PubMed:21727895).
+CC       {ECO:0000269|PubMed:15192078, ECO:0000269|PubMed:16406039,
+CC       ECO:0000269|PubMed:16785743, ECO:0000269|PubMed:17079737,
+CC       ECO:0000269|PubMed:17850793, ECO:0000269|PubMed:18424556,
+CC       ECO:0000269|PubMed:18651655, ECO:0000269|PubMed:18955481,
+CC       ECO:0000269|PubMed:19605502, ECO:0000269|PubMed:20638054,
+CC       ECO:0000269|PubMed:21508962, ECO:0000269|PubMed:21523854,
+CC       ECO:0000269|PubMed:21727895, ECO:0000269|PubMed:23393138,
+CC       ECO:0000269|PubMed:23533175, ECO:0000269|PubMed:23589304}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AL845423; CAM17466.1; -; Genomic_DNA.
+DR   EMBL; AL928922; CAM17466.1; JOINED; Genomic_DNA.
+DR   EMBL; AL928922; CAM24131.1; -; Genomic_DNA.
+DR   EMBL; AL845423; CAM24131.1; JOINED; Genomic_DNA.
+DR   EMBL; BX294391; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AY255619; AAO85131.1; -; mRNA.
+DR   EMBL; AK044357; BAC31882.1; -; mRNA.
+DR   EMBL; BC056637; AAH56637.1; -; mRNA.
+DR   CCDS; CCDS38195.1; -. [A2ARI4-1]
+DR   RefSeq; NP_766259.2; NM_172671.2. [A2ARI4-1]
+DR   UniGene; Mm.277351; -.
+DR   UniGene; Mm.485992; -.
+DR   ProteinModelPortal; A2ARI4; -.
+DR   SMR; A2ARI4; -.
+DR   STRING; 10090.ENSMUSP00000047325; -.
+DR   PhosphoSitePlus; A2ARI4; -.
+DR   MaxQB; A2ARI4; -.
+DR   PaxDb; A2ARI4; -.
+DR   PeptideAtlas; A2ARI4; -.
+DR   PRIDE; A2ARI4; -.
+DR   DNASU; 107515; -.
+DR   Ensembl; ENSMUST00000046548; ENSMUSP00000047325; ENSMUSG00000050199. [A2ARI4-1]
+DR   Ensembl; ENSMUST00000111037; ENSMUSP00000106666; ENSMUSG00000050199. [A2ARI4-2]
+DR   GeneID; 107515; -.
+DR   KEGG; mmu:107515; -.
+DR   UCSC; uc008lmq.1; mouse. [A2ARI4-1]
+DR   CTD; 55366; -.
+DR   MGI; MGI:1891468; Lgr4.
+DR   eggNOG; KOG0619; Eukaryota.
+DR   eggNOG; KOG2087; Eukaryota.
+DR   eggNOG; COG4886; LUCA.
+DR   GeneTree; ENSGT00760000119088; -.
+DR   HOGENOM; HOG000231829; -.
+DR   HOVERGEN; HBG031675; -.
+DR   InParanoid; A2ARI4; -.
+DR   KO; K04309; -.
+DR   OMA; DGYWSDC; -.
+DR   OrthoDB; EOG091G0QA0; -.
+DR   PhylomeDB; A2ARI4; -.
+DR   TreeFam; TF316814; -.
+DR   Reactome; R-MMU-4641263; Regulation of FZD by ubiquitination.
+DR   ChiTaRS; Lgr4; mouse.
+DR   PRO; PR:A2ARI4; -.
+DR   Proteomes; UP000000589; Chromosome 2.
+DR   Bgee; ENSMUSG00000050199; -.
+DR   Genevisible; A2ARI4; MM.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IDA:UniProtKB.
+DR   GO; GO:0004888; F:transmembrane signaling receptor activity; IDA:UniProtKB.
+DR   GO; GO:0030282; P:bone mineralization; IMP:UniProtKB.
+DR   GO; GO:0046849; P:bone remodeling; IMP:UniProtKB.
+DR   GO; GO:0061290; P:canonical Wnt signaling pathway involved in metanephric kidney development; IMP:UniProtKB.
+DR   GO; GO:0072202; P:cell differentiation involved in metanephros development; IMP:UniProtKB.
+DR   GO; GO:0032922; P:circadian regulation of gene expression; IMP:UniProtKB.
+DR   GO; GO:0007623; P:circadian rhythm; IEP:UniProtKB.
+DR   GO; GO:0048565; P:digestive tract development; IMP:MGI.
+DR   GO; GO:0050673; P:epithelial cell proliferation; IMP:MGI.
+DR   GO; GO:2001013; P:epithelial cell proliferation involved in renal tubule morphogenesis; IGI:MGI.
+DR   GO; GO:0007186; P:G-protein coupled receptor signaling pathway; IEA:UniProtKB-KW.
+DR   GO; GO:0001942; P:hair follicle development; IMP:MGI.
+DR   GO; GO:0045087; P:innate immune response; IEA:UniProtKB-KW.
+DR   GO; GO:0036335; P:intestinal stem cell homeostasis; IMP:MGI.
+DR   GO; GO:0030539; P:male genitalia development; IMP:MGI.
+DR   GO; GO:0072224; P:metanephric glomerulus development; IMP:UniProtKB.
+DR   GO; GO:0072282; P:metanephric nephron tubule morphogenesis; IMP:UniProtKB.
+DR   GO; GO:0050710; P:negative regulation of cytokine secretion; IMP:UniProtKB.
+DR   GO; GO:0034122; P:negative regulation of toll-like receptor signaling pathway; IMP:UniProtKB.
+DR   GO; GO:0045892; P:negative regulation of transcription, DNA-templated; IMP:UniProtKB.
+DR   GO; GO:0001649; P:osteoblast differentiation; IMP:UniProtKB.
+DR   GO; GO:0090190; P:positive regulation of branching involved in ureteric bud morphogenesis; IMP:UniProtKB.
+DR   GO; GO:0090263; P:positive regulation of canonical Wnt signaling pathway; IDA:UniProtKB.
+DR   GO; GO:0045893; P:positive regulation of transcription, DNA-templated; IMP:UniProtKB.
+DR   GO; GO:0007283; P:spermatogenesis; IMP:UniProtKB.
+DR   GO; GO:0035239; P:tube morphogenesis; IMP:MGI.
+DR   Gene3D; 3.80.10.10; -; 3.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR002131; Gphrmn_rcpt_fam.
+DR   InterPro; IPR032675; L_dom-like.
+DR   InterPro; IPR001611; Leu-rich_rpt.
+DR   InterPro; IPR003591; Leu-rich_rpt_typical-subtyp.
+DR   InterPro; IPR000372; LRRNT.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   Pfam; PF13855; LRR_8; 4.
+DR   Pfam; PF01462; LRRNT; 1.
+DR   PRINTS; PR00373; GLYCHORMONER.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   SMART; SM00369; LRR_TYP; 15.
+DR   SMART; SM00013; LRRNT; 1.
+DR   SUPFAM; SSF52058; SSF52058; 2.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+DR   PROSITE; PS51450; LRR; 15.
+PE   1: Evidence at protein level;
+KW   Alternative splicing; Biological rhythms; Cell membrane;
+KW   Complete proteome; Developmental protein; Differentiation;
+KW   Disulfide bond; G-protein coupled receptor; Glycoprotein; Immunity;
+KW   Innate immunity; Leucine-rich repeat; Membrane; Phosphoprotein;
+KW   Receptor; Reference proteome; Repeat; Signal; Spermatogenesis;
+KW   Transducer; Transmembrane; Transmembrane helix; Wnt signaling pathway.
+FT   SIGNAL        1     24       {ECO:0000255}.
+FT   CHAIN        25    951       Leucine-rich repeat-containing G-protein
+FT                                coupled receptor 4.
+FT                                /FTId=PRO_0000303240.
+FT   TOPO_DOM     25    544       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    545    565       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM    566    575       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    576    596       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM    597    619       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    620    640       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    641    661       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    662    682       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    683    703       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    704    724       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    725    756       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    757    777       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    778    783       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    784    804       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    805    951       Cytoplasmic. {ECO:0000255}.
+FT   DOMAIN       25     57       LRRNT.
+FT   REPEAT       58     79       LRR 1.
+FT   REPEAT       82    103       LRR 2.
+FT   REPEAT      106    127       LRR 3.
+FT   REPEAT      130    151       LRR 4.
+FT   REPEAT      154    177       LRR 5.
+FT   REPEAT      178    199       LRR 6.
+FT   REPEAT      202    223       LRR 7.
+FT   REPEAT      226    247       LRR 8.
+FT   REPEAT      249    270       LRR 9.
+FT   REPEAT      273    294       LRR 10.
+FT   REPEAT      320    341       LRR 11.
+FT   REPEAT      344    365       LRR 12.
+FT   REPEAT      366    387       LRR 13.
+FT   REPEAT      390    411       LRR 14.
+FT   REPEAT      414    435       LRR 15.
+FT   MOD_RES     920    920       Phosphoserine.
+FT                                {ECO:0000250|UniProtKB:Q9BXB1}.
+FT   CARBOHYD     68     68       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    188    188       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    199    199       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    294    294       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    505    505       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID     29     35       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   DISULFID     33     43       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   DISULFID    339    364       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   DISULFID    470    522       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   DISULFID    471    476       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   DISULFID    618    693       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   VAR_SEQ      62     85       Missing (in isoform 2). {ECO:0000305}.
+FT                                /FTId=VSP_047137.
+FT   MUTAGEN     755    755       T->I: Confers constitutive activity.
+FT                                {ECO:0000269|PubMed:23589304}.
+FT   CONFLICT    668    668       V -> L (in Ref. 4; AAH56637).
+FT                                {ECO:0000305}.
+FT   CONFLICT    684    684       G -> R (in Ref. 4; AAH56637).
+FT                                {ECO:0000305}.
+FT   CONFLICT    730    730       C -> F (in Ref. 3; BAC31882).
+FT                                {ECO:0000305}.
+FT   CONFLICT    928    928       R -> P (in Ref. 4; AAH56637).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   951 AA;  104150 MW;  AD41C68730A19C6B CRC64;
+     MPGPLRLLCF FALGLLGSAG PSGAAPPLCA APCSCDGDRR VDCSGKGLTA VPEGLSAFTQ
+     ALDISMNNIT QLPEDAFKNF PFLEELQLAG NDLSFIHPKA LSGLKELKVL TLQNNQLKTV
+     PSEAIRGLSA LQSLRLDANH ITSVPEDSFE GLVQLRHLWL DDNILTEVPV RPLSNLPTLQ
+     ALTLALNNIS SIPDFAFTNL SSLVVLHLHN NKIKSLSQHC FDGLDNLETL DLNYNNLDEF
+     PQAIKALPSL KELGFHSNSI SVIPDGAFAG NPLLRTIHLY DNPLSFVGNS AFHNLSDLHS
+     LVIRGASLVQ WFPNLAGTVH LESLTLTGTK ISSIPDDLCQ NQKMLRTLDL SYNDIRDLPS
+     FNGCRALEEI SLQRNQISLI KETTFQGLTS LRILDLSRNL IREIHSGAFA KLGTITNLDV
+     SFNELTSFPT EGLNGLNQLK LVGNFQLKDA LAARDFANLR SLSVPYAYQC CAFWGCDSYA
+     NLNTEDNSPQ DHSVTKEKGA TDAANATSTA ESEEHSQIII HCTPSTGAFK PCEYLLGSWM
+     IRLTVWFIFL VALLFNLLVI LTVFASCSSL PASKLFIGLI SVSNLLMGIY TGILTFLDAV
+     SWGRFAEFGI WWETGSGCKV AGSLAVFSSE SAVFLLTLAA VERSVFAKDV MKNGKSSHLR
+     QFQVAALVAL LGAAIAGCFP LFHGGQYSAS PLCLPFPTGE TPSLGFTVTL VLLNSLAFLL
+     MAIIYTKLYC NLEKEDPSEN SQSSMIKHVA WLIFTNCIFF CPVAFFSFAP LITAISISPE
+     IMKSVTLIFF PLPACLNPVL YVFFNPKFKD DWKLLKRRVT RKHGSVSVSI SSQGGCGEQD
+     FYYDCGMYSH LQGNLTVCDC CESFLLTKPV SCKHLIKSHS CPVLTVASCQ RPEAYWSDCG
+     TQSAHSDYAD EEDSFVSDSS DQVQACGRAC FYQSRGFPLV RYAYNLPRVR D
+//
+ID   FPRS4_MOUSE             Reviewed;         323 AA.
+AC   A4FUQ5; A4QMY2; E9QPJ4; O88538;
+DT   01-SEP-2009, integrated into UniProtKB/Swiss-Prot.
+DT   27-JUL-2011, sequence version 2.
+DT   10-MAY-2017, entry version 75.
+DE   RecName: Full=Formyl peptide receptor-related sequence 4;
+DE   AltName: Full=N-formylpeptide receptor-like 4;
+GN   Name=Fpr-rs4;
+OS   Mus musculus (Mouse).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Glires; Rodentia; Myomorpha;
+OC   Muroidea; Muridae; Murinae; Mus; Mus.
+OX   NCBI_TaxID=10090;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=9722950; DOI=10.1006/geno.1998.5376;
+RA   Gao J.-L., Chen H., Filie J.D., Kozak C.A., Murphy P.M.;
+RT   "Differential expansion of the N-formylpeptide receptor gene cluster
+RT   in human and mouse.";
+RL   Genomics 51:270-276(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=C57BL/6J;
+RX   PubMed=19468303; DOI=10.1371/journal.pbio.1000112;
+RA   Church D.M., Goodstadt L., Hillier L.W., Zody M.C., Goldstein S.,
+RA   She X., Bult C.J., Agarwala R., Cherry J.L., DiCuccio M., Hlavina W.,
+RA   Kapustin Y., Meric P., Maglott D., Birtle Z., Marques A.C., Graves T.,
+RA   Zhou S., Teague B., Potamousis K., Churas C., Place M., Herschleb J.,
+RA   Runnheim R., Forrest D., Amos-Landgraf J., Schwartz D.C., Cheng Z.,
+RA   Lindblad-Toh K., Eichler E.E., Ponting C.P.;
+RT   "Lineage-specific biology revealed by a finished genome assembly of
+RT   the mouse.";
+RL   PLoS Biol. 7:E1000112-E1000112(2009).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [4]
+RP   TISSUE SPECIFICITY, AND FUNCTION.
+RX   PubMed=19387439; DOI=10.1038/nature08029;
+RA   Riviere S., Challet L., Fluegge D., Spehr M., Rodriguez I.;
+RT   "Formyl peptide receptor-like proteins are a novel family of
+RT   vomeronasal chemosensors.";
+RL   Nature 459:574-577(2009).
+RN   [5]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=19497865; DOI=10.1073/pnas.0904464106;
+RA   Liberles S.D., Horowitz L.F., Kuang D., Contos J.J., Wilson K.L.,
+RA   Siltberg-Liberles J., Liberles D.A., Buck L.B.;
+RT   "Formyl peptide receptors are candidate chemosensory receptors in the
+RT   vomeronasal organ.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 106:9842-9847(2009).
+CC   -!- FUNCTION: May have an olfactory function associated with the
+CC       identification of pathogens or of pathogenic states.
+CC       {ECO:0000269|PubMed:19387439}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- TISSUE SPECIFICITY: Expressed in 0.6 % of a subset of sensory
+CC       neurons located in the apical layer of the vomeronasal organ. Each
+CC       neuron appears to express only one receptor gene.
+CC       {ECO:0000269|PubMed:19387439, ECO:0000269|PubMed:19497865}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -!- WEB RESOURCE: Name=Protein Spotlight; Note=A sickly smell - Issue
+CC       114 of February 2010;
+CC       URL="http://web.expasy.org/spotlight/back_issues/114";
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; AF071182; AAC34587.1; -; Genomic_DNA.
+DR   EMBL; AC171405; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC115534; AAI15535.1; -; mRNA.
+DR   EMBL; BC115535; AAI15536.1; -; mRNA.
+DR   CCDS; CCDS49968.1; -.
+DR   RefSeq; NP_032067.2; NM_008041.2.
+DR   UniGene; Mm.455331; -.
+DR   ProteinModelPortal; A4FUQ5; -.
+DR   STRING; 10090.ENSMUSP00000093311; -.
+DR   PaxDb; A4FUQ5; -.
+DR   PRIDE; A4FUQ5; -.
+DR   Ensembl; ENSMUST00000095651; ENSMUSP00000093311; ENSMUSG00000048062.
+DR   GeneID; 14291; -.
+DR   KEGG; mmu:14291; -.
+DR   UCSC; uc012alh.1; mouse.
+DR   CTD; 14291; -.
+DR   MGI; MGI:1278317; Fpr-rs4.
+DR   GeneTree; ENSGT00760000118990; -.
+DR   HOGENOM; HOG000234122; -.
+DR   InParanoid; A4FUQ5; -.
+DR   OMA; VHIIANI; -.
+DR   OrthoDB; EOG091G09ZK; -.
+DR   TreeFam; TF330976; -.
+DR   Reactome; R-MMU-416476; G alpha (q) signalling events.
+DR   Reactome; R-MMU-418594; G alpha (i) signalling events.
+DR   Reactome; R-MMU-444473; Formyl peptide receptors bind formyl peptides and many other ligands.
+DR   Reactome; R-MMU-6798695; Neutrophil degranulation.
+DR   PRO; PR:A4FUQ5; -.
+DR   Proteomes; UP000000589; Chromosome 17.
+DR   Bgee; ENSMUSG00000048062; -.
+DR   Genevisible; A4FUQ5; MM.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IBA:GO_Central.
+DR   GO; GO:0004875; F:complement receptor activity; IBA:GO_Central.
+DR   GO; GO:0004982; F:N-formyl peptide receptor activity; IDA:MGI.
+DR   GO; GO:0060326; P:cell chemotaxis; IBA:GO_Central.
+DR   GO; GO:0002430; P:complement receptor mediated signaling pathway; IBA:GO_Central.
+DR   GO; GO:0006954; P:inflammatory response; IBA:GO_Central.
+DR   GO; GO:0050900; P:leukocyte migration; IBA:GO_Central.
+DR   GO; GO:0007200; P:phospholipase C-activating G-protein coupled receptor signaling pathway; IBA:GO_Central.
+DR   GO; GO:0007204; P:positive regulation of cytosolic calcium ion concentration; IBA:GO_Central.
+DR   InterPro; IPR000826; Formyl_rcpt-rel.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   PANTHER; PTHR24225; PTHR24225; 1.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Membrane; Receptor;
+KW   Reference proteome; Transducer; Transmembrane; Transmembrane helix.
+FT   CHAIN         1    323       Formyl peptide receptor-related sequence
+FT                                4.
+FT                                /FTId=PRO_0000382024.
+FT   TOPO_DOM      1     29       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     30     50       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     51     66       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     67     87       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM     88     99       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    100    120       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    121    144       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    145    165       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    166    202       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    203    223       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    224    241       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    242    262       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    263    280       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    281    301       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    302    323       Cytoplasmic. {ECO:0000255}.
+FT   CARBOHYD      4      4       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     10     10       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    269    269       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID     98    176       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   CONFLICT     23     23       R -> S (in Ref. 1; AAC34587 and 3;
+FT                                AAI15536). {ECO:0000305}.
+FT   CONFLICT     76     76       A -> V (in Ref. 1; AAC34587).
+FT                                {ECO:0000305}.
+FT   CONFLICT    193    193       V -> M (in Ref. 1; AAC34587).
+FT                                {ECO:0000305}.
+FT   CONFLICT    248    248       V -> I (in Ref. 1; AAC34587).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   323 AA;  36294 MW;  17803E937AD10D9F CRC64;
+     MEVNISMPLN GSEVVFYDST TSRVLWILSL VVLFITFVLG VLGNGLVIWV AGFQMAHTVT
+     TVSYLNLALS DLSFMATLPL HIISMVMRGK WLFGWFLCKL VHIIANINLF VSIFLITLIA
+     MDRCICVLCP VWSQNHRTVS LARKVVLGAW IFALLLTLPH FLFLTTVRDA RGDVYCISKF
+     ESWVATSEEQ LKVSVIAATA SGIINFIIGF SMPMSFIAIC YGLMAAKICR RGFVNSSRPL
+     RVLTAVAVSF FVCWFPFQLI MLLGNIFNNE TLSIIHMLVN PANTLASFNS CLNPILYVFL
+     GQEFRDRLIY SLYASLERAL RED
+//
+ID   PD2R_BOVIN              Reviewed;         361 AA.
+AC   A5D7K8;
+DT   05-MAY-2009, integrated into UniProtKB/Swiss-Prot.
+DT   12-JUN-2007, sequence version 1.
+DT   05-JUL-2017, entry version 65.
+DE   RecName: Full=Prostaglandin D2 receptor;
+DE            Short=PGD receptor;
+DE            Short=PGD2 receptor;
+DE   AltName: Full=Prostanoid DP receptor;
+GN   Name=PTGDR;
+OS   Bos taurus (Bovine).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Laurasiatheria; Cetartiodactyla; Ruminantia;
+OC   Pecora; Bovidae; Bovinae; Bos.
+OX   NCBI_TaxID=9913;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   STRAIN=Hereford; TISSUE=Fetal muscle;
+RG   NIH - Mammalian Gene Collection (MGC) project;
+RL   Submitted (APR-2007) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Receptor for prostaglandin D2 (PGD2). The activity of
+CC       this receptor is mainly mediated by G(s) proteins that stimulate
+CC       adenylate cyclase, resulting in an elevation of intracellular
+CC       cAMP. A mobilization of calcium is also observed, but without
+CC       formation of inositol 1,4,5-trisphosphate (By similarity).
+CC       {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; BC140594; AAI40595.1; -; mRNA.
+DR   RefSeq; NP_001091503.1; NM_001098034.1.
+DR   UniGene; Bt.86353; -.
+DR   ProteinModelPortal; A5D7K8; -.
+DR   STRING; 9913.ENSBTAP00000008808; -.
+DR   PaxDb; A5D7K8; -.
+DR   Ensembl; ENSBTAT00000008808; ENSBTAP00000008808; ENSBTAG00000006703.
+DR   GeneID; 515331; -.
+DR   KEGG; bta:515331; -.
+DR   CTD; 5729; -.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   GeneTree; ENSGT00760000119188; -.
+DR   HOGENOM; HOG000115475; -.
+DR   InParanoid; A5D7K8; -.
+DR   KO; K04332; -.
+DR   OMA; SLCQAFA; -.
+DR   OrthoDB; EOG091G0F07; -.
+DR   TreeFam; TF324982; -.
+DR   Reactome; R-BTA-391908; Prostanoid ligand receptors.
+DR   Reactome; R-BTA-418555; G alpha (s) signalling events.
+DR   Proteomes; UP000009136; Chromosome 10.
+DR   Bgee; ENSBTAG00000006703; -.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0004956; F:prostaglandin D receptor activity; IBA:GO_Central.
+DR   GO; GO:0004957; F:prostaglandin E receptor activity; IBA:GO_Central.
+DR   GO; GO:0001785; F:prostaglandin J receptor activity; IEA:Ensembl.
+DR   GO; GO:0046085; P:adenosine metabolic process; IEA:Ensembl.
+DR   GO; GO:0071799; P:cellular response to prostaglandin D stimulus; IEA:Ensembl.
+DR   GO; GO:0071380; P:cellular response to prostaglandin E stimulus; IBA:GO_Central.
+DR   GO; GO:0006954; P:inflammatory response; IEA:Ensembl.
+DR   GO; GO:0030238; P:male sex determination; IEA:Ensembl.
+DR   GO; GO:0097755; P:positive regulation of blood vessel diameter; IBA:GO_Central.
+DR   GO; GO:0030431; P:sleep; IEA:Ensembl.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR000376; Pglndn_D_rcpt.
+DR   InterPro; IPR008365; Prostanoid_rcpt.
+DR   PANTHER; PTHR11866; PTHR11866; 1.
+DR   PANTHER; PTHR11866:SF18; PTHR11866:SF18; 1.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR01788; PROSTANOIDR.
+DR   PRINTS; PR00854; PRSTNOIDDPR.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Membrane; Receptor;
+KW   Reference proteome; Transducer; Transmembrane; Transmembrane helix.
+FT   CHAIN         1    361       Prostaglandin D2 receptor.
+FT                                /FTId=PRO_0000370710.
+FT   TOPO_DOM      1     21       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     22     42       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     43     58       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     59     79       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM     80    107       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    108    128       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    129    150       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    151    171       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    172    195       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    196    216       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    217    262       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    263    283       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    284    310       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    311    331       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    332    361       Cytoplasmic. {ECO:0000255}.
+FT   CARBOHYD     10     10       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     90     90       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    297    297       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID    105    183       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+SQ   SEQUENCE   361 AA;  40372 MW;  DF0C341605C1CAD5 CRC64;
+     MRPLFYRCHN TTSVEKGNSA TMGGVLFSTG LVGNLLALGL LARSGLGSCP PRSPRPPPSV
+     FYVLVFGLTI TDLLGKCLVS PFVLSAYAQN RSLRELVPGS DSSLCQAFAF IMSFFGLAST
+     LQLLAMALEC WLSLGHPFFH RRHLTPRRGA MVAPVVGAFC LAFCALPLVG FGKFVQYCPG
+     TWCFFQMVHE ERSLSVLSYS VLYASLMLLL VLAIVLCNLS AMRNLYAMHL RLRGLLRPGS
+     RERAEPGAGE REATPLHLEE LDHLLLLALM TVLFTMCSLP LIYRAYYGAF KAVPEQNGTT
+     EETEDLRALR FLSVISIVDP WIFIIFRTSV FRMFFRKIFI RPLIYRNWHS NSCQTNMESS
+     L
+//
+ID   PRLHR_HUMAN             Reviewed;         370 AA.
+AC   P49683; O75194; Q502U8; Q5VXR9;
+DT   01-FEB-1996, integrated into UniProtKB/Swiss-Prot.
+DT   02-NOV-2010, sequence version 3.
+DT   07-JUN-2017, entry version 151.
+DE   RecName: Full=Prolactin-releasing peptide receptor;
+DE            Short=PrRP receptor;
+DE            Short=PrRPR;
+DE   AltName: Full=G-protein coupled receptor 10;
+DE   AltName: Full=hGR3;
+GN   Name=PRLHR; Synonyms=GPR10, GR3;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANT VAL-283.
+RX   PubMed=8666380; DOI=10.1006/geno.1995.9996;
+RA   Marchese A., Heiber M., Nguyen T., Heng H.H.Q., Saldivia V.R.,
+RA   Cheng R., Murphy P.M., Tsui L.-C., Shi X., Gregor P., George S.R.,
+RA   O'Dowd B.F., Docherty J.M.;
+RT   "Cloning and chromosomal mapping of three novel genes, GPR9, GPR10,
+RT   and GPR14, encoding receptors related to interleukin 8, neuropeptide
+RT   Y, and somatostatin receptors.";
+RL   Genomics 29:335-344(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND VARIANT VAL-283.
+RX   PubMed=9607765; DOI=10.1038/30515;
+RA   Hinuma S., Habata Y., Fujii R., Kawamata Y., Hosoya M., Fukusumi S.,
+RA   Kitada C., Masuo Y., Asano T., Matsumoto H., Sekiguchi M.,
+RA   Kurokawa T., Nishimura O., Onda H., Fujino M.;
+RT   "A prolactin-releasing peptide in the brain.";
+RL   Nature 393:272-276(1998).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], TISSUE SPECIFICITY, INDUCTION, AND
+RP   VARIANT VAL-283.
+RX   PubMed=11923475; DOI=10.1210/mend.16.4.0819;
+RA   Ozawa A., Yamada M., Satoh T., Monden T., Hashimoto K., Kohga H.,
+RA   Hashiba Y., Sasaki T., Mori M.;
+RT   "Transcriptional regulation of the human PRL-releasing peptide (PrRP)
+RT   receptor gene by a dopamine 2 receptor agonist: cloning and
+RT   characterization of the human PrRP receptor gene and its promoter
+RT   region.";
+RL   Mol. Endocrinol. 16:785-798(2002).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15164054; DOI=10.1038/nature02462;
+RA   Deloukas P., Earthrowl M.E., Grafham D.V., Rubenfield M., French L.,
+RA   Steward C.A., Sims S.K., Jones M.C., Searle S., Scott C., Howe K.,
+RA   Hunt S.E., Andrews T.D., Gilbert J.G.R., Swarbreck D., Ashurst J.L.,
+RA   Taylor A., Battles J., Bird C.P., Ainscough R., Almeida J.P.,
+RA   Ashwell R.I.S., Ambrose K.D., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Banerjee R., Bates K., Beasley H., Bray-Allen S., Brown A.J.,
+RA   Brown J.Y., Burford D.C., Burrill W., Burton J., Cahill P., Camire D.,
+RA   Carter N.P., Chapman J.C., Clark S.Y., Clarke G., Clee C.M., Clegg S.,
+RA   Corby N., Coulson A., Dhami P., Dutta I., Dunn M., Faulkner L.,
+RA   Frankish A., Frankland J.A., Garner P., Garnett J., Gribble S.,
+RA   Griffiths C., Grocock R., Gustafson E., Hammond S., Harley J.L.,
+RA   Hart E., Heath P.D., Ho T.P., Hopkins B., Horne J., Howden P.J.,
+RA   Huckle E., Hynds C., Johnson C., Johnson D., Kana A., Kay M.,
+RA   Kimberley A.M., Kershaw J.K., Kokkinaki M., Laird G.K., Lawlor S.,
+RA   Lee H.M., Leongamornlert D.A., Laird G., Lloyd C., Lloyd D.M.,
+RA   Loveland J., Lovell J., McLaren S., McLay K.E., McMurray A.,
+RA   Mashreghi-Mohammadi M., Matthews L., Milne S., Nickerson T.,
+RA   Nguyen M., Overton-Larty E., Palmer S.A., Pearce A.V., Peck A.I.,
+RA   Pelan S., Phillimore B., Porter K., Rice C.M., Rogosin A., Ross M.T.,
+RA   Sarafidou T., Sehra H.K., Shownkeen R., Skuce C.D., Smith M.,
+RA   Standring L., Sycamore N., Tester J., Thorpe A., Torcasso W.,
+RA   Tracey A., Tromans A., Tsolas J., Wall M., Walsh J., Wang H.,
+RA   Weinstock K., West A.P., Willey D.L., Whitehead S.L., Wilming L.,
+RA   Wray P.W., Young L., Chen Y., Lovering R.C., Moschonas N.K.,
+RA   Siebert R., Fechtel K., Bentley D., Durbin R.M., Hubbard T.,
+RA   Doucette-Stamm L., Beck S., Smith D.R., Rogers J.;
+RT   "The DNA sequence and comparative analysis of human chromosome 10.";
+RL   Nature 429:375-381(2004).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA], AND VARIANT VAL-283.
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   TISSUE SPECIFICITY.
+RX   PubMed=10498338; DOI=10.1016/S0167-0115(99)00028-2;
+RA   Fujii R., Fukusumi S., Hosoya M., Kawamata Y., Habata Y., Hinuma S.,
+RA   Sekiguchi M., Kitada C., Kurokawa T., Nishimura O., Onda H.,
+RA   Sumino Y., Fujino M.;
+RT   "Tissue distribution of prolactin-releasing peptide (PrRP) and its
+RT   receptor.";
+RL   Regul. Pept. 83:1-10(1999).
+RN   [7]
+RP   INTERACTION WITH GRIP1; GRIP2 AND PICK1, AND MUTAGENESIS OF THR-365;
+RP   VAL-366; SER-367; VAL-368; VAL-369 AND ILE-370.
+RX   PubMed=11641419;
+RA   Lin S.H.S., Arai A.C., Wang Z., Nothacker H.-P., Civelli O.;
+RT   "The carboxyl terminus of the prolactin-releasing peptide receptor
+RT   interacts with PDZ domain proteins involved in alpha-amino-3-hydroxy-
+RT   5-methylisoxazole-4-propionic acid receptor clustering.";
+RL   Mol. Pharmacol. 60:916-923(2001).
+CC   -!- FUNCTION: Receptor for prolactin-releasing peptide (PrRP).
+CC       Implicated in lactation, regulation of food intake and pain-signal
+CC       processing.
+CC   -!- SUBUNIT: Interacts through its C-terminal region with the PDZ
+CC       domain-containing proteins GRIP1, GRIP2 and PICK1. Interacts with
+CC       PDZ domains 4 and 5 of GRIP1 and with the PDZ domain of PICK1.
+CC       {ECO:0000269|PubMed:11641419}.
+CC   -!- INTERACTION:
+CC       Q9Y3R0:GRIP1; NbExp=2; IntAct=EBI-8009236, EBI-5349621;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- TISSUE SPECIFICITY: Only detected in the pituitary gland and in
+CC       all cell types of pituitary adenomas.
+CC       {ECO:0000269|PubMed:10498338, ECO:0000269|PubMed:11923475}.
+CC   -!- INDUCTION: Repressed by bromocriptine, a dopamine agonist.
+CC       {ECO:0000269|PubMed:11923475}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAC50504.1; Type=Frameshift; Positions=168, 175; Evidence={ECO:0000305};
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U32672; AAC50504.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; AB015745; BAA31159.1; -; mRNA.
+DR   EMBL; AB048946; BAB83030.1; -; Genomic_DNA.
+DR   EMBL; AL356865; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC095539; AAH95539.1; -; mRNA.
+DR   EMBL; BC101490; AAI01491.1; -; mRNA.
+DR   EMBL; BC101492; AAI01493.1; -; mRNA.
+DR   CCDS; CCDS7606.1; -.
+DR   RefSeq; NP_004239.1; NM_004248.2.
+DR   UniGene; Hs.248119; -.
+DR   ProteinModelPortal; P49683; -.
+DR   BioGrid; 109095; 3.
+DR   IntAct; P49683; 3.
+DR   MINT; MINT-1785715; -.
+DR   STRING; 9606.ENSP00000239032; -.
+DR   BindingDB; P49683; -.
+DR   ChEMBL; CHEMBL1681611; -.
+DR   GuidetoPHARMACOLOGY; 337; -.
+DR   iPTMnet; P49683; -.
+DR   PhosphoSitePlus; P49683; -.
+DR   BioMuta; PRLHR; -.
+DR   DMDM; 311033415; -.
+DR   PaxDb; P49683; -.
+DR   PeptideAtlas; P49683; -.
+DR   PRIDE; P49683; -.
+DR   Ensembl; ENST00000239032; ENSP00000239032; ENSG00000119973.
+DR   Ensembl; ENST00000636925; ENSP00000490073; ENSG00000119973.
+DR   GeneID; 2834; -.
+DR   KEGG; hsa:2834; -.
+DR   UCSC; uc001ldp.2; human.
+DR   CTD; 2834; -.
+DR   DisGeNET; 2834; -.
+DR   GeneCards; PRLHR; -.
+DR   H-InvDB; HIX0170463; -.
+DR   HGNC; HGNC:4464; PRLHR.
+DR   HPA; HPA039361; -.
+DR   MIM; 600895; gene.
+DR   neXtProt; NX_P49683; -.
+DR   OpenTargets; ENSG00000119973; -.
+DR   PharmGKB; PA28847; -.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   GeneTree; ENSGT00760000118781; -.
+DR   HOGENOM; HOG000050229; -.
+DR   HOVERGEN; HBG101109; -.
+DR   InParanoid; P49683; -.
+DR   KO; K04314; -.
+DR   OMA; PRKIAPH; -.
+DR   OrthoDB; EOG091G0C2X; -.
+DR   PhylomeDB; P49683; -.
+DR   TreeFam; TF315303; -.
+DR   Reactome; R-HSA-375276; Peptide ligand-binding receptors.
+DR   SignaLink; P49683; -.
+DR   GeneWiki; Prolactin-releasing_peptide_receptor; -.
+DR   GenomeRNAi; 2834; -.
+DR   PRO; PR:P49683; -.
+DR   Proteomes; UP000005640; Chromosome 10.
+DR   Bgee; ENSG00000119973; -.
+DR   CleanEx; HS_PRLHR; -.
+DR   Genevisible; P49683; HS.
+DR   GO; GO:0005887; C:integral component of plasma membrane; TAS:ProtInc.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0004930; F:G-protein coupled receptor activity; TAS:ProtInc.
+DR   GO; GO:0008188; F:neuropeptide receptor activity; TAS:ProtInc.
+DR   GO; GO:0004983; F:neuropeptide Y receptor activity; IEA:InterPro.
+DR   GO; GO:0007268; P:chemical synaptic transmission; IBA:GO_Central.
+DR   GO; GO:0007631; P:feeding behavior; IBA:GO_Central.
+DR   GO; GO:0007565; P:female pregnancy; TAS:ProtInc.
+DR   GO; GO:0007186; P:G-protein coupled receptor signaling pathway; TAS:ProtInc.
+DR   GO; GO:0042445; P:hormone metabolic process; IEA:Ensembl.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR001402; Prolrel_pep_rcpt.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR01018; PRPRECEPTOR.
+DR   SMART; SM01381; 7TM_GPCR_Srsx; 1.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Membrane; Polymorphism;
+KW   Receptor; Reference proteome; Transducer; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN         1    370       Prolactin-releasing peptide receptor.
+FT                                /FTId=PRO_0000069524.
+FT   TOPO_DOM      1     62       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     63     83       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     84    101       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    102    122       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM    123    126       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    127    147       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    148    175       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    176    196       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    197    225       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    226    246       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    247    276       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    277    297       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    298    317       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    318    338       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    339    369       Cytoplasmic. {ECO:0000255}.
+FT   REGION      365    370       Required for interaction with GRIP1,
+FT                                GRIP2 and PICK1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   CARBOHYD     27     27       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     36     36       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID    134    211       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   VARIANT     283    283       I -> V (in dbSNP:rs1613448).
+FT                                {ECO:0000269|PubMed:11923475,
+FT                                ECO:0000269|PubMed:15489334,
+FT                                ECO:0000269|PubMed:8666380,
+FT                                ECO:0000269|PubMed:9607765}.
+FT                                /FTId=VAR_023948.
+FT   VARIANT     302    302       D -> G (in dbSNP:rs8192523).
+FT                                /FTId=VAR_029746.
+FT   MUTAGEN     365    370       Missing: Abolishes binding to GRIP1 and
+FT                                PICK1.
+FT   MUTAGEN     365    365       T->A: No effect on binding to GRIP1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   MUTAGEN     366    366       V->A: No effect on binding to GRIP1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   MUTAGEN     367    367       S->A: Abolishes binding to GRIP1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   MUTAGEN     368    368       V->A: Abolishes binding to GRIP1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   MUTAGEN     369    369       V->A: No effect on binding to GRIP1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   MUTAGEN     370    370       I->A: Abolishes binding to GRIP1.
+FT                                {ECO:0000269|PubMed:11641419}.
+FT   CONFLICT     89     89       R -> P (in Ref. 1; AAC50504).
+FT                                {ECO:0000305}.
+FT   CONFLICT    194    194       A -> P (in Ref. 1; AAC50504).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   370 AA;  41121 MW;  47F71490A080C81F CRC64;
+     MASSTTRGPR VSDLFSGLPP AVTTPANQSA EASAGNGSVA GADAPAVTPF QSLQLVHQLK
+     GLIVLLYSVV VVVGLVGNCL LVLVIARVRR LHNVTNFLIG NLALSDVLMC TACVPLTLAY
+     AFEPRGWVFG GGLCHLVFFL QPVTVYVSVF TLTTIAVDRY VVLVHPLRRR ISLRLSAYAV
+     LAIWALSAVL ALPAAVHTYH VELKPHDVRL CEEFWGSQER QRQLYAWGLL LVTYLLPLLV
+     ILLSYVRVSV KLRNRVVPGC VTQSQADWDR ARRRRTFCLL VVIVVVFAVC WLPLHVFNLL
+     RDLDPHAIDP YAFGLVQLLC HWLAMSSACY NPFIYAWLHD SFREELRKLL VAWPRKIAPH
+     GQNMTVSVVI
+//
+ID   UR2R_RAT                Reviewed;         386 AA.
+AC   P49684; P48041;
+DT   01-FEB-1996, integrated into UniProtKB/Swiss-Prot.
+DT   15-JUL-1999, sequence version 2.
+DT   07-JUN-2017, entry version 123.
+DE   RecName: Full=Urotensin-2 receptor;
+DE            Short=UR-2-R;
+DE   AltName: Full=G-protein coupled receptor 14;
+DE   AltName: Full=G-protein coupled sensory epithelial neuropeptide-like receptor;
+DE            Short=SENR;
+DE   AltName: Full=Urotensin II receptor;
+DE            Short=UR-II-R;
+GN   Name=Uts2r; Synonyms=Gpr14, Senr;
+OS   Rattus norvegicus (Rat).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Glires; Rodentia; Myomorpha;
+OC   Muroidea; Muridae; Murinae; Rattus.
+OX   NCBI_TaxID=10116;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8666380; DOI=10.1006/geno.1995.9996;
+RA   Marchese A., Heiber M., Nguyen T., Heng H.H.Q., Saldivia V.R.,
+RA   Cheng R., Murphy P.M., Tsui L.-C., Shi X., Gregor P., George S.R.,
+RA   O'Dowd B.F., Docherty J.M.;
+RT   "Cloning and chromosomal mapping of three novel genes, GPR9, GPR10,
+RT   and GPR14, encoding receptors related to interleukin 8, neuropeptide
+RT   Y, and somatostatin receptors.";
+RL   Genomics 29:335-344(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Sprague-Dawley; TISSUE=Circumvallate papilla;
+RX   PubMed=7733947; DOI=10.1006/bbrc.1995.1563;
+RA   Tal M., Ammar D.A., Karpuj M., Krizhanovsky V., Naim M.,
+RA   Thompson D.A.;
+RT   "A novel putative neuropeptide receptor expressed in neural tissue,
+RT   including sensory epithelia.";
+RL   Biochem. Biophys. Res. Commun. 209:752-759(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   STRAIN=Wistar; TISSUE=Urinary bladder;
+RA   Suga H., Takao K.;
+RT   "Expression of the rat SENR in the urinary bladder tissues.";
+RL   Submitted (MAR-1998) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Pheochromocytoma;
+RA   Liu H., Zou M., Suga H., Takao K.;
+RT   "The SENR/GPR14 expresses in rat pheochromocytoma PC 12 cells.";
+RL   Submitted (JUL-1999) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   FUNCTION AS A UROTENSIN-2B RECEPTOR.
+RX   PubMed=14550283; DOI=10.1016/j.bbrc.2003.09.102;
+RA   Sugo T., Murakami Y., Shimomura Y., Harada M., Abe M., Ishibashi Y.,
+RA   Kitada C., Miyajima N., Suzuki N., Mori M., Fujino M.;
+RT   "Identification of urotensin II-related peptide as the urotensin II-
+RT   immunoreactive molecule in the rat brain.";
+RL   Biochem. Biophys. Res. Commun. 310:860-868(2003).
+CC   -!- FUNCTION: High affinity receptor for urotensin-2 and urotensin-2B.
+CC       The activity of this receptor is mediated by a G-protein that
+CC       activate a phosphatidylinositol-calcium second messenger system.
+CC       {ECO:0000269|PubMed:14550283}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- TISSUE SPECIFICITY: Preferentially expressed in neural and sensory
+CC       tissues.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U32673; AAC52593.1; -; Genomic_DNA.
+DR   EMBL; U23483; AAA80111.1; -; Genomic_DNA.
+DR   EMBL; AB012210; BAA25251.1; -; mRNA.
+DR   EMBL; AB029611; BAA82357.1; -; mRNA.
+DR   PIR; I84612; I84612.
+DR   RefSeq; NP_065412.1; NM_020537.1.
+DR   UniGene; Rn.44230; -.
+DR   ProteinModelPortal; P49684; -.
+DR   BioGrid; 248616; 1.
+DR   STRING; 10116.ENSRNOP00000051809; -.
+DR   BindingDB; P49684; -.
+DR   ChEMBL; CHEMBL4921; -.
+DR   GuidetoPHARMACOLOGY; 365; -.
+DR   PhosphoSitePlus; P49684; -.
+DR   PaxDb; P49684; -.
+DR   PRIDE; P49684; -.
+DR   Ensembl; ENSRNOT00000054926; ENSRNOP00000051809; ENSRNOG00000036669.
+DR   GeneID; 57305; -.
+DR   KEGG; rno:57305; -.
+DR   CTD; 2837; -.
+DR   RGD; 621884; Uts2r.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   GeneTree; ENSGT00670000098072; -.
+DR   HOGENOM; HOG000060074; -.
+DR   HOVERGEN; HBG098595; -.
+DR   InParanoid; P49684; -.
+DR   KO; K04241; -.
+DR   OMA; NQKVLYL; -.
+DR   OrthoDB; EOG091G0DD6; -.
+DR   PhylomeDB; P49684; -.
+DR   TreeFam; TF334200; -.
+DR   Reactome; R-RNO-375276; Peptide ligand-binding receptors.
+DR   Reactome; R-RNO-416476; G alpha (q) signalling events.
+DR   PRO; PR:P49684; -.
+DR   Proteomes; UP000002494; Chromosome 10.
+DR   Genevisible; P49684; RN.
+DR   GO; GO:0005769; C:early endosome; IDA:RGD.
+DR   GO; GO:0005887; C:integral component of plasma membrane; IBA:GO_Central.
+DR   GO; GO:0005886; C:plasma membrane; IDA:RGD.
+DR   GO; GO:0055037; C:recycling endosome; IDA:RGD.
+DR   GO; GO:0001604; F:urotensin II receptor activity; IDA:RGD.
+DR   GO; GO:0045776; P:negative regulation of blood pressure; IMP:RGD.
+DR   GO; GO:0003105; P:negative regulation of glomerular filtration; IMP:RGD.
+DR   GO; GO:0035814; P:negative regulation of renal sodium excretion; IMP:RGD.
+DR   GO; GO:0035811; P:negative regulation of urine volume; IMP:RGD.
+DR   GO; GO:0007218; P:neuropeptide signaling pathway; IBA:GO_Central.
+DR   GO; GO:0007200; P:phospholipase C-activating G-protein coupled receptor signaling pathway; IBA:GO_Central.
+DR   GO; GO:0045766; P:positive regulation of angiogenesis; IMP:RGD.
+DR   GO; GO:0045777; P:positive regulation of blood pressure; IMP:RGD.
+DR   GO; GO:0030307; P:positive regulation of cell growth; IMP:RGD.
+DR   GO; GO:0046005; P:positive regulation of circadian sleep/wake cycle, REM sleep; IMP:RGD.
+DR   GO; GO:0010841; P:positive regulation of circadian sleep/wake cycle, wakefulness; IMP:RGD.
+DR   GO; GO:0007204; P:positive regulation of cytosolic calcium ion concentration; IMP:RGD.
+DR   GO; GO:0048146; P:positive regulation of fibroblast proliferation; IMP:RGD.
+DR   GO; GO:0045907; P:positive regulation of vasoconstriction; IMP:RGD.
+DR   GO; GO:0042493; P:response to drug; IEP:RGD.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR000670; Urot_II_rcpt.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR00647; UROTENSIN2R.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Membrane; Receptor;
+KW   Reference proteome; Transducer; Transmembrane; Transmembrane helix.
+FT   CHAIN         1    386       Urotensin-2 receptor.
+FT                                /FTId=PRO_0000070196.
+FT   TOPO_DOM      1     54       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     55     77       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     78     87       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     88    113       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM    114    124       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    125    146       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    147    167       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    168    186       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    187    209       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    210    232       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    233    258       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    259    284       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    285    299       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    300    321       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    322    386       Cytoplasmic. {ECO:0000255}.
+FT   CARBOHYD     29     29       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     33     33       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID    123    199       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   CONFLICT    315    315       F -> L (in Ref. 1; AAC52593).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   386 AA;  42707 MW;  FA4E95CC6A4CA27C CRC64;
+     MALSLESTTS FHMLTVSGST VTELPGDSNV SLNSSWSGPT DPSSLKDLVA TGVIGAVLSA
+     MGVVGMVGNV YTLVVMCRFL RASASMYVYV VNLALADLLY LLSIPFIIAT YVTKDWHFGD
+     VGCRVLFSLD FLTMHASIFT LTIMSSERYA AVLRPLDTVQ RSKGYRKLLV LGTWLLALLL
+     TLPMMLAIQL VRRGSKSLCL PAWGPRAHRT YLTLLFGTSI VGPGLVIGLL YVRLARAYWL
+     SQQASFKQTR RLPNPRVLYL ILGIVLLFWA CFLPFWLWQL LAQYHEAMPL TPETARIVNY
+     LTTCLTYGNS CINPFLYTLL TKNYREYLRG RQRSLGSSCH SPGSPGSFLP SRVHLQQDSG
+     RSLSSSSQQA TETLMLSPVP RNGALL
+//
+ID   GPR15_HUMAN             Reviewed;         360 AA.
+AC   P49685; Q3MIL4; Q6ISN6;
+DT   01-FEB-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-FEB-1996, sequence version 1.
+DT   07-JUN-2017, entry version 136.
+DE   RecName: Full=G-protein coupled receptor 15;
+DE   AltName: Full=Brother of Bonzo;
+DE            Short=BoB;
+GN   Name=GPR15;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8838812; DOI=10.1006/geno.1996.0143;
+RA   Heiber M., Marchese A., Nguyen T., Heng H.H.Q., George S.R.,
+RA   O'Dowd B.F.;
+RT   "A novel human gene encoding a G-protein-coupled receptor (GPR15) is
+RT   located on chromosome 3.";
+RL   Genomics 32:462-465(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA].
+RC   TISSUE=Liver;
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+CC   -!- FUNCTION: Probable chemokine receptor. Alternative coreceptor with
+CC       CD4 for HIV-1 infection.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U34806; AAC50826.1; -; Genomic_DNA.
+DR   EMBL; BC069437; AAH69437.1; -; mRNA.
+DR   EMBL; BC101779; AAI01780.1; -; mRNA.
+DR   EMBL; BC101781; AAI01782.1; -; mRNA.
+DR   CCDS; CCDS2931.1; -.
+DR   PIR; G02064; G02064.
+DR   RefSeq; NP_005281.1; NM_005290.3.
+DR   UniGene; Hs.162987; -.
+DR   UniGene; Hs.563128; -.
+DR   ProteinModelPortal; P49685; -.
+DR   BioGrid; 109098; 2.
+DR   STRING; 9606.ENSP00000284311; -.
+DR   iPTMnet; P49685; -.
+DR   PhosphoSitePlus; P49685; -.
+DR   DMDM; 1346170; -.
+DR   PaxDb; P49685; -.
+DR   PeptideAtlas; P49685; -.
+DR   PRIDE; P49685; -.
+DR   DNASU; 2838; -.
+DR   Ensembl; ENST00000284311; ENSP00000284311; ENSG00000154165.
+DR   GeneID; 2838; -.
+DR   KEGG; hsa:2838; -.
+DR   UCSC; uc011bgy.3; human.
+DR   CTD; 2838; -.
+DR   DisGeNET; 2838; -.
+DR   GeneCards; GPR15; -.
+DR   HGNC; HGNC:4469; GPR15.
+DR   HPA; HPA013775; -.
+DR   MIM; 601166; gene.
+DR   neXtProt; NX_P49685; -.
+DR   OpenTargets; ENSG00000154165; -.
+DR   PharmGKB; PA28858; -.
+DR   eggNOG; ENOG410IJEK; Eukaryota.
+DR   eggNOG; ENOG410YCV2; LUCA.
+DR   GeneTree; ENSGT00760000119055; -.
+DR   HOGENOM; HOG000077773; -.
+DR   HOVERGEN; HBG101112; -.
+DR   InParanoid; P49685; -.
+DR   KO; K08403; -.
+DR   OMA; FLLTCMS; -.
+DR   OrthoDB; EOG091G0AX0; -.
+DR   PhylomeDB; P49685; -.
+DR   TreeFam; TF330024; -.
+DR   Reactome; R-HSA-418555; G alpha (s) signalling events.
+DR   GeneWiki; GPR15; -.
+DR   GenomeRNAi; 2838; -.
+DR   PRO; PR:P49685; -.
+DR   Proteomes; UP000005640; Chromosome 3.
+DR   Bgee; ENSG00000154165; -.
+DR   CleanEx; HS_GPR15; -.
+DR   ExpressionAtlas; P49685; baseline and differential.
+DR   Genevisible; P49685; HS.
+DR   GO; GO:0005887; C:integral component of plasma membrane; TAS:ProtInc.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0004930; F:G-protein coupled receptor activity; TAS:ProtInc.
+DR   GO; GO:0007186; P:G-protein coupled receptor signaling pathway; TAS:ProtInc.
+DR   GO; GO:0072678; P:T cell migration; IEA:Ensembl.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   SMART; SM01381; 7TM_GPCR_Srsx; 1.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; Complete proteome; G-protein coupled receptor;
+KW   Membrane; Polymorphism; Receptor; Reference proteome; Transducer;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1    360       G-protein coupled receptor 15.
+FT                                /FTId=PRO_0000069531.
+FT   TOPO_DOM      1     33       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     34     54       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     55     69       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     70     90       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM     91    120       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    121    141       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    142    149       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    150    170       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    171    192       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    193    213       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    214    239       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    240    260       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    261    284       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    285    305       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    306    360       Cytoplasmic. {ECO:0000255}.
+FT   VARIANT      37     37       P -> S (in dbSNP:rs2230344).
+FT                                /FTId=VAR_020075.
+FT   VARIANT     112    112       M -> V (in dbSNP:rs35320046).
+FT                                /FTId=VAR_049391.
+SQ   SEQUENCE   360 AA;  40787 MW;  F781F28B7E312390 CRC64;
+     MDPEETSVYL DYYYATSPNS DIRETHSHVP YTSVFLPVFY TAVFLTGVLG NLVLMGALHF
+     KPGSRRLIDI FIINLAASDF IFLVTLPLWV DKEASLGLWR TGSFLCKGSS YMISVNMHCS
+     VLLLTCMSVD RYLAIVWPVV SRKFRRTDCA YVVCASIWFI SCLLGLPTLL SRELTLIDDK
+     PYCAEKKATP IKLIWSLVAL IFTFFVPLLS IVTCYCCIAR KLCAHYQQSG KHNKKLKKSI
+     KIIFIVVAAF LVSWLPFNTF KFLAIVSGLR QEHYLPSAIL QLGMEVSGPL AFANSCVNPF
+     IYYIFDSYIR RAIVHCLCPC LKNYDFGSST ETSDSHLTKA LSTFIHAEDF ARRRKRSVSL
+//
+ID   NPY4R_HUMAN             Reviewed;         375 AA.
+AC   P50391; Q13456; Q5ISU3; Q5T2X9; Q6FH06;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   10-MAY-2017, entry version 141.
+DE   RecName: Full=Neuropeptide Y receptor type 4;
+DE            Short=NPY4-R;
+DE   AltName: Full=Pancreatic polypeptide receptor 1;
+DE            Short=PP1;
+GN   Name=NPY4R; Synonyms=PPYR1;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   TISSUE=Placenta;
+RX   PubMed=7592911; DOI=10.1074/jbc.270.45.26762;
+RA   Bard J.A., Walker M.W., Branchek T.A., Weinshank R.L.;
+RT   "Cloning and functional expression of a human Y4 subtype receptor for
+RT   pancreatic polypeptide, neuropeptide Y, and peptide YY.";
+RL   J. Biol. Chem. 270:26762-26765(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=7493937; DOI=10.1074/jbc.270.49.29123;
+RA   Lundell I., Blomqvist A.G., Berglund M.M., Schober D.A., Johnson D.,
+RA   Statnick M.A., Gadski R.A., Gehlert D.R., Larhammar D.;
+RT   "Cloning of a human receptor of the NPY receptor family with high
+RT   affinity for pancreatic polypeptide and peptide YY.";
+RL   J. Biol. Chem. 270:29123-29128(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND VARIANT SER-99.
+RX   PubMed=8643460; DOI=10.1073/pnas.93.10.4661;
+RA   Yan H., Yang J., Marasco J., Yamaguchi K., Brenner S., Collins F.,
+RA   Karbon W.;
+RT   "Cloning and functional expression of cDNAs encoding human and rat
+RT   pancreatic polypeptide receptors.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 93:4661-4665(1996).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [MRNA], AND VARIANT SER-99.
+RA   Reichwald K., Petz U., Roschmann E., Platzer M.;
+RT   "PPYR1: identification of new untranslated 5' exon by in silico and
+RT   experimental evaluation of gene structure.";
+RL   Submitted (JUN-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RA   Kopatz S.A., Aronstam R.S., Sharma S.V.;
+RT   "cDNA clones of human proteins involved in signal transduction
+RT   sequenced by the Guthrie cDNA resource center (www.cdna.org).";
+RL   Submitted (APR-2003) to the EMBL/GenBank/DDBJ databases.
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA], AND VARIANT CYS-240.
+RA   Ebert L., Schick M., Neubert P., Schatten R., Henze S., Korn B.;
+RT   "Cloning of human full open reading frames in Gateway(TM) system entry
+RT   vector (pDONR201).";
+RL   Submitted (JUN-2004) to the EMBL/GenBank/DDBJ databases.
+RN   [7]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15164054; DOI=10.1038/nature02462;
+RA   Deloukas P., Earthrowl M.E., Grafham D.V., Rubenfield M., French L.,
+RA   Steward C.A., Sims S.K., Jones M.C., Searle S., Scott C., Howe K.,
+RA   Hunt S.E., Andrews T.D., Gilbert J.G.R., Swarbreck D., Ashurst J.L.,
+RA   Taylor A., Battles J., Bird C.P., Ainscough R., Almeida J.P.,
+RA   Ashwell R.I.S., Ambrose K.D., Babbage A.K., Bagguley C.L., Bailey J.,
+RA   Banerjee R., Bates K., Beasley H., Bray-Allen S., Brown A.J.,
+RA   Brown J.Y., Burford D.C., Burrill W., Burton J., Cahill P., Camire D.,
+RA   Carter N.P., Chapman J.C., Clark S.Y., Clarke G., Clee C.M., Clegg S.,
+RA   Corby N., Coulson A., Dhami P., Dutta I., Dunn M., Faulkner L.,
+RA   Frankish A., Frankland J.A., Garner P., Garnett J., Gribble S.,
+RA   Griffiths C., Grocock R., Gustafson E., Hammond S., Harley J.L.,
+RA   Hart E., Heath P.D., Ho T.P., Hopkins B., Horne J., Howden P.J.,
+RA   Huckle E., Hynds C., Johnson C., Johnson D., Kana A., Kay M.,
+RA   Kimberley A.M., Kershaw J.K., Kokkinaki M., Laird G.K., Lawlor S.,
+RA   Lee H.M., Leongamornlert D.A., Laird G., Lloyd C., Lloyd D.M.,
+RA   Loveland J., Lovell J., McLaren S., McLay K.E., McMurray A.,
+RA   Mashreghi-Mohammadi M., Matthews L., Milne S., Nickerson T.,
+RA   Nguyen M., Overton-Larty E., Palmer S.A., Pearce A.V., Peck A.I.,
+RA   Pelan S., Phillimore B., Porter K., Rice C.M., Rogosin A., Ross M.T.,
+RA   Sarafidou T., Sehra H.K., Shownkeen R., Skuce C.D., Smith M.,
+RA   Standring L., Sycamore N., Tester J., Thorpe A., Torcasso W.,
+RA   Tracey A., Tromans A., Tsolas J., Wall M., Walsh J., Wang H.,
+RA   Weinstock K., West A.P., Willey D.L., Whitehead S.L., Wilming L.,
+RA   Wray P.W., Young L., Chen Y., Lovering R.C., Moschonas N.K.,
+RA   Siebert R., Fechtel K., Bentley D., Durbin R.M., Hubbard T.,
+RA   Doucette-Stamm L., Beck S., Smith D.R., Rogers J.;
+RT   "The DNA sequence and comparative analysis of human chromosome 10.";
+RL   Nature 429:375-381(2004).
+RN   [8]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA], AND VARIANT SER-99.
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+CC   -!- FUNCTION: Receptor for neuropeptide Y and peptide YY. The rank
+CC       order of affinity of this receptor for pancreatic polypeptides is
+CC       PP, PP (2-36) and [Ile-31, Gln-34] PP > [Pro-34] PYY > PYY and
+CC       [Leu-31, Pro-34] NPY > NPY > PYY (3-36) and NPY (2-36) > PP (13-
+CC       36) > PP (31-36) > NPY free acid.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- TISSUE SPECIFICITY: Highest levels found in brain, coronary artery
+CC       and ileum. Low levels in pancreas and kidney. Detected in colon
+CC       and small intestine.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U35232; AAC50280.1; -; Genomic_DNA.
+DR   EMBL; Z66526; CAA91433.1; -; Genomic_DNA.
+DR   EMBL; U42387; AAB07759.1; -; mRNA.
+DR   EMBL; AY649985; AAV68196.1; -; mRNA.
+DR   EMBL; AY649986; AAV68197.1; -; mRNA.
+DR   EMBL; AY268432; AAP23199.1; -; Genomic_DNA.
+DR   EMBL; CR541950; CAG46748.1; -; mRNA.
+DR   EMBL; AL390716; CAI13318.1; -; Genomic_DNA.
+DR   EMBL; BC096238; AAH96238.1; -; mRNA.
+DR   CCDS; CCDS73100.1; -.
+DR   PIR; G02300; G02300.
+DR   PIR; I39182; I39182.
+DR   RefSeq; NP_001265723.1; NM_001278794.1.
+DR   RefSeq; NP_001265724.1; NM_001278795.1.
+DR   RefSeq; NP_005963.4; NM_005972.5.
+DR   RefSeq; XP_005277701.1; XM_005277644.3.
+DR   RefSeq; XP_006717608.1; XM_006717545.3.
+DR   RefSeq; XP_011537416.1; XM_011539114.2.
+DR   RefSeq; XP_011537417.1; XM_011539115.2.
+DR   RefSeq; XP_011538238.1; XM_011539936.2.
+DR   RefSeq; XP_011538239.1; XM_011539937.2.
+DR   RefSeq; XP_011547675.1; XM_011549373.2.
+DR   RefSeq; XP_011547676.1; XM_011549374.2.
+DR   RefSeq; XP_011547677.1; XM_011549375.2.
+DR   RefSeq; XP_011547678.1; XM_011549376.2.
+DR   RefSeq; XP_016854962.1; XM_016999473.1.
+DR   RefSeq; XP_016854963.1; XM_016999474.1.
+DR   RefSeq; XP_016870952.1; XM_017015463.1.
+DR   RefSeq; XP_016870953.1; XM_017015464.1.
+DR   RefSeq; XP_016871875.1; XM_017016386.1.
+DR   RefSeq; XP_016871876.1; XM_017016387.1.
+DR   UniGene; Hs.524719; -.
+DR   PDB; 2IK5; Model; -; @=1-375.
+DR   PDBsum; 2IK5; -.
+DR   ProteinModelPortal; P50391; -.
+DR   BioGrid; 111532; 1.
+DR   STRING; 9606.ENSP00000363431; -.
+DR   BindingDB; P50391; -.
+DR   ChEMBL; CHEMBL4877; -.
+DR   DrugBank; DB05004; AC162352.
+DR   DrugBank; DB05045; TM30338.
+DR   GuidetoPHARMACOLOGY; 307; -.
+DR   iPTMnet; P50391; -.
+DR   PhosphoSitePlus; P50391; -.
+DR   DMDM; 1709423; -.
+DR   PaxDb; P50391; -.
+DR   PRIDE; P50391; -.
+DR   Ensembl; ENST00000374312; ENSP00000363431; ENSG00000204174.
+DR   Ensembl; ENST00000395716; ENSP00000379066; ENSG00000204174.
+DR   Ensembl; ENST00000612632; ENSP00000480883; ENSG00000204174.
+DR   GeneID; 100996758; -.
+DR   GeneID; 105379861; -.
+DR   GeneID; 5540; -.
+DR   KEGG; hsa:100996758; -.
+DR   KEGG; hsa:105379861; -.
+DR   KEGG; hsa:5540; -.
+DR   UCSC; uc031wfc.1; human.
+DR   CTD; 100996758; -.
+DR   CTD; 5540; -.
+DR   DisGeNET; 100996758; -.
+DR   DisGeNET; 5540; -.
+DR   GeneCards; NPY4R; -.
+DR   H-InvDB; HIX0170461; -.
+DR   HGNC; HGNC:9329; NPY4R.
+DR   HPA; HPA027863; -.
+DR   MIM; 601790; gene.
+DR   neXtProt; NX_P50391; -.
+DR   PharmGKB; PA33692; -.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   GeneTree; ENSGT00760000118781; -.
+DR   HOGENOM; HOG000050229; -.
+DR   HOVERGEN; HBG105676; -.
+DR   InParanoid; P50391; -.
+DR   KO; K04206; -.
+DR   OrthoDB; EOG091G0HOS; -.
+DR   PhylomeDB; P50391; -.
+DR   TreeFam; TF315303; -.
+DR   Reactome; R-HSA-375276; Peptide ligand-binding receptors.
+DR   Reactome; R-HSA-418594; G alpha (i) signalling events.
+DR   SIGNOR; P50391; -.
+DR   GeneWiki; Pancreatic_polypeptide_receptor_1; -.
+DR   PRO; PR:P50391; -.
+DR   Proteomes; UP000005640; Chromosome 10.
+DR   Bgee; ENSG00000204174; -.
+DR   CleanEx; HS_PPYR1; -.
+DR   Genevisible; P50391; HS.
+DR   GO; GO:0005887; C:integral component of plasma membrane; TAS:ProtInc.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0004930; F:G-protein coupled receptor activity; TAS:ProtInc.
+DR   GO; GO:0001602; F:pancreatic polypeptide receptor activity; IBA:GO_Central.
+DR   GO; GO:0008015; P:blood circulation; TAS:ProtInc.
+DR   GO; GO:0007268; P:chemical synaptic transmission; IBA:GO_Central.
+DR   GO; GO:0007586; P:digestion; TAS:ProtInc.
+DR   GO; GO:0007631; P:feeding behavior; TAS:ProtInc.
+DR   GO; GO:0007186; P:G-protein coupled receptor signaling pathway; TAS:ProtInc.
+DR   GO; GO:0007218; P:neuropeptide signaling pathway; IBA:GO_Central.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR001933; NPY4_rcpt.
+DR   InterPro; IPR000611; NPY_rcpt.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR01015; NRPEPTIDEY4R.
+DR   PRINTS; PR01012; NRPEPTIDEYR.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   3D-structure; Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Lipoprotein; Membrane;
+KW   Palmitate; Polymorphism; Receptor; Reference proteome; Transducer;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1    375       Neuropeptide Y receptor type 4.
+FT                                /FTId=PRO_0000069935.
+FT   TOPO_DOM      1     39       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     40     60       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     61     87       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     88    108       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM    109    116       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    117    137       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    138    155       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    156    176       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    177    212       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    213    233       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    234    263       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    264    284       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    285    301       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    302    322       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    323    375       Cytoplasmic. {ECO:0000255}.
+FT   LIPID       340    340       S-palmitoyl cysteine. {ECO:0000255}.
+FT   CARBOHYD      2      2       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     19     19       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD     29     29       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    187    187       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID    114    201       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   VARIANT      99     99       A -> S (in dbSNP:rs2229967).
+FT                                {ECO:0000269|PubMed:15489334,
+FT                                ECO:0000269|PubMed:8643460,
+FT                                ECO:0000269|Ref.4}.
+FT                                /FTId=VAR_030337.
+FT   VARIANT     240    240       R -> C (in dbSNP:rs3824733).
+FT                                {ECO:0000269|Ref.6}.
+FT                                /FTId=VAR_030338.
+SQ   SEQUENCE   375 AA;  42195 MW;  0081DBA51436EE22 CRC64;
+     MNTSHLLALL LPKSPQGENR SKPLGTPYNF SEHCQDSVDV MVFIVTSYSI ETVVGVLGNL
+     CLMCVTVRQK EKANVTNLLI ANLAFSDFLM CLLCQPLTAV YTIMDYWIFG ETLCKMSAFI
+     QCMSVTVSIL SLVLVALERH QLIINPTGWK PSISQAYLGI VLIWVIACVL SLPFLANSIL
+     ENVFHKNHSK ALEFLADKVV CTESWPLAHH RTIYTTFLLL FQYCLPLGFI LVCYARIYRR
+     LQRQGRVFHK GTYSLRAGHM KQVNVVLVVM VVAFAVLWLP LHVFNSLEDW HHEAIPICHG
+     NLIFLVCHLL AMASTCVNPF IYGFLNTNFK KEIKALVLTC QQSAPLEESE HLPLSTVHTE
+     VSKGSLRLSG RSNPI
+//
+ID   MR1AL_DANRE             Reviewed;         152 AA.
+AC   P51047;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   15-MAR-2017, entry version 92.
+DE   RecName: Full=Melatonin receptor type 1A-like;
+DE            Short=Mel-1A-R-like;
+DE            Short=Mel1a receptor-like;
+DE   AltName: Full=Melatonin receptor Mel1a Z1.4;
+DE   AltName: Full=zMel1a-2;
+DE   Flags: Fragment;
+GN   Name=mtnr1al; Synonyms=mel1a, mtnr1a;
+OS   Danio rerio (Zebrafish) (Brachydanio rerio).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Actinopterygii; Neopterygii; Teleostei; Ostariophysi; Cypriniformes;
+OC   Cyprinidae; Danio.
+OX   NCBI_TaxID=7955;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RX   PubMed=7576645; DOI=10.1016/0896-6273(95)90090-X;
+RA   Reppert S.M., Weaver D.R., Cassone V.M., Godson C.,
+RA   Kolakowski L.F. Jr.;
+RT   "Melatonin receptors are for the birds: molecular analysis of two
+RT   receptor subtypes differentially expressed in chick brain.";
+RL   Neuron 15:1003-1015(1995).
+RN   [2]
+RP   INDUCTION.
+RX   PubMed=17622340; DOI=10.1371/journal.pone.0000587;
+RA   Shang E.H., Zhdanova I.V.;
+RT   "The circadian system is a target and modulator of prenatal cocaine
+RT   effects.";
+RL   PLoS ONE 2:E587-E587(2007).
+CC   -!- FUNCTION: High affinity receptor for melatonin. The activity of
+CC       this receptor is mediated by pertussis toxin sensitive G proteins
+CC       that inhibits adenylate cyclase activity (By similarity).
+CC       {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- INDUCTION: By cocaine, which increases the levels of day-time
+CC       expression. {ECO:0000269|PubMed:17622340}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U31823; AAA92495.1; -; mRNA.
+DR   UniGene; Dr.21033; -.
+DR   ProteinModelPortal; P51047; -.
+DR   STRING; 7955.ENSDARP00000124268; -.
+DR   PaxDb; P51047; -.
+DR   ZFIN; ZDB-GENE-990415-154; mtnr1al.
+DR   eggNOG; ENOG410IHFY; Eukaryota.
+DR   eggNOG; ENOG4111ZZV; LUCA.
+DR   HOGENOM; HOG000037953; -.
+DR   InParanoid; P51047; -.
+DR   PhylomeDB; P51047; -.
+DR   Proteomes; UP000000437; Unplaced.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008502; F:melatonin receptor activity; IEA:InterPro.
+DR   GO; GO:0007623; P:circadian rhythm; IBA:GO_Central.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR000025; Melatonin_rcpt.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR00857; MELATONINR.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   Biological rhythms; Cell membrane; Complete proteome;
+KW   G-protein coupled receptor; Membrane; Receptor; Reference proteome;
+KW   Transducer; Transmembrane; Transmembrane helix.
+FT   CHAIN        <1   >152       Melatonin receptor type 1A-like.
+FT                                /FTId=PRO_0000069744.
+FT   TOPO_DOM     <1     13       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     14     34       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM     35     58       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     59     79       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM     80    111       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    112    132       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    133    144       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    145   >152       Helical; Name=7. {ECO:0000255}.
+FT   NON_TER       1      1
+FT   NON_TER     152    152
+SQ   SEQUENCE   152 AA;  17634 MW;  00962009057759AD CRC64;
+     CHSLKYDKLF SNKNTVCYVI LVWALTVLAI VPNWFVESLQ YDPRVFSCTF AQSVSSLYTI
+     MVVVVHFIVP IGIVTYCYLR IWILVIQVPR RVKPDSRPKI KPHDFRNFLT MFVVFVLFAV
+     CWAPLNFIGL AVAIHPRLGQ SIPEWLFTAS YF
+//
+ID   MTR1A_XENLA             Reviewed;         153 AA.
+AC   P51048;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   15-MAR-2017, entry version 71.
+DE   RecName: Full=Melatonin receptor type 1A X2.0;
+DE            Short=Mel-1A-R X2.0;
+DE            Short=Mel1a receptor X2.0;
+DE   Flags: Fragment;
+OS   Xenopus laevis (African clawed frog).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Amphibia; Batrachia; Anura; Pipoidea; Pipidae; Xenopodinae; Xenopus;
+OC   Xenopus.
+OX   NCBI_TaxID=8355;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RX   PubMed=7576645; DOI=10.1016/0896-6273(95)90090-X;
+RA   Reppert S.M., Weaver D.R., Cassone V.M., Godson C.,
+RA   Kolakowski L.F. Jr.;
+RT   "Melatonin receptors are for the birds: molecular analysis of two
+RT   receptor subtypes differentially expressed in chick brain.";
+RL   Neuron 15:1003-1015(1995).
+CC   -!- FUNCTION: High affinity receptor for melatonin. The activity of
+CC       this receptor is mediated by pertussis toxin sensitive G proteins
+CC       that inhibits adenylate cyclase activity (By similarity).
+CC       {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U31826; AAA92500.1; -; mRNA.
+DR   UniGene; Xl.21457; -.
+DR   ProteinModelPortal; P51048; -.
+DR   SMR; P51048; -.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008502; F:melatonin receptor activity; IEA:InterPro.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR000025; Melatonin_rcpt.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR00857; MELATONINR.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; G-protein coupled receptor; Membrane; Receptor;
+KW   Transducer; Transmembrane; Transmembrane helix.
+FT   CHAIN        <1   >153       Melatonin receptor type 1A X2.0.
+FT                                /FTId=PRO_0000069869.
+FT   TOPO_DOM     <1     12       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     13     33       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM     34     57       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     58     78       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM     79    112       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    113    133       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    134    145       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    146   >153       Helical; Name=7. {ECO:0000255}.
+FT   NON_TER       1      1
+FT   NON_TER     153    153
+SQ   SEQUENCE   153 AA;  17665 MW;  ED0421422BE20F27 CRC64;
+     HSSWYNRLFS NSGTICYVGL VWVLALGAIL PNLFVGSLRC DPRIFSCTFA QYVSSYYTIA
+     VVIFHFFLPI GVVSYCYLRI WVLVLNIRHR VKPDRHLHHQ TWPYNIHGFI TMFVVFVLFA
+     VCWGPLNIIG LTVAIYPPLG DSIPQWLFVA SYF
+//
+ID   OPSP_CHICK              Reviewed;         351 AA.
+AC   P51475; P79794;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   05-JUL-2017, entry version 120.
+DE   RecName: Full=Pinopsin;
+DE   AltName: Full=Pineal gland-specific opsin;
+DE            Short=P-opsin;
+DE            Short=Pineal opsin;
+OS   Gallus gallus (Chicken).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Archelosauria; Archosauria; Dinosauria; Saurischia; Theropoda;
+OC   Coelurosauria; Aves; Neognathae; Galloanserae; Galliformes;
+OC   Phasianidae; Phasianinae; Gallus.
+OX   NCBI_TaxID=9031;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE.
+RC   TISSUE=Pineal gland;
+RX   PubMed=7878470; DOI=10.1126/science.7878470;
+RA   Max M., McKinnon P.J., Seidenman K.J., Barrett R.K., Applebury M.L.,
+RA   Takahashi J.S., Margolskee R.F.;
+RT   "Pineal opsin: a nonvisual opsin expressed in chick pineal.";
+RL   Science 267:1502-1506(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [MRNA].
+RC   TISSUE=Pineal gland;
+RX   PubMed=7969427; DOI=10.1038/372094a0;
+RA   Okano T., Yoshizawa T., Fukada Y.;
+RT   "Pinopsin is a chicken pineal photoreceptive molecule.";
+RL   Nature 372:94-97(1994).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=White leghorn; TISSUE=Pineal gland;
+RX   PubMed=9756926; DOI=10.1074/jbc.273.41.26820;
+RA   Max M., Surya A., Takahashi J.S., Margolskee R.F., Knox B.E.;
+RT   "Light-dependent activation of rod transducin by pineal opsin.";
+RL   J. Biol. Chem. 273:26820-26826(1998).
+CC   -!- FUNCTION: Produces a slow and prolonged phototransduction response
+CC       consistent with the non-visual function of pineal photoreception.
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Absorption:
+CC         Abs(max)=~470 nm;
+CC   -!- SUBCELLULAR LOCATION: Membrane; Multi-pass membrane protein.
+CC   -!- TISSUE SPECIFICITY: Pineal gland.
+CC   -!- PTM: Phosphorylated on some or all of the serine and threonine
+CC       residues present in the C-terminal region. {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       Opsin subfamily. {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; U15762; AAA64223.1; -; mRNA.
+DR   EMBL; U87449; AAB47565.1; -; Genomic_DNA.
+DR   PIR; A55962; A55962.
+DR   RefSeq; NP_990740.1; NM_205409.2.
+DR   UniGene; Gga.786; -.
+DR   ProteinModelPortal; P51475; -.
+DR   SMR; P51475; -.
+DR   STRING; 9031.ENSGALP00000007864; -.
+DR   PaxDb; P51475; -.
+DR   GeneID; 396377; -.
+DR   KEGG; gga:396377; -.
+DR   CTD; 102096571; -.
+DR   eggNOG; KOG3656; Eukaryota.
+DR   eggNOG; ENOG410XRW9; LUCA.
+DR   HOGENOM; HOG000253932; -.
+DR   HOVERGEN; HBG107442; -.
+DR   InParanoid; P51475; -.
+DR   KO; K04251; -.
+DR   OrthoDB; EOG091G0ALC; -.
+DR   PhylomeDB; P51475; -.
+DR   TreeFam; TF324998; -.
+DR   PRO; PR:P51475; -.
+DR   Proteomes; UP000000539; Unplaced.
+DR   Bgee; ENSGALG00000004924; -.
+DR   GO; GO:0005623; C:cell; IDA:AgBase.
+DR   GO; GO:0036064; C:ciliary basal body; IDA:AgBase.
+DR   GO; GO:0016021; C:integral component of membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0042599; C:lamellar body; IDA:AgBase.
+DR   GO; GO:0097232; C:lamellar body membrane; IDA:AgBase.
+DR   GO; GO:0016020; C:membrane; IDA:AgBase.
+DR   GO; GO:0001750; C:photoreceptor outer segment; IBA:GO_Central.
+DR   GO; GO:0008020; F:G-protein coupled photoreceptor activity; IBA:GO_Central.
+DR   GO; GO:0016038; P:absorption of visible light; IDA:AgBase.
+DR   GO; GO:0007602; P:phototransduction; IEA:UniProtKB-KW.
+DR   GO; GO:0018298; P:protein-chromophore linkage; IDA:AgBase.
+DR   GO; GO:0007601; P:visual perception; IEA:InterPro.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR001760; Opsin.
+DR   InterPro; IPR002206; Opsin_pineal.
+DR   InterPro; IPR027430; Retinal_BS.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR00238; OPSIN.
+DR   PRINTS; PR00666; PINOPSIN.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+DR   PROSITE; PS00238; OPSIN; 1.
+PE   1: Evidence at protein level;
+KW   Chromophore; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Glycoprotein; Lipoprotein; Membrane;
+KW   Palmitate; Phosphoprotein; Photoreceptor protein; Receptor;
+KW   Reference proteome; Retinal protein; Sensory transduction; Transducer;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN         1    351       Pinopsin.
+FT                                /FTId=PRO_0000197807.
+FT   TOPO_DOM      1     30       Extracellular.
+FT   TRANSMEM     31     55       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     56     67       Cytoplasmic.
+FT   TRANSMEM     68     92       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM     93    107       Extracellular.
+FT   TRANSMEM    108    127       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    128    146       Cytoplasmic.
+FT   TRANSMEM    147    170       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    171    194       Extracellular.
+FT   TRANSMEM    195    222       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    223    244       Cytoplasmic.
+FT   TRANSMEM    245    268       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    269    276       Extracellular.
+FT   TRANSMEM    277    301       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    302    351       Cytoplasmic.
+FT   MOD_RES     288    288       N6-(retinylidene)lysine.
+FT   LIPID       314    314       S-palmitoyl cysteine. {ECO:0000250}.
+FT   LIPID       315    315       S-palmitoyl cysteine. {ECO:0000250}.
+FT   CARBOHYD      4      4       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   CARBOHYD    192    192       N-linked (GlcNAc...) asparagine.
+FT                                {ECO:0000255}.
+FT   DISULFID    104    181       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   CONFLICT     28     28       Q -> W (in Ref. 3; AAB47565).
+FT                                {ECO:0000305}.
+FT   CONFLICT    135    135       K -> R (in Ref. 2; AAA64223).
+FT                                {ECO:0000305}.
+FT   CONFLICT    163    163       A -> T (in Ref. 2; AAA64223).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   351 AA;  38174 MW;  56BDFAD187008338 CRC64;
+     MSSNSSQAPP NGTPGPFDGP QWPYQAPQST YVGVAVLMGT VVACASVVNG LVIVVSICYK
+     KLRSPLNYIL VNLAVADLLV TLCGSSVSLS NNINGFFVFG RRMCELEGFM VSLTGIVGLW
+     SLAILALERY VVVCKPLGDF QFQRRHAVSG CAFTWGWALL WSAPPLLGWS SYVPEGLRTS
+     CGPNWYTGGS NNNSYILSLF VTCFVLPLSL ILFSYTNLLL TLRAAAAQQK EADTTQRAER
+     EVTRMVIVMV MAFLLCWLPY STFALVVATH KGIIIQPVLA SLPSYFSKTA TVYNPIIYVF
+     MNKQFQSCLL EMLCCGYQPQ RTGKASPGTP GPHADVTAAG LRNKVMPAHP V
+//
+ID   P2RY4_HUMAN             Reviewed;         365 AA.
+AC   P51582; Q4VBB7; Q4VBB8; Q502W2; Q5JT22;
+DT   01-OCT-1996, integrated into UniProtKB/Swiss-Prot.
+DT   01-OCT-1996, sequence version 1.
+DT   07-JUN-2017, entry version 144.
+DE   RecName: Full=P2Y purinoceptor 4;
+DE            Short=P2Y4;
+DE   AltName: Full=P2P;
+DE   AltName: Full=Uridine nucleotide receptor;
+DE            Short=UNR;
+GN   Name=P2RY4; Synonyms=NRU;
+OS   Homo sapiens (Human).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+OC   Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+OC   Catarrhini; Hominidae; Homo.
+OX   NCBI_TaxID=9606;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8537336; DOI=10.1074/jbc.270.52.30849;
+RA   Communi D., Pirotton S., Parmentier M., Boeynaems J.-M.;
+RT   "Cloning and functional expression of a human uridine nucleotide
+RT   receptor.";
+RL   J. Biol. Chem. 270:30849-30852(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND VARIANTS THR-178 AND ALA-234.
+RX   PubMed=8537335; DOI=10.1074/jbc.270.52.30845;
+RA   Nguyen T., Erb L., Weisman G.A., Marchese A., Heng H.H.Q.,
+RA   Garrad R.C., George S.R., Turner J.T., O'Dowd B.F.;
+RT   "Cloning, expression, and chromosomal localization of the human
+RT   uridine nucleotide receptor gene.";
+RL   J. Biol. Chem. 270:30845-30848(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   TISSUE=Pancreas;
+RX   PubMed=8617367; DOI=10.1016/0014-5793(96)00321-3;
+RA   Stam N.J., Klomp J., van der Heuvel M., Olijve W.;
+RT   "Molecular cloning and characterization of a novel orphan receptor
+RT   (P2P) expressed in human pancreas that shows high structural homology
+RT   to the P2U purinoceptor.";
+RL   FEBS Lett. 384:260-264(1996).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=15772651; DOI=10.1038/nature03440;
+RA   Ross M.T., Grafham D.V., Coffey A.J., Scherer S., McLay K., Muzny D.,
+RA   Platzer M., Howell G.R., Burrows C., Bird C.P., Frankish A.,
+RA   Lovell F.L., Howe K.L., Ashurst J.L., Fulton R.S., Sudbrak R., Wen G.,
+RA   Jones M.C., Hurles M.E., Andrews T.D., Scott C.E., Searle S.,
+RA   Ramser J., Whittaker A., Deadman R., Carter N.P., Hunt S.E., Chen R.,
+RA   Cree A., Gunaratne P., Havlak P., Hodgson A., Metzker M.L.,
+RA   Richards S., Scott G., Steffen D., Sodergren E., Wheeler D.A.,
+RA   Worley K.C., Ainscough R., Ambrose K.D., Ansari-Lari M.A., Aradhya S.,
+RA   Ashwell R.I., Babbage A.K., Bagguley C.L., Ballabio A., Banerjee R.,
+RA   Barker G.E., Barlow K.F., Barrett I.P., Bates K.N., Beare D.M.,
+RA   Beasley H., Beasley O., Beck A., Bethel G., Blechschmidt K., Brady N.,
+RA   Bray-Allen S., Bridgeman A.M., Brown A.J., Brown M.J., Bonnin D.,
+RA   Bruford E.A., Buhay C., Burch P., Burford D., Burgess J., Burrill W.,
+RA   Burton J., Bye J.M., Carder C., Carrel L., Chako J., Chapman J.C.,
+RA   Chavez D., Chen E., Chen G., Chen Y., Chen Z., Chinault C.,
+RA   Ciccodicola A., Clark S.Y., Clarke G., Clee C.M., Clegg S.,
+RA   Clerc-Blankenburg K., Clifford K., Cobley V., Cole C.G., Conquer J.S.,
+RA   Corby N., Connor R.E., David R., Davies J., Davis C., Davis J.,
+RA   Delgado O., Deshazo D., Dhami P., Ding Y., Dinh H., Dodsworth S.,
+RA   Draper H., Dugan-Rocha S., Dunham A., Dunn M., Durbin K.J., Dutta I.,
+RA   Eades T., Ellwood M., Emery-Cohen A., Errington H., Evans K.L.,
+RA   Faulkner L., Francis F., Frankland J., Fraser A.E., Galgoczy P.,
+RA   Gilbert J., Gill R., Gloeckner G., Gregory S.G., Gribble S.,
+RA   Griffiths C., Grocock R., Gu Y., Gwilliam R., Hamilton C., Hart E.A.,
+RA   Hawes A., Heath P.D., Heitmann K., Hennig S., Hernandez J.,
+RA   Hinzmann B., Ho S., Hoffs M., Howden P.J., Huckle E.J., Hume J.,
+RA   Hunt P.J., Hunt A.R., Isherwood J., Jacob L., Johnson D., Jones S.,
+RA   de Jong P.J., Joseph S.S., Keenan S., Kelly S., Kershaw J.K., Khan Z.,
+RA   Kioschis P., Klages S., Knights A.J., Kosiura A., Kovar-Smith C.,
+RA   Laird G.K., Langford C., Lawlor S., Leversha M., Lewis L., Liu W.,
+RA   Lloyd C., Lloyd D.M., Loulseged H., Loveland J.E., Lovell J.D.,
+RA   Lozado R., Lu J., Lyne R., Ma J., Maheshwari M., Matthews L.H.,
+RA   McDowall J., McLaren S., McMurray A., Meidl P., Meitinger T.,
+RA   Milne S., Miner G., Mistry S.L., Morgan M., Morris S., Mueller I.,
+RA   Mullikin J.C., Nguyen N., Nordsiek G., Nyakatura G., O'dell C.N.,
+RA   Okwuonu G., Palmer S., Pandian R., Parker D., Parrish J.,
+RA   Pasternak S., Patel D., Pearce A.V., Pearson D.M., Pelan S.E.,
+RA   Perez L., Porter K.M., Ramsey Y., Reichwald K., Rhodes S.,
+RA   Ridler K.A., Schlessinger D., Schueler M.G., Sehra H.K.,
+RA   Shaw-Smith C., Shen H., Sheridan E.M., Shownkeen R., Skuce C.D.,
+RA   Smith M.L., Sotheran E.C., Steingruber H.E., Steward C.A., Storey R.,
+RA   Swann R.M., Swarbreck D., Tabor P.E., Taudien S., Taylor T.,
+RA   Teague B., Thomas K., Thorpe A., Timms K., Tracey A., Trevanion S.,
+RA   Tromans A.C., d'Urso M., Verduzco D., Villasana D., Waldron L.,
+RA   Wall M., Wang Q., Warren J., Warry G.L., Wei X., West A.,
+RA   Whitehead S.L., Whiteley M.N., Wilkinson J.E., Willey D.L.,
+RA   Williams G., Williams L., Williamson A., Williamson H., Wilming L.,
+RA   Woodmansey R.L., Wray P.W., Yen J., Zhang J., Zhou J., Zoghbi H.,
+RA   Zorilla S., Buck D., Reinhardt R., Poustka A., Rosenthal A.,
+RA   Lehrach H., Meindl A., Minx P.J., Hillier L.W., Willard H.F.,
+RA   Wilson R.K., Waterston R.H., Rice C.M., Vaudin M., Coulson A.,
+RA   Nelson D.L., Weinstock G., Sulston J.E., Durbin R.M., Hubbard T.,
+RA   Gibbs R.A., Beck S., Rogers J., Bentley D.R.;
+RT   "The DNA sequence of the human X chromosome.";
+RL   Nature 434:325-337(2005).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE MRNA], AND VARIANT THR-178.
+RX   PubMed=15489334; DOI=10.1101/gr.2596504;
+RG   The MGC Project Team;
+RT   "The status, quality, and expansion of the NIH full-length cDNA
+RT   project: the Mammalian Gene Collection (MGC).";
+RL   Genome Res. 14:2121-2127(2004).
+RN   [6]
+RP   PHOSPHORYLATION AT SER-333 AND SER-334, AND MUTAGENESIS OF SER-243;
+RP   SER-333; SER-334 AND SER-339.
+RX   PubMed=11114308; DOI=10.1074/jbc.M009909200;
+RA   Brinson A.E., Harden T.K.;
+RT   "Differential regulation of the uridine nucleotide-activated P2Y4 and
+RT   P2Y6 receptors. Ser-333 and Ser-334 in the carboxyl terminus are
+RT   involved in agonist-dependent phosphorylation desensitization and
+RT   internalization of the P2Y4 receptor.";
+RL   J. Biol. Chem. 276:11939-11948(2001).
+CC   -!- FUNCTION: Receptor for UTP and UDP coupled to G-proteins that
+CC       activate a phosphatidylinositol-calcium second messenger system.
+CC       Not activated by ATP or ADP.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Multi-pass membrane protein.
+CC   -!- TISSUE SPECIFICITY: Pancreas.
+CC   -!- PTM: Phosphorylation of Ser-333 and Ser-334 is a key step in
+CC       agonist-dependent desensitization and loss of surface P2RY4. This
+CC       phosphorylation does not involve PKC, nor other calcium activated
+CC       kinases. {ECO:0000269|PubMed:11114308}.
+CC   -!- SIMILARITY: Belongs to the G-protein coupled receptor 1 family.
+CC       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+CC   -----------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see http://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution-NoDerivs License
+CC   -----------------------------------------------------------------------
+DR   EMBL; X91852; CAA62963.1; -; Genomic_DNA.
+DR   EMBL; U40223; AAC50347.1; -; Genomic_DNA.
+DR   EMBL; X96597; CAA65415.1; -; Genomic_DNA.
+DR   EMBL; AL357752; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; BC095503; AAH95503.1; -; mRNA.
+DR   EMBL; BC096067; AAH96067.1; -; mRNA.
+DR   EMBL; BC096068; AAH96068.1; -; mRNA.
+DR   EMBL; BC096069; AAH96069.1; -; mRNA.
+DR   EMBL; BC096070; AAH96070.1; -; mRNA.
+DR   CCDS; CCDS14398.1; -.
+DR   PIR; S68679; S68679.
+DR   RefSeq; NP_002556.1; NM_002565.3.
+DR   UniGene; Hs.673854; -.
+DR   PDB; 2B6Q; Model; -; A=1-365.
+DR   PDBsum; 2B6Q; -.
+DR   ProteinModelPortal; P51582; -.
+DR   IntAct; P51582; 1.
+DR   STRING; 9606.ENSP00000363643; -.
+DR   BindingDB; P51582; -.
+DR   ChEMBL; CHEMBL2123; -.
+DR   GuidetoPHARMACOLOGY; 325; -.
+DR   iPTMnet; P51582; -.
+DR   PhosphoSitePlus; P51582; -.
+DR   BioMuta; P2RY4; -.
+DR   DMDM; 1709524; -.
+DR   PaxDb; P51582; -.
+DR   PeptideAtlas; P51582; -.
+DR   PRIDE; P51582; -.
+DR   Ensembl; ENST00000374519; ENSP00000363643; ENSG00000186912.
+DR   GeneID; 5030; -.
+DR   KEGG; hsa:5030; -.
+DR   UCSC; uc004dxz.2; human.
+DR   CTD; 5030; -.
+DR   DisGeNET; 5030; -.
+DR   GeneCards; P2RY4; -.
+DR   HGNC; HGNC:8542; P2RY4.
+DR   HPA; CAB022644; -.
+DR   MIM; 300038; gene.
+DR   neXtProt; NX_P51582; -.
+DR   OpenTargets; ENSG00000186912; -.
+DR   PharmGKB; PA32871; -.
+DR   eggNOG; ENOG410IIAQ; Eukaryota.
+DR   eggNOG; ENOG410XQNZ; LUCA.
+DR   GeneTree; ENSGT00760000118784; -.
+DR   HOGENOM; HOG000231307; -.
+DR   HOVERGEN; HBG101120; -.
+DR   InParanoid; P51582; -.
+DR   KO; K04271; -.
+DR   OMA; EFDHYVH; -.
+DR   OrthoDB; EOG091G09D4; -.
+DR   PhylomeDB; P51582; -.
+DR   TreeFam; TF350009; -.
+DR   Reactome; R-HSA-417957; P2Y receptors.
+DR   Reactome; R-HSA-418594; G alpha (i) signalling events.
+DR   GeneWiki; P2RY4; -.
+DR   GenomeRNAi; 5030; -.
+DR   PRO; PR:P51582; -.
+DR   Proteomes; UP000005640; Chromosome X.
+DR   Bgee; ENSG00000186912; -.
+DR   CleanEx; HS_P2RY4; -.
+DR   Genevisible; P51582; HS.
+DR   GO; GO:0016324; C:apical plasma membrane; IEA:Ensembl.
+DR   GO; GO:0016323; C:basolateral plasma membrane; IEA:Ensembl.
+DR   GO; GO:0005887; C:integral component of plasma membrane; TAS:ProtInc.
+DR   GO; GO:0005886; C:plasma membrane; TAS:Reactome.
+DR   GO; GO:0005524; F:ATP binding; IEA:Ensembl.
+DR   GO; GO:0045028; F:G-protein coupled purinergic nucleotide receptor activity; IEA:InterPro.
+DR   GO; GO:0015065; F:uridine nucleotide receptor activity; TAS:ProtInc.
+DR   GO; GO:0045030; F:UTP-activated nucleotide receptor activity; IEA:Ensembl.
+DR   GO; GO:0071380; P:cellular response to prostaglandin E stimulus; IEA:Ensembl.
+DR   GO; GO:0007200; P:phospholipase C-activating G-protein coupled receptor signaling pathway; TAS:ProtInc.
+DR   GO; GO:0007204; P:positive regulation of cytosolic calcium ion concentration; TAS:ProtInc.
+DR   GO; GO:0030321; P:transepithelial chloride transport; IEA:Ensembl.
+DR   InterPro; IPR000276; GPCR_Rhodpsn.
+DR   InterPro; IPR017452; GPCR_Rhodpsn_7TM.
+DR   InterPro; IPR000018; P2Y4.
+DR   PANTHER; PTHR24231:SF61; PTHR24231:SF61; 1.
+DR   Pfam; PF00001; 7tm_1; 1.
+DR   PRINTS; PR00237; GPCRRHODOPSN.
+DR   PRINTS; PR01066; P2Y4PRNOCPTR.
+DR   PROSITE; PS00237; G_PROTEIN_RECEP_F1_1; 1.
+DR   PROSITE; PS50262; G_PROTEIN_RECEP_F1_2; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell membrane; Complete proteome; Disulfide bond;
+KW   G-protein coupled receptor; Membrane; Phosphoprotein; Polymorphism;
+KW   Receptor; Reference proteome; Transducer; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN         1    365       P2Y purinoceptor 4.
+FT                                /FTId=PRO_0000070020.
+FT   TOPO_DOM      1     34       Extracellular. {ECO:0000255}.
+FT   TRANSMEM     35     61       Helical; Name=1. {ECO:0000255}.
+FT   TOPO_DOM     62     72       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM     73     95       Helical; Name=2. {ECO:0000255}.
+FT   TOPO_DOM     96    112       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    113    131       Helical; Name=3. {ECO:0000255}.
+FT   TOPO_DOM    132    154       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    155    174       Helical; Name=4. {ECO:0000255}.
+FT   TOPO_DOM    175    196       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    197    222       Helical; Name=5. {ECO:0000255}.
+FT   TOPO_DOM    223    246       Cytoplasmic. {ECO:0000255}.
+FT   TRANSMEM    247    269       Helical; Name=6. {ECO:0000255}.
+FT   TOPO_DOM    270    287       Extracellular. {ECO:0000255}.
+FT   TRANSMEM    288    309       Helical; Name=7. {ECO:0000255}.
+FT   TOPO_DOM    310    365       Cytoplasmic. {ECO:0000255}.
+FT   MOD_RES     333    333       Phosphoserine.
+FT                                {ECO:0000305|PubMed:11114308}.
+FT   MOD_RES     334    334       Phosphoserine.
+FT                                {ECO:0000305|PubMed:11114308}.
+FT   DISULFID    108    185       {ECO:0000255|PROSITE-ProRule:PRU00521}.
+FT   VARIANT     168    168       V -> M (in dbSNP:rs1152186).
+FT                                /FTId=VAR_011854.
+FT   VARIANT     178    178       N -> T (in dbSNP:rs1152187).
+FT                                {ECO:0000269|PubMed:15489334,
+FT                                ECO:0000269|PubMed:8537335}.
+FT                                /FTId=VAR_011855.
+FT   VARIANT     191    191       P -> L (in dbSNP:rs1152188).
+FT                                /FTId=VAR_011856.
+FT   VARIANT     234    234       S -> A (in dbSNP:rs3829709).
+FT                                {ECO:0000269|PubMed:8537335}.
+FT                                /FTId=VAR_049429.
+FT   MUTAGEN     243    243       S->A: No effect.
+FT                                {ECO:0000269|PubMed:11114308}.
+FT   MUTAGEN     333    365       Missing: Abolishes agonist-induced
+FT                                phosphorylation. Prevents agonist-induced
+FT                                desensitization and loss of cell surface
+FT                                receptors.
+FT   MUTAGEN     333    359       SSLALVSLPEDSSCRWAATPQDSSCST->AALALVALPEDA
+FT                                ACRWAAAPQDAACAA: Greatly reduces agonist-
+FT                                induced desensitization and loss of cell
+FT                                surface receptors.
+FT   MUTAGEN     333    333       S->A: Greatly reduces agonist-induced
+FT                                desensitization and loss of cell surface
+FT                                receptors; when associated with A-334 and
+FT                                A-339. {ECO:0000269|PubMed:11114308}.
+FT   MUTAGEN     334    334       S->A: Greatly reduces agonist-induced
+FT                                desensitization and loss of cell surface
+FT                                receptors; when associated with A-333 and
+FT                                A-339. {ECO:0000269|PubMed:11114308}.
+FT   MUTAGEN     339    339       S->A: Greatly reduces agonist-induced
+FT                                desensitization and loss of cell surface
+FT                                receptors; when associated with A-333 and
+FT                                A-334. {ECO:0000269|PubMed:11114308}.
+FT   MUTAGEN     344    365       Missing: No effect on agonist-induced
+FT                                phosphorylation, no functional effect.
+FT   MUTAGEN     356    365       Missing: No functional effect.
+FT   CONFLICT     86     86       L -> V (in Ref. 2; AAC50347).
+FT                                {ECO:0000305}.
+FT   CONFLICT    121    121       C -> S (in Ref. 5; AAH96068).
+FT                                {ECO:0000305}.
+FT   CONFLICT    247    247       I -> V (in Ref. 5; AAH96069).
+FT                                {ECO:0000305}.
+FT   CONFLICT    352    352       P -> T (in Ref. 5; AAH96069).
+FT                                {ECO:0000305}.
+SQ   SEQUENCE   365 AA;  40963 MW;  23E0AFED3B7BDEED CRC64;
+     MASTESSLLR SLGLSPGPGS SEVELDCWFD EDFKFILLPV SYAVVFVLGL GLNAPTLWLF
+     IFRLRPWDAT ATYMFHLALS DTLYVLSLPT LIYYYAAHNH WPFGTEICKF VRFLFYWNLY
+     CSVLFLTCIS VHRYLGICHP LRALRWGRPR LAGLLCLAVW LVVAGCLVPN LFFVTTSNKG
+     TTVLCHDTTR PEEFDHYVHF SSAVMGLLFG VPCLVTLVCY GLMARRLYQP LPGSAQSSSR
+     LRSLRTIAVV LTVFAVCFVP FHITRTIYYL ARLLEADCRV LNIVNVVYKV TRPLASANSC
+     LDPVLYLLTG DKYRRQLRQL CGGGKPQPRT AASSLALVSL PEDSSCRWAA TPQDSSCSTP
+     RADRL
+//
