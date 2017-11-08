@@ -3,6 +3,7 @@ from decimal import *
 from Bio import SeqIO
 import subprocess
 import scipy
+import sys
 from scipy import stats
 import numpy as np
 import matplotlib.pyplot as plt
@@ -25,20 +26,31 @@ from matplotlib import rcParams
 #    You should have received a copy of the GNU General Public License
 #    along with 3D TMH Complexity.  If not, see <http://www.gnu.org/licenses/>.
 
+print("This file is part of 3D TMH Complexity.")
 
+print("3D TMH Complexity is free software: you can redistribute it and/or modify")
+print("it under the terms of the GNU General Public License as published by")
+print("the Free Software Foundation, either version 3 of the License, or")
+print("(at your option) any later version.")
+
+print("3D TMH Complexity is distributed in the hope that it will be useful,")
+print("but WITHOUT ANY WARRANTY; without even the implied warranty of")
+print("MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the")
+print("GNU General Public License for more details.")
+
+print("You should have received a copy of the GNU General Public License")
+print("along with 3D TMH Complexity.  If not, see <http://www.gnu.org/licenses/>.")
+
+print("\n\n\nUSAGE:python3 [Script] [file] [TMH number for graph]\nEXAMPLE:python3 Uniprot_to_graphs_and_stats.py file.txt 7 ")
 # To do:
 # Separate hydrophobicity calculation - more efficient and flexible
 # Length restrictions and statistics for final results
-# Control datasets
-# Generate graphics
 
 # Input files should be obtained in text format downloaded from Uniprot
 # and moved to the same directory as this script.
+
 input_filenames = [
-    "GPCR_controlledvocabularyquery_UniRef50.txt",
-    "Opsins_UniRef50.txt",
-    "t2r_UniRef50.txt",
-    "7TM_list_UniRef50.txt"
+    str(sys.argv[1])
 ]
 
 # Parameters for tmh allowances
@@ -318,6 +330,7 @@ def tmsoc_calculation(sequence, tmh_locations):
 # dataset has 13 TMHs, then there will be 13 empty lists made in a list
 # representing the 1-13 possible TMH locations.
 for input_file in input_filenames:
+    max_tmd_to_print=int(sys.argv[2])
     # These are the parameters used by the biopython Seq.IO module
     filename = input_file
     input_format = "swiss"
@@ -339,8 +352,8 @@ for input_file in input_filenames:
                 this_record_tmd_count = this_record_tmd_count + 1
         if this_record_tmd_count > tmd_count:
             tmd_count = this_record_tmd_count
-            if this_record_tmd_count > 7:
-                print(record.id, " contained more than 7 TMHs.")
+            if this_record_tmd_count > max_tmd_to_print:
+                print(record.id, " contained more than ", max_tmd_to_print, "TMHs.")
 
     # Generate a list of empty lists, one for each tmh set.
     print("Maximum tmh count in", input_file, "is", tmd_count)
@@ -419,10 +432,10 @@ for input_file in input_filenames:
 
     # Graphs
     violin_plot(list_of_complexity_scores_in_tmh[
-                0:7], str("Complexity"), input_file)
-    violin_plot(list_of_lengths_in_tmh[0:7], str("Length"), input_file)
+                0:max_tmd_to_print], str("Complexity"), input_file)
+    violin_plot(list_of_lengths_in_tmh[0:max_tmd_to_print], str("Length"), input_file)
     for scale_number, scales in enumerate(list_of_hydrophobicity_scores_in_tmh[0:len(hydrophobicity_for_record[1])]):
-        violin_plot(list_of_hydrophobicity_scores_in_tmh[scale_number][0:7], str(
+        violin_plot(list_of_hydrophobicity_scores_in_tmh[scale_number][0:max_tmd_to_print], str(
             hydrophobicity_for_record[1][scale_number] + " hydrophobiciity scale"), input_file)
 
     stat_tests_list = [scipy.stats.kruskal, scipy.stats.ks_2samp]
