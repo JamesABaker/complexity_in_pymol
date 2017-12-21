@@ -6,6 +6,10 @@ import scipy
 import sys
 from scipy import stats
 import numpy as np
+
+import matplotlib
+matplotlib.use('Agg')
+
 import matplotlib.pyplot as plt
 import time
 from matplotlib import rcParams
@@ -242,7 +246,7 @@ def violin_plot(dataset, name, input_file):
     # plt.show()
 
     #Save bitmap and vector images of figure, then flush figure.
-    date_time = time.strftime("%H:%M:%S_%d:%m:%Y")
+    date_time = time.strftime("%H_%M_%S__%d_%m_%Y")
     file_name = str(date_time + "_" + input_file + "_" + name + ".pdf")
     plt.savefig(file_name, dpi=700)
     file_name = str(date_time + "_" + input_file + "_" + name + ".png")
