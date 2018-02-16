@@ -10,9 +10,9 @@ Currently, **the software is available for Linux distributions only** since it i
 
 The script uses Phobius to estimate TMH boundaries. TMSOC is then used to assess complexity and the results are viewable in Pymol. The TMH regions are coloured accordingly:
 
-![alt text](images/demo.png "A crystal structure coloured by the software.")
+![A crystal structure coloured by the software.](images/demo.gif)
 
-_Figure._ Cartoon of a structure coloured according to Complexity of the TMHs.
+_Figure._ Cartoon of a GPCR structure coloured according to Complexity of the TMHs.
 
 ## Installation
 
