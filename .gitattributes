@@ -1,2 +1,4 @@
 pdbtmalpha5-4-2017_CLEANED.xml filter=lfs diff=lfs merge=lfs -text
 pdbtmalpha5-4-2017.xml filter=lfs diff=lfs merge=lfs -text
+*/* filter=lfs diff=lfs merge=lfs -text
+sequence/* filter=lfs diff=lfs merge=lfs -text
